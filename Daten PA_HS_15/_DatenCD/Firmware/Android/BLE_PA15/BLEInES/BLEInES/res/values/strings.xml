@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">ZHAW Blens</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="ble_not_supported">BluetoothLE is not supportet on your device.</string>
+    <string name="ble_not_activated">You have to activete Bluetooth on your device.</string>
+    <string name="plsSelectItem">Please select a device.</string>
+    <string name="noListItem">Please wait. Searching for sensors…</string>
+    <string name="title_activity_nfc">Read and write settings</string>
+    <string name="settings">Settings:</string>
+    <string name="dialog_ok_message">Einstellungen wurden erfolgreich übertragen.</string>
+    <string name="dialog_ok_title">Erfolg!</string>
+    <string name="dialog_err_message">Zeitüberschreitung. Bitte versuchen Sie es noch einmal…</string>
+    <string name="dialog_err_title">Fehler!</string>
+    <string name="ok">OK</string>
+
+</resources>

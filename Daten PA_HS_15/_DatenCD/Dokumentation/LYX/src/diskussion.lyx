@@ -1,0 +1,152 @@
+#LyX 2.1 created this file. For more info see http://www.lyx.org/
+\lyxformat 474
+\begin_document
+\begin_header
+\textclass memoir
+\use_default_options false
+\maintain_unincluded_children false
+\language ngerman
+\language_package none
+\inputencoding auto
+\fontencoding default
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_math auto
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 0
+\use_package cancel 0
+\use_package esint 1
+\use_package mathdots 0
+\use_package mathtools 0
+\use_package mhchem 0
+\use_package stackrel 0
+\use_package stmaryrd 0
+\use_package undertilde 0
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language german
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Chapter
+Diskussion und Ausblick
+\end_layout
+
+\begin_layout Standard
+Das Ziel der Aufgabenstellung wurde von unserer Sichtweise erreicht und
+ es wurde bewiesen, dass es möglich ist, einen Geschwindigkeitssensor an
+ einem Fahrrad mittels Energy Harvesting zu entwerfen.
+\end_layout
+
+\begin_layout Standard
+Das erreichen des Zieles war nicht einfach und auch nicht immer klar ersichtlich.
+ Da die Software für den TI-SensorTag und die Konfiguration des EM8500 parallel
+ entwickelt wurden, mussten immer wieder Parameter verändert und neue Berechnung
+en gemacht werden.
+ Das machte die Arbeit zwar sehr interessant, war aber nicht so vorgesehen.
+ Es ist ein wenig enttäuschend, dass der TI-SensorTag nicht wie gewünscht
+ mit dem 1.
+ Lösungsansatz, mit dem Pin Wake-Up aus dem Standby Modus, geweckt werden
+ konnte.
+ Dadurch wäre der Energieverbrauch des Sensors sehr viel kleiner.
+ Der Energieverbrauch mit der aktuellen Software ist leider nicht wirklich
+ eine Low Energy Anwendung, trotzdem konnte aber ein funktionierender, batteriel
+oser Geschwindigkeitssensor entwickelt werden.
+\end_layout
+
+\begin_layout Standard
+Allgemein ist die Verwendung der Energiemodi des TI-SensorTags sehr kompliziert
+ zu programmieren, ebenfalls sind die Einstellungen für gewisse Register
+ im EM8500 Chip noch nicht ganz ausgereift.
+ Zu Beginn der Arbeit dachten wir, dass die Software und die Konfiguration
+ für die beiden Chips eher einen kleinen Teil der Arbeit ausmachen würden.
+ Jetzt am Schluss müssen wir jedoch eingestehen, dass genau diese zwei Teile
+ die meiste Zeit in Anspruch genommen haben.
+ Wir wollten uns eigentlich mehr auf die harvesting Hardware konzentrieren,
+ um diese möglichst effizient zu designen.
+ Dies ist uns leider nicht ganz gelungen.
+ Trotzdem sind wir mit den erreichten Ergebnissen sehr zufrieden, da wir
+ die Probleme genau lokalisieren konnten.
+\end_layout
+
+\begin_layout Standard
+Ein weiterer Ausblick ist, das gesamte System so kompakt wie möglich zu
+ designen.
+ Somit besteht die Möglichkeit ein schützendes Gehäuse zu konstruieren,
+ welches mit einer einfachen Mechanik - zum Beispiel einer Schnappvorrichtung
+ - an den Rahmen des Farhrades angebracht werden könnte.
+ Zusätzlich müsste man auch den Magneten schützen.
+ Die Neodym Magnete sind nicht rostfrei und für eine Anwendung im Freien
+ ohne Gummischutz nicht gedacht.
+ Solche Magnete sind auf dem Markt zu ersteigern.
+ Siehe Datenblatt Topfmagnet mit Innengewinde und Gummischutz ITNG16 unter
+ Anhang 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "chap:Datenblätter"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+In einer weiterführenden Arbeit müssen die erwähnten Probleme sicherlich
+ nochmals überdacht werden.
+\end_layout
+
+\begin_layout Standard
+Zur Zeitplanung im Anhang ist noch etwas anzumerken: die Zeitplanung beinhaltet
+ die Evaluierung aller Bauteile und das Designen einer eigenen Elektronikplatine
+ mit allen Bauteilen, da zu Beginn der Projektarbeit noch nicht klar war,
+ dass der TI-SenroTag und der EM8500 verwendet werden sollen.
+ Deshalb ist dieser Zeitplan nicht mehr aussagekräftig.
+ Das Zeitmanagemet hatten wir aber trotzdem gut im Griff.
+ Ebenfalls funktionierte die Zusammenarbeit zwischen uns als Team sehr gut.
+ Wir konnten die wichtigsten Erkentnisse zusammen erarbeiten und die weiterführe
+nden Arbeiten aufteilen.
+\end_layout
+
+\end_body
+\end_document

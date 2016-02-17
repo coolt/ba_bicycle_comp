@@ -1,0 +1,6354 @@
+#LyX 2.1 created this file. For more info see http://www.lyx.org/
+\lyxformat 474
+\begin_document
+\begin_header
+\textclass memoir
+\use_default_options false
+\maintain_unincluded_children false
+\language ngerman
+\language_package none
+\inputencoding auto
+\fontencoding default
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_math auto
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 0
+\use_package cancel 0
+\use_package esint 1
+\use_package mathdots 0
+\use_package mathtools 0
+\use_package mhchem 0
+\use_package stackrel 0
+\use_package stmaryrd 0
+\use_package undertilde 0
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language german
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Chapter
+Vorgehen
+\end_layout
+
+\begin_layout Section
+Harvesting Quelle und Hardware
+\end_layout
+
+\begin_layout Subsection
+Grundüberlegungen
+\end_layout
+
+\begin_layout Standard
+Die Hardware soll so ausgelegt werden, dass sie die benötigte Energie als
+ Harvester erzeugt und aus einer Wechselspannung eine Gleichspannung richtet,
+ da der Power Management Chip nur mit einer Gleichspannung betrieben werden
+ kann (siehe Kapitel 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Power-Management"
+
+\end_inset
+
+).
+ Durch den Power Management Chip sind die Spannungswerte eingeschränkt und
+ dürfen nicht überschritten werden.
+ Weiter ist zu beachten, dass die Anziehungskraft des Magneten auf den Eisenkern
+ in der Spule so gering wie möglich gehalten wird, da sonst eine unnötige
+ Bremswirkung entsteht.
+ Da der Puls - in Form einer induzierten Spannung in der Spule - gleichgerichtet
+ werden muss und somit in der Spannungskennlinie verschwindet, muss eine
+ Lösung gefunden werden, diesen Puls zu registrieren.
+ Denn dieser Puls wird schlussendlich benötigt, um die Umlaufzeit des Magneten
+ und somit die eigentliche Fahrgeschwindigkeit zu detektieren.
+ Zusammengefasst gelten folgende Punkte für die Hardware:
+\end_layout
+
+\begin_layout Itemize
+Gleichrichten der induzierten Spannung
+\end_layout
+
+\begin_layout Itemize
+Erzeugte Spannung einschränken
+\end_layout
+
+\begin_layout Itemize
+Pulsdetektion
+\end_layout
+
+\begin_layout Itemize
+keine Bremswirkung
+\end_layout
+
+\begin_layout Subsection
+Experimente und Vorgehen
+\end_layout
+
+\begin_layout Standard
+Um den Anforderungen der Hardware gerecht zu werden, wird methodisch schrittweis
+e vorgegangen:
+\end_layout
+
+\begin_layout Enumerate
+Spannung erzeugen mittels Magnet und Spule.
+ Es stellt sich die Frage, wie viel Spannung ist möglich, wie verhalten
+ sich unterschiedliche Spulen und Magnete?
+\end_layout
+
+\begin_layout Enumerate
+Erzeugte Spannung in Form einer Wechselspannung gleichrichten.
+ Was für Gleichrichterschaltungen kommen in Frage und was für konstante
+ Spannungswerte sind zu erreichen?
+\end_layout
+
+\begin_layout Enumerate
+Gleichspannung begrenzen um Power Management Chip vor Überspannung zu schützen.
+\end_layout
+
+\begin_layout Enumerate
+Puls detektieren.
+\end_layout
+
+\begin_layout Standard
+Alle Experimente und Messungen werden mit folgenden Messgeräten durchgeführt:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="4" columns="3">
+<features rotate="0" tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Messgerät
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Bezeichnung
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Serien Nummer
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Multimeter
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+MASTECK PM334
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+20060226639
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Oszilloskop
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Tektronix MDO 3014
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+C021219
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+DC Power Analyzer
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Agilent N6705B
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+My50000795
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Verwendete Messgeräte
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Damit die Experimente auch der Realität entsprechen, wird bereits während
+ der Entwicklung ein Fahrrad gebraucht, welches auf dem Kopf stehend von
+ Hand an den Pedalen betrieben wird.
+ Das verwendete Fahrrad ist von der Marke EUROTEAM, das Modell 
+\begin_inset Quotes gld
+\end_inset
+
+Rocky
+\begin_inset Quotes grd
+\end_inset
+
+.
+ Es wird im Folgenden oft das Wort Geschwindigkeit verwendet.
+ Mit Geschwindigkeit wird die Geschwindigkeit, welche das Fahrrad auf der
+ Strasse hätte, gemeint.
+ Diese berechnet sich über den Raddurchmesser oder den Umfang (welcher aus
+ dem Raddurchmesser berechnet werden kann) des Rades und der Umlaufzeit
+ des Rades:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+Geschwindigkeit\;v=\frac{Radumfang\,[m]}{Umlaufzeit\,[s]}\label{eq:Berechnung Geschwindigkeit}
+\end{equation}
+
+\end_inset
+
+Der Umfang des verwendeten Rades misst 2.04 m.
+ Der Durchmesser beträgt 65 cm.
+ Die Umlaufzeit wird jeweils mit dem Oszilloskop anhand der Spannungsspitzen
+ gemessen.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+Für Simulationen wird die Gratis-Software von Linear Technologies LTSpice
+ IV verwendet.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+Für die Versuche werden Topfmagnete mit Gewindezapfen mit verschiedenen
+ Durchmessern von Supermagnete.ch
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+http://www.supermagnete.ch
+\end_layout
+
+\end_inset
+
+ verwendet.
+ Diese entsprechen gemäss Kapitel 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:Magnet"
+
+\end_inset
+
+ den Anforderungen und sind an der Fahrradspeiche gut montierbar.
+ Die genaue Modellbezeichnung ist GTN-16 und GTN-25 (16/25 mm Durchmesser).
+ Die Datenblätter sind in 
+\color black
+Anhang
+\color red
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "chap:Datenblätter"
+
+\end_inset
+
+
+\color inherit
+ zu finden.
+ In 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Verwendete Magnete"
+
+\end_inset
+
+ ist das Modell GTN-16 und die Polarität der Magnete zu sehen.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename ../picture/Topfmagnet.jpg
+	lyxscale 30
+	width 35text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Ansicht vom Magneten GTN-16
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset space \hfill{}
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename ../picture/Topfmagnet_Polarität.png
+	lyxscale 30
+	width 35text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Polarität der Topfmagnete
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Verwendete Magnete 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "BilderMagnete"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Verwendete Magnete"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Spannungserzeugung mittels Induktion durch Magnet
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Versuchsdurchführung:
+\series default
+ 
+\begin_inset Newline newline
+\end_inset
+
+Verschiedene Versuche sind in folgender Tabelle 
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "tab:Versuchsresultate induzierte Spannung"
+
+\end_inset
+
+ festgehalten.
+ Ziel ist es, festzustellen, wie sich die induzierte Spannung bei unterschiedlic
+hen Spulen und Magneten verhält.
+ Bei der Versuchsdurchführung wird der Magnet an die Speiche des Fahrrades
+ montiert und die Spule, jeweils mit minimalem Abstand zum Magneten, an
+ den Rahmen.
+ An den beiden Polen der Spule folgt die Spannungsmessung mittels Oszilloskop.
+ Es wird mit einer konstanten Umlaufgeschwindigkeit des Magneten experimentiert,
+ damit die verschiedenen Versuche vergleichbar sind.
+ Es werden gekaufte und selbst gewickelte Spulen ausgetestet.
+\begin_inset Newline newline
+\end_inset
+
+Für eine Umdrehung des Rades werden
+\color red
+ 
+\color black
+für folgende Versuche 5 Sekunden
+\color inherit
+ beansprucht.
+ Das Verhältnis vom Durchmesser vom Magneten zum Umlaufweg für eine Umdrehung
+ entspricht 1:98, wie in Gleichung 
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "eq:Berechnung Verhältnis Weg/Durchmesser"
+
+\end_inset
+
+ hergeleitet wird.
+ Somit lässt sich eine Zeit 
+\color black
+deltaT
+\color inherit
+ berechnen
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+deltaT=\frac{5s}{98}=0.05s\label{eq:Berechnung deltaT}
+\end{equation}
+
+\end_inset
+
+wobei der Abstand vom Radmittelpunkt zum Magneten 
+\begin_inset Formula $r=0.25\,m$
+\end_inset
+
+ beträgt und sich somit das Verhältnis berechnen lässt:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\frac{Umlaufweg\,Magnet}{Durchmesser\,Magnet}=\frac{2\cdot\pi\cdot0.25}{0.016}=98.17\label{eq:Berechnung Verhältnis Weg/Durchmesser}
+\end{equation}
+
+\end_inset
+
+Der Unterschied des Durchmessers zum grossen Magneten wurde vernachlässigt
+ - da die Differenz 0.003 m ist - und somit auch nicht exakt einstellbar
+ ist.
+ Der Remanenzwert des Magneten ist bestimmt durch die Magnetisierungs-Güte;
+ bei den hier eingesetzten Magneten N42.
+ Diese Güte wird dem Datenblatt des Magneten
+\color black
+ Anhang
+\color red
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "chap:Datenblätter"
+
+\end_inset
+
+ 
+\color inherit
+des Hersteller entnommen und dann mittels der Tabelle
+\color red
+ 
+\color inherit
+Eigenschaften der Neodym Magnete in Anhang 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "chap:Eigenschaften Neodym Magnete"
+
+\end_inset
+
+ die Flussdichte abgeleitet.
+\begin_inset Newline newline
+\end_inset
+
+Nachfolgend der Versuchsaufbau mit (1) Magnete, (2) Spule und (3) Anschluss
+ Messgerät.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename ../picture/Versuchsaufbau Induzierte Spannung in Spule.JPG
+	lyxscale 10
+	scale 10
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Versuchsaufbau zum Messen der induzierten Spannung in der Spule
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Versuchsaufbau zum Messen der induzierten Spannung in der Spule"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\series bold
+Versuchsresultate:
+\series default
+ 
+\begin_inset Newline newline
+\end_inset
+
+Die Resultate sind in der Tabelle 
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "tab:Versuchsresultate induzierte Spannung"
+
+\end_inset
+
+ aufgeführt.
+ Dabei gilt:
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+A: eingeschlossene Fläche der Spule
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+n: Anzahl Windungen der Spule
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+E: mit Eisenkern oder ohne
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+B: Remanenz des Magneten
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+A: Fläche des Magneten
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+deltaT: Zeit in der B in der Spule wirkt
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+calc: Berechnete induzierte Spannung gemäss Gleichung 
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "eq:Induzierte Spannung (B senkrecht zu A)"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+mess: gemessene Spannungsspitzenwerte
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="11" columns="9">
+<features rotate="0" tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+V
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Spule
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Magnet
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+deltaT
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+U induziert
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+A
+\begin_inset space ~
+\end_inset
+
+[m
+\begin_inset script superscript
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+
+]
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+n
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+E
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+B
+\begin_inset space ~
+\end_inset
+
+[T]
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+A
+\begin_inset space ~
+\end_inset
+
+[m
+\begin_inset script superscript
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+
+]
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+[s]
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+calc
+\begin_inset space ~
+\end_inset
+
+[V]
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+mess
+\begin_inset space ~
+\end_inset
+
+[V]
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.8e-4
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+60
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+ja
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2.01e-4
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.05
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.28
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.10
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.8e-4
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+60
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+ja
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+4.91e-4
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.05
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.28
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.10
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2.5e-4
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+20
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+nein
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2.01e-4
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.05
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.10
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.05
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+4
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.8e-4
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+120
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+ja
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2.01e-4
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.05
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.56
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.20
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+5
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+6.0e-4
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+300
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+ja
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2.01e-4
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.05
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+4.68
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.80
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+6
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+6.0e-4
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+300
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+nein
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2.01e-4
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.05
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+4.68
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.50
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+7
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+6.0e-4
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+300
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+ja
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+4.91e-4
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.05
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+4.68
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+4.10
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+8
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+6.0e-4
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+300
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+nein
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+4.91e-4
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.05
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+4.68
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3.50
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+9
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2.1e-4
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+281
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+ja
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2.01e-4
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.05
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.53
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.40
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Versuchsresultate induzierte Spannung in verschiedenen Spulen mit verschiedenen
+ Magnetgrössen
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:Versuchsresultate induzierte Spannung"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\series bold
+Versuchsauswertung:
+\series default
+ 
+\begin_inset Newline newline
+\end_inset
+
+In den Versuchen 1 und 2 wird dieselbe selbst gewickelte Spule verwendet,
+ aber jeweils ein anderer Magnet.
+ Die beiden Magnete unterscheiden sich nur in der Grösse.
+ Die gemessenen Spannungsspitzenwerte sind exakt gleich, aber sehr tief.
+ Daraus folgt, dass die Fläche des Magneten keinen Einfluss mehr hat, wenn
+ die Fläche der Spule überschritten wird.
+ Bei Versuch 4 wird die Anzahl Windungen der Spule aus Versuch 1 und 2 verdoppel
+t.
+ Das Resultat zeigt eine Übereinstimmung mit der Berechnung: die induzierte
+ Spannung hat sich leicht erhöht und steigt von 0.15 V auf 0.20 V.
+ Wird die Anzahl Windungen verkleinert und die Fläche erhöht, wie in Versuch
+ 3, zeigt das gemessene Resultat einen deutlichen Abfall der Spannungsspitze.
+ Auch das Verzichten auf einen Eisenkern wird zu diesem schlechten Resultat
+ beitragen.
+ 
+\begin_inset Newline newline
+\end_inset
+
+In den Versuchen 5 bis 8 wird eine deutlich grössere Spule verwendet.
+ Die hier verwendete Spule ist in 
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "fig:Versuchsaufbau zum Messen der induzierten Spannung in der Spule"
+
+\end_inset
+
+ ersichtlich.
+ In den ersten beiden Versuchen - 5 und 6 - wird der kleine Magnet verwendet,
+ die Spule jeweils einmal mit und ohne Eisenkern.
+ Die 
+\color black
+gemessene Spannung ist mit Eisenkern höher.
+ Beide Resultate stimmen jedoch bei Weitem nicht mit den Berechnungen überein.
+ Eine mögliche Ursache dafür könnten die Grössen-Verhältnisse der Flächen
+ sein.
+ Deshalb hat man die beiden Versuche mit einem grösseren Magneten wiederholt.
+ Das Resultat in Versuch 7 und 8 ist eindeutig und zeigt, dass im Idealfall
+ die Spule und der Magnet dieselben Flächen haben sollten.
+\begin_inset Newline newline
+\end_inset
+
+Da die Anforderungen einen möglichst kleinen Magneten verlangen, wird ein
+ weiterer Versuch mit einer Spule, die möglichst dieselbe Fläche hat, durchgefüh
+rt.
+ Das Resultat aus Versuch 9 mit 0.4 V ist sehr gut, da die Umlaufgeschwindigkeit
+ des Rades doch sehr langsam ist.
+ Dies soll folgende Rechnung kurz verdeutlichen:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+v=\frac{s}{t}=\frac{2\cdot r\cdot\pi}{t}=\frac{2\cdot0.25\,m\cdot\pi}{5\,s}=0.31\,m/s=1.13\,km/h\label{eq:Berechnung Versuchsgeschwindigkeit Magnet}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+Die Spule aus Versuch 9 kommt vom Hersteller PREMO
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+https://www.grupopremo.com
+\end_layout
+
+\end_inset
+
+ und hat die Bezeichnung 3015N-0238J 32/06.
+ Die Spule ist eigentlich für RFID-Anwendungen gedacht und hat deshalb drei
+ Wicklungen in die x-, y- und z-Ebene.
+ Für die Hauptanwendung wird die z-Wicklung verwendet.
+ Mit dieser Spule sollen weitere Versuche durchgeführt werden, um zu klären,
+ ob sie geeignet ist und die für den Power Management Chip geforderte Spannung
+ liefert.
+ Das Datenblatt zur Spule ist im 
+\color black
+Anhang 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "chap:Datenblätter"
+
+\end_inset
+
+
+\color red
+ 
+\color inherit
+hinterlegt.
+\end_layout
+
+\begin_layout Subsection
+Spannungskennlinie der Spule PREMO 3015N-0238J 32/06
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Versuchsdurchführung:
+\series default
+ 
+\begin_inset Newline newline
+\end_inset
+
+Die Spule wird wieder mit möglichst geringem Abstand zum Magneten an den
+ Rahmen des Fahrrades befestigt.
+ Der Abstand zum Radmittelpunkt soll 0.25 m, also möglichst weit aussen am
+ Rad sein, damit die Geschwindigkeit v des Magneten möglichst hoch wird.
+ Es werden nun mit verschiedenen Geschwindigkeiten von 5 km/h bis 50 km/h
+ die Spannungsspitzen gemessen und aufgezeichnet.
+ Für diese Messungen ist die Spule unbelastet.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\series bold
+Versuchsresultate:
+\begin_inset Newline newline
+\end_inset
+
+
+\series default
+Die nachfolgende 
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "fig:Spannungsverlauf Magnetdurchlauf der Spule PREMO"
+
+\end_inset
+
+ zeigt den Spannungsverlauf eines Magnetdurchlaufes.
+ Bei höheren Geschwindigkeiten des Magneten ist die induzierte Spannung
+ höher, jedoch die Zeit des Impulses kürzer.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../picture/Spannungsverlauf eines Magnetdurchlauf an PREMO Spule.png
+	lyxscale 50
+	width 70text%
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Spannungsverlauf an der Spule PREMO bei Magnetdurchlauf
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Spannungsverlauf Magnetdurchlauf der Spule PREMO"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Die einzelnen Messergebnisse sind im
+\color black
+ Anhang
+\color red
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "chap:Matlab-File"
+
+\end_inset
+
+
+\color black
+ e
+\color inherit
+inzusehen.
+ Daraus wird die Kennlinie erzeugt, die in 
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "fig:Spannungskennlinie Spule PREMO"
+
+\end_inset
+
+ zu sehen ist.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename ../picture/Spannungskennlinie Spule PREMO.jpg
+	lyxscale 50
+	width 70text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Spannungskennlinie der induzierten Spannung in der Spule PREMO
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Spannungskennlinie Spule PREMO"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\series bold
+Versuchsauswertung:
+\series default
+ 
+\end_layout
+
+\begin_layout Standard
+\noindent
+Die 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Spannungsverlauf Magnetdurchlauf der Spule PREMO"
+
+\end_inset
+
+ zeigt den erwarteten Spannungsverlauf der induzierten Spannung in der Spule.
+ Die identischen Spannungsspitzen (positiv und negativ) zeigen, dass die
+ Spule gut ausgerichtet ist und der Magnet ideal auf die Spule wirken kann.
+ Die Spannungskennlinie in 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Spannungskennlinie Spule PREMO"
+
+\end_inset
+
+ zeigt einen linearen Verlauf.
+ Dies bestätigt sich, wenn man den Einfluss von deltaT auf die induzierte
+ Spannung analysiert.
+ Denn in der Formel 
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "eq:Induzierte Spannung (B senkrecht zu A)"
+
+\end_inset
+
+ hat deltaT mit Potenz 1 einen linearen Einfluss.
+ Weiter stellt man fest, dass die Spannung auch sehr hohe Werte erreichen
+ kann und bei einer mittleren Geschwindigkeit von 25 km/h in etwa 3 V annimmt.
+ Mit dem Vorwissen, dass durch Gleichrichten der Spannung und durch Belasten
+ der Spule noch Verluste abfallen werden, ist dies ein Resultat, mit welchem
+ man weiter fortfahren kann.
+ Es gilt nun in einem weiteren Schritt, die resultiernde Wechselspannung
+ in eine Gleichspannung zu richten und diese auch zu begrenzen.
+\end_layout
+
+\begin_layout Subsection
+Gleichrichten der Wechselspannung
+\end_layout
+
+\begin_layout Standard
+Es gilt nun die erreichte induzierte Wechselspannung für den Power Management
+ Chip gleichzurichten.
+ Dafür stellen sich verschiedene Möglichkeiten zur Verfügung.
+ In dieser Arbeit werden zwei Varianten getestet.
+ Zum einen soll eine Spannungsvervielfachung und zum anderen eine Gleichrichtung
+ mit Dioden getestet werden.
+ Nachfolgend soll kurz mit ein paar entscheidenden Punkten erläutert werden,
+ aus welchen Gründen man sich dafür entschieden hat.
+\end_layout
+
+\begin_layout Itemize
+Ein Transformator hat höhere Verluste gegenüber einer Gleichrichtung mit
+ Dioden.
+\end_layout
+
+\begin_layout Itemize
+Es gibt die Möglichkeit, eine Gleichrichtung mittels einem CMOS-Gleichrichter
+ auszuführen, damit keine Diodenverluste entstehen.
+ Diese Gleichrichter existieren aber noch nicht auf dem Markt.
+ Sie wären ideal, da diese speziell für Harvesting-Anwendungen entwickelt
+ wurden.
+ Siehe Anhang 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "chap:Datenblätter"
+
+\end_inset
+
+ CMOS Gleichrichter.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Simulation Multiplexerschaltung:
+\series default
+ 
+\begin_inset Newline newline
+\end_inset
+
+Die Idee ist, mittels einer kleinen Spule - was eine kleine induzierte Spannung
+ bedeutet - die Spannung zu vervielfachen.
+ Dies soll mit einer Villardschaltung umgesetzt werden.
+ Zuerst wird die Schaltung mit einer Simulation getestet.
+ Dabei wird die induzierte Spannung mit einem Sinus simuliert.
+ In den zwei nachfolgenden Abbildungen sind zwei Simulationen zu sehen.
+ Die erste simuliert eine induzierte Spannung von 0.5 V, die zweite 2.0 V.
+ Es wird eine 2-Stufen Villardschaltung eingesetz
+\color black
+t 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "VillardSchaltung"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../picture/Simulation Villar(2Stufen) Eingang 0.5V.png
+	lyxscale 35
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Villardschaltung (2 Stufen), Eingang 0.5 V, sinus
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Villardschaltung (2Stufen) Eingang 0.5V"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../picture/Simulation Villar(2Stufen) Eingang 2V.png
+	lyxscale 35
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Villardschaltung (2 Stufen), Eingang 2.0 V, sinus
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Villardschaltung (2Stufen) Eingang 2.0V"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Es ist deutlich zu sehen, dass bei einer Eingangsspannung von 0.5 V keine
+ brauchbare Ausgangsspannung entsteht.
+ Bei 2 V ist eine Vervielfachung der Spannung zu sehen.
+ Der Effekt ist auf die Dioden zurückzuführen, welche eine mindesteingangsspannu
+ng von 0.7 V verlangen, damit sie leiten.
+ Da beim Harvesting Spannungen erzeugt werden, welche auch unter 0.7 V sind,
+ ist diese Methode nicht brauchbar.
+\begin_inset Newline newline
+\end_inset
+
+
+\series bold
+
+\begin_inset Newline newline
+\end_inset
+
+Versuch Gleichrichtung mittels Dioden:
+\series default
+
+\begin_inset Newline newline
+\end_inset
+
+Es gibt verschiedene Gleichrichterschaltungen mit Dioden.
+ Der Einweggleichrichter verliert die negative Halbwelle der Wechselspannung
+ und ist somit für diese Anwendung nicht interessant.
+ Der nachfolgende erste Versuch soll mit einer Brückenschaltung realisiert
+ werden.
+\begin_inset Newline newline
+\end_inset
+
+ 
+\begin_inset Newline newline
+\end_inset
+
+
+\series bold
+Simulation Brückenschaltung:
+\series default
+
+\begin_inset Newline newline
+\end_inset
+
+In einem ersten Schritt soll getestet werden, ob eine Brückenschaltung auch
+ bei kleinen Spannungen funktioniert.
+ Die 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Simulation Brückenschaltung Eingang 0.5V"
+
+\end_inset
+
+ zeigt bei einer Sinus-Eingangsspannung mit Spitzenwert 0.5 V (grüne Kurve),
+ dass am Ausgang (blaue Kurve) eine brauchbare Spannung erzielt wird.
+ Die negative Halbwelle wird dabei wie gewünscht zu einer positiven Welle
+ transformiert (Bemerkung: da gegenüber Ground gemessen wird, ist die negative
+ Halbwelle der grünen Kurven - der Eingangsspannung - nicht voll ausgeprägt).
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../picture/Simulation Brückenschaltung 0.5V.png
+	lyxscale 35
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Simulation Brückenschaltung mit Eingang 0.5 V
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Simulation Brückenschaltung Eingang 0.5V"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Die Verluste - Differenz zwischen grüner und blauer Kurve - bleiben gering
+ und somit ist diese Schaltung eine mögliche Lösung.
+ Um nun eine Gleichspannung zu erzielen, soll die Schaltung mit Kondensatoren
+ erweitert werden, damit die erzeugte Energie gespeichert wird.
+ Zusätzlich werden die Dioden durch Schottky-Dioden ersetzt, um die Verluste
+ weiter zu reduzieren.
+ Normale Dioden haben einen Spannungsabfall von 0.7 V, wohingegen Schottky-Didoen
+ nur einen Spannungsabfall von 0.3 V haben.
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Simulation Brückenschaltung mit Kondensator Eingang 0.5V"
+
+\end_inset
+
+ zeigt am Ausgang die erwartete Gleichspannung.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename ../picture/Simulation Brückenschaltung mit Kondensator 0.5V.png
+	lyxscale 30
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Simulation Brückengleichrichter mit Kondensator, Eingang 0.5 V
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Simulation Brückenschaltung mit Kondensator Eingang 0.5V"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Da die Spannung bezüglich des Power Management Chips auf höchstens 2 V begrenzt
+ werden muss, wird in einer weiteren Simulation die Schaltung mit Dioden
+ so ausgelegt, dass eine maximale Spannung von 2 V (maximaler DC Eingangspegel
+ des Power Management Chips) nicht überschritten wird.
+ Dabei werden drei normale Dioden in Serie geschaltet und somit wird unter
+ irrealen Bedingungen (d.h.
+ mit idealen Voraussetzungen)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+3\cdot0.7\,V=2.1\,V\label{eq:Maximale Spannung durch Dioden-Serie-Schaltung}
+\end{equation}
+
+\end_inset
+
+am Ausgang erwartet.
+ Da die Schaltung später unter Last steht, werden diese 2.1 V nicht erreicht.
+ In 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Simulation Brückenschaltung mit Kondensator und Begrenzung Eingang 6V"
+
+\end_inset
+
+ wird die Schaltung simuliert.
+ Bei einer Eingangsspannung von 6 V wird die Ausgangsspannung wie erwünscht
+ begrenzt.
+ Anzumerken ist, dass die Simulation eine Spannung von 2.7 V zeigt.
+ Dies ist unter realen Bedingungen mit einer Last nicht zu erwarten und
+ soll mit einem realen Versuch gezeigt werden.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+w
+\begin_inset Graphics
+	filename ../picture/Simulation Brückenschaltung mit Kondensator und Begrenzung 6V.png
+	lyxscale 35
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Simulation Brückengleichrichter mit Kondensator und Begrenzung, Eingang
+ 6 V
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Simulation Brückenschaltung mit Kondensator und Begrenzung Eingang 6V"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\series bold
+Versuchsdurchführung:
+\series default
+
+\begin_inset Newline newline
+\end_inset
+
+Die Schaltung wird nun gemäss Simulation (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Simulation Brückenschaltung mit Kondensator und Begrenzung Eingang 6V"
+
+\end_inset
+
+) aufgebaut und soll unter verschiedenen Bedingungen ausgewertet werden.
+ Für das Experiment werden folgende Komponenten eingesetzt (inklusive Bauteile
+ für die Schaltung):
+\end_layout
+
+\begin_layout Itemize
+Spule PREMO 3015N-0238J 32/06 (1)
+\end_layout
+
+\begin_layout Itemize
+4 Schottky Barrier Rectifier Dioden 1N5819 (2)
+\end_layout
+
+\begin_layout Itemize
+3 Switching Dioden CDSV4148-G (3)
+\end_layout
+
+\begin_layout Itemize
+1 CS0470/25 Capacitor 470uF 25V (4)
+\end_layout
+
+\begin_layout Standard
+Die Datenblätter zu den Halbleitern findet man im Anhang 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "chap:Datenblätter"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../picture/Versuchsaufbau Hardware.JPG
+	lyxscale 15
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Versuchsaufbau der Hardware mit den bisherigen Simulationen
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Versuchsaufbau Hardware"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Das Ziel besteht nun darin, die Hardware unter verschiedenen Bedingungen
+ zu testen und Resultate zu erzielen.
+ Aus den Resultaten soll dann eine Aussage gemacht werden können, ob die
+ Hardware als Harvester-Komponente geeignet ist.
+ Die folgenden Punkte sollen abgeklärt werden:
+\end_layout
+
+\begin_layout Enumerate
+Ist die Ausgangsspannung eine geeignete Gleichspannung?
+\end_layout
+
+\begin_layout Enumerate
+Wie hoch ist die maximale Spannung am Ausgang? Kann diese wie gewünscht
+ begrenzt werden?
+\end_layout
+
+\begin_layout Enumerate
+Was für Spannungen werden bei unterschiedlichen Geschwindigkeiten erzielt?
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Versuchsresultate:
+\series default
+
+\begin_inset Newline newline
+\end_inset
+
+Die nachfolgende 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Spannungsverlauf Hardware"
+
+\end_inset
+
+ zeigt den Verlauf der Spannung am Eingang (Gelb) und am Ausgang (Grün)
+ der Hardware.
+ Da gegenüber Ground gemessen wird, ist die negative Halbwelle am Eingang
+ nicht vollständig zu sehen.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../picture/Spannungsverlauf Hardware V1.png
+	lyxscale 60
+	width 100text%
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Spannungsverlauf Hardware, induzierte Spannung am Eingang (Gelb), Ausgang
+ am Kondensator (Grün)
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Spannungsverlauf Hardware"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Die einzelnen gesessenen Resultate sind in der Tabelle 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:Versuchsresultate Hardware"
+
+\end_inset
+
+ aufgeführt und als Kennlinie in 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Spannungskennlinie Hardware"
+
+\end_inset
+
+ dargestellt.
+ Damit der Kondensator sich wieder entladen kann - um auch an realen Bedingungen
+ heran zu kommen - wird eine Last von 10 kOhm an den Ausgang angeschlossen.
+ Dabei gilt:
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+deltaT: Zeit zwischen Durchlauf des Magneten.
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+v: Geschwindigkeit des Fahrrades.
+ Berechnet mit 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:Berechnung Geschwindigkeit"
+
+\end_inset
+
+ mit t = deltaT.
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+Umin: Gemessene minimale Spannung am Kondensator.
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+Umax: Gemessene maximale Spannung am Kondensator.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="4" columns="9">
+<features rotate="0" tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+v [km/h]
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+4.97
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+8.84
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+15.58
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+20.00
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+30.08
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+35.34
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+44.53
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+67.32
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+deltaT [s]
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.137
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.640
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.363
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.283
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.188
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.160
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.127
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.084
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Umax [V]
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.108
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.300
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.560
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.740
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.080
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.280
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.520
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.870
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Umin [V]
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.080
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.240
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.480
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.660
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.000
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.240
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.420
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.730
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Versuchsresultate Hardware
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:Versuchsresultate Hardware"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../picture/Spannungskennlinie Hardware.jpg
+	lyxscale 50
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Spannungskennlinie Hardware
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Spannungskennlinie Hardware"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Die nachfolgende Abbildung zeigt, wie gemessen wird und stellt zugleich
+ den letzten Spalteneintrag in Tabelle 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:Versuchsresultate Hardware"
+
+\end_inset
+
+ dar.
+ Hier wurde die höchstmögliche Geschwindigkeit erzeugt, um ein Resultat
+ zu erhalten, bezüglich der Begrenzung durch die Dioden-Serie-Schaltung.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../picture/Versuch Hardware Umax.png
+	lyxscale 60
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Maximale Spannung bei maximaler Geschwindigkeit
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Hardware:Maximale Spannung bei maximaler Geschwindigkeit"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\series bold
+Versuchsauswertung:
+\series default
+
+\begin_inset Newline newline
+\end_inset
+
+Die Resultate zeigen, dass eine Gleichspannung erzielt werden kann.
+ Diese erreicht einen Spitzenwert von 1.87 V DC bei einer Geschwindigkeit
+ von 67.32 km/h.
+ Eine höhere Geschwindigkeit ist von Hand schwer zu erreichen, jedoch sollten
+ 67.32 km/h für einen Maximalwert ausreichen.
+ Wie zuvor in 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:Maximale Spannung durch Dioden-Serie-Schaltung"
+
+\end_inset
+
+ berechnet, sollte der Spitzenwert bei 2.1 V DC erreicht werden.
+ Im Vergleich zur Messung beträgt der Unterschied 0.23 V DC.
+ Diese Differenz ist akzeptabel und ist durch die realen Bedingungen zu
+ erwarten.
+ Da der Power Management Chip eine maximale Spannung von 2 V DC vorgibt,
+ ist die Hardware sehr gut ausgelegt.
+ Insgesamt erreicht die Hardware die Voraussetzungen und soll nun im gesamten
+ System getestet werden.
+\begin_inset Newline newline
+\end_inset
+
+Bemerkung: Die eben ausgeführten Messungen und weitere sind im 
+\color black
+Anhang 
+\color red
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "chap:Matlab-File"
+
+\end_inset
+
+
+\color inherit
+ festgehalten.
+\end_layout
+
+\begin_layout Subsection
+Pulsdetektion
+\end_layout
+
+\begin_layout Standard
+Damit die Magnetumlaufzeit gemessen werden kann, muss der Puls jedes Durchlaufes
+ detektiert werden.
+ Dafür gibt es verschiedene Ansätze, wie diese Detektion aussehen kann.
+ 
+\end_layout
+
+\begin_layout Subsubsection
+\noindent
+
+\series bold
+Versuch Pulsdetektion mit Spule (PREMO)
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\series bold
+Versuchsdurchführung:
+\series default
+
+\begin_inset Newline newline
+\end_inset
+
+Die PREMO-Spule besitzt drei Wicklungen, je eine in jeder Raum-Ebene (x,
+ y, z).
+ Die Wicklung in der z-Ebene wird für die Erzeugung der Betriebsspannung
+ benutzt.
+ Da die induzierte Spannung gleichgerichtet und geglättet wird, kann damit
+ keine Pulsdetektion mehr gemacht werden.
+ Es sollen nun die beiden Wicklungen in der x- und y-Ebene getestet werden.
+\begin_inset Newline newline
+\end_inset
+
+Die Hardware bleibt erhalten und an die z-Spule angeschlossen.
+ Die beiden Anschlüsse der Spule für die beiden anderen Wicklungen sollen
+ nun detektiert werden.
+ Ziel ist es, herauszufinden, ob in diesen Wicklungen eine Induktion entsteht
+ und ob die erzeugte Spannung als Puls genutzt werden kann.
+ Da das Magnetfeld der Spule nicht mehr senkrecht zur Fläche steht, sollten
+ die induzierten Spannungen (in der x- und y-Ebene) geringer ausfallen.
+ 
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\series bold
+Versuchsresultat:
+\series default
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Induzierte Spannung PREMO in allen Wicklungen"
+
+\end_inset
+
+ zeigt die gemessenen induzierten Spannungen.
+ Es gilt:
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+Gelb: Induzierte Spannung in z-Ebene (als Referenz).
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+Blau: Induzierte Spannung in x-Ebene.
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+Rot: Induzierte Spannung in y-Ebene.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../picture/Induzierte Spannung in allen Wicklungen PREMO.png
+	lyxscale 30
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Induzierte Spannungen in der Spule PREMO in allen Wicklungen
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Induzierte Spannung PREMO in allen Wicklungen"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\series bold
+Versuchsauswertung:
+\series default
+
+\begin_inset Newline newline
+\end_inset
+
+Die Messung zeigt eine deutlich geringere Spannung in den beiden Wicklungen,
+ die nicht senkrecht zum Magnetfeld stehen.
+ In einem weiteren Schritt müsste man nun die Spannung gleichrichten oder
+ mit einer Diode die positive Halbwelle filtern, da der Pin am TI-SensorTag
+ eine positive Spannung erwartet.
+ Der TI-SensorTag verlangt aber weiter eine Spannung am Pin von 1.5 bis 2
+ V DC, um diese als einen High-Pegel zu erkennen und somit kann die Spule
+ als Pulsdetektion nicht verwendet werden.
+ Bei Geschwindigkeiten unter 30 km/h wäre keine Detektion möglich.
+\end_layout
+
+\begin_layout Subsubsection
+\noindent
+
+\series bold
+Versuch Pulsdetektion mittels Reed Relay
+\end_layout
+
+\begin_layout Standard
+Eine zweite und einfachere Methode ist die Detektion mittels Reed Relay
+ zu machen.
+ Ein Reed Relay hat zwei Metallkontakte, welche im Vakuum verschweisst sind.
+ Die Metallkontakte haben dabei einen minimalen Abstand zueinander, welcher
+ im mikrometer Bereich ist.
+ Wird das Reed Relay in die Nähe eines magnetischen Feldes betrieben, schliessen
+ sich die Kontakte.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\series bold
+Versuchsdurchführung
+\series default
+:
+\begin_inset Newline newline
+\end_inset
+
+Für den Versuch wird ein Reed Relay von einem gekauften Geschwindigkeitssensor
+ ausgebaut und verwendet, da diese in der Grösse optimiert sind.
+ Aus diesem Grund kann auch kein Typ angegeben werden.
+ Der Kontakt auf der einen Seite des Reed Relay wird an die Speisung angeschloss
+en, die andere Seite wird über einen Widerstand von 100 kOhm auf Ground
+ gesetzt.
+ Am Widerstand wird die Spannung gemessen.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\series bold
+Versuchsresultat:
+\series default
+
+\begin_inset Newline newline
+\end_inset
+
+In 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Reed Relay Schaltvorgang"
+
+\end_inset
+
+ ist im oberen Bildbereich ein Impuls zu zu sehen, wenn der Magnet am Reed
+ Relay vorbeifährt.
+ Im Zoombereich ist die positive Flanke besser sichtbar.
+ Es ist zu sehen, dass der Puls prellen kann.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../picture/ReedRelay_PulseDetection.png
+	lyxscale 30
+	width 100text%
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Reed Relay Schaltvorgang bei Magnetduchlauf
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Reed Relay Schaltvorgang"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Versuchsauswertung:
+\series default
+
+\begin_inset Newline newline
+\end_inset
+
+Die Pulsdetektion mit dem Reed Relay ist sehr einfach aufgebaut und funktioniert
+ in jedem Fall.
+ Das prellen des Pulses muss später in der Software gehandhabt werden.
+ Es wird im Folgenden das Reed Relay für die Pulsdetektion verwendet.
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Schema der realisierten Hardware
+\end_layout
+
+\begin_layout Standard
+Das Schema der entwickelten Harvesting Hardware ist in nachstehender 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Schema der entwickelten Harvesting Hardware"
+
+\end_inset
+
+ zu sehen.
+ Diese wird für die folgenden Versuche verwendet und nicht mehr verändert.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../picture/Schema_Harvesting_Hardware.PNG
+	lyxscale 30
+	width 80text%
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Schema der entwickelten Harvesting Hardware
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Schema der entwickelten Harvesting Hardware"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Power Management
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Power-Management"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Wie bereits in Kapitel 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:Power-Management"
+
+\end_inset
+
+ erwähnt, wird für das Power Management der Chip EM8500 von EM-Microelectronics
+ verwendet.
+ Dieser Chip verspricht eine sehr effiziente Energiespeicherung und -gewinnung
+ von geeigneten Energy Harvesting Quellen im Bereich von μW bis mW.
+ Als geeignete Quellen werden Solarzellen oder Thermoelektrische Generatoren
+ (TEG) vorgeschlagen.
+ Der Chip hat sehr viele Konfigurationsmöglichkeiten, die vorprogrammiert
+ oder während dem Gebrauch über eine serielle Schnittstelle verändert werden
+ können.
+ In dieser Projektarbeit wird die Methode des Vorprogrammierens gewählt,
+ da somit während dem Betrieb keine weitere Peripherie, wie SPI oder I2C
+ vom Microcontroller gebraucht wird und somit wiederum Energie gespart werden
+ kann.
+ 
+\end_layout
+
+\begin_layout Subsection
+Übersicht EM8500
+\end_layout
+
+\begin_layout Standard
+In 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Blockschaltbild EM8500"
+
+\end_inset
+
+ ist das Blockschaltbild des EM8500 zu sehen.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../picture/EM8500_Blockschaltbild.PNG
+	lyxscale 50
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Blockschaltbild EM8500 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "EM8500Blockschaltbild"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Blockschaltbild EM8500"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Der Chip erwartet am Eingang VDD_HRV eine DC Spannung bis maximal 2 V DC.
+ Diese Spannung wird über einen DCDC Converter in ein Short Time Storage
+ (STS), welches ein Kondensator ist, geladen.
+ Der DCDC Converter hat einen Maximum Power Point Controller (MPPT), über
+ welchen eingestellt werden kann, bei welcher Eingangsspannung die maximale
+ Leistung zu erwarten ist.
+ Die Ausgangsspannung für die Applikation ist VSUP, welche einstellbar ist
+ und je nach Spannungslevel vom STS eingeschaltet oder ausgeschaltet ist.
+ Zudem kann auch eine konstante Spannung an VSUP über den ULP LDO eingestellt
+ werden.
+ VAUX[0..2] sind zusätzliche Ausgänge, die bei Bedarf ein- und ausgeschaltet
+ werden können, um zum Beispiel Sensoren einzuschalten.
+ Neben dem STS gibt es auch noch ein Long Term Storage (LTS), welcher die
+ überschüssige Energie, welche nicht mehr im STS gespeichert werden kann,
+ aufnimmt.
+ Der LTS kann ein Super-Capacitor oder ein Akku sein.
+ Daher hat der Chip auch Funktionen um die Akkuspannung zu überwachen und
+ diesen vom DCDC Converter oder von VSUP zu trennen, falls eine maximale
+ oder minimale Spannung am Akku detektiert wird.
+ Der Chip hat viele weitere Funktionen.
+ In dieser Arbeit wird nur auf Funktionen eingegangen, die auch angewendet
+ werden.
+ Informationen über weitere Funktionen können aus dem Datenblatt im 
+\color black
+Anhang 
+\color red
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "chap:Datenblätter"
+
+\end_inset
+
+
+\color inherit
+ genommen werden.
+\end_layout
+
+\begin_layout Subsection
+Funktionsweise
+\end_layout
+
+\begin_layout Standard
+In 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Funktionsweise EM8500"
+
+\end_inset
+
+ ist die Start- und normale Betriebssequenz des EM8500 zu sehen.
+ Dabei sind die Spannungen von STS, LTS und VSUP ersichtlich, welche die
+ Hauptfunktionen des Chips ausmachen.
+ Im Folgenden sind die Sequenzen 1 - 6 erklärt:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement h
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../picture/EM8500_Spannungen.PNG
+	lyxscale 50
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Funktionsweise EM8500 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "EM8500StartUp"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Funktionsweise EM8500"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Der DCDC Converter transferiert Energie von HRV in den STS.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Wenn VSTS grösser ist als V
+\begin_inset script subscript
+
+\begin_layout Plain Layout
+CS_hi
+\end_layout
+
+\end_inset
+
+, ist die Kalt-Start Sequenz beendet und der Chip startet auf.
+ Der DCDC Converter arbeitet nun im Main-Charging Modus, wobei er den MPPT
+ eingeschaltet hat.
+\end_layout
+
+\begin_layout Enumerate
+Wenn VSTS über den Pegel von v_bat_min_hi steigt, wird VSUP mit dem STS
+ verbunden, welcher die Applikation somit speist.
+\end_layout
+
+\begin_layout Enumerate
+Wenn VSTS die maximale Applikationsspannung v_apl_max_lo erreicht, transferiert
+ der DCDC Converter die überschüssige Energie in den LTS.
+ Die Applikation ist weiterhin nur mit dem CSTS gespiesen.
+\end_layout
+
+\begin_layout Enumerate
+Sinkt VSTS unter einen Minimalwert v_bat_min_hi, transferiert der DCDC Converter
+ wieder Energie in der STS.
+\end_layout
+
+\begin_layout Enumerate
+Der Chip bleibt nun in den Sequenzen 4 & 5, bis VLTS über dem Pegel v_bat_min_hi
+ steigt.
+ Dies ist die minimale Spannung um die Applikation zu speisen.
+ Ab diesem Moment sind STS und LTS zusammengeschaltet und beide werden parallel
+ geladen.
+ Ab hier ist der Ausgang BAT_LOW auf '0' gesetzt.
+\end_layout
+
+\begin_layout Standard
+Damit der Chip nicht ständig Ein- und Ausschaltvorgänge regelt, können bei
+ den verschiedenen Spannungspegeln jeweils Hysteresen programmiert werden.
+\end_layout
+
+\begin_layout Subsection
+Vorgehen
+\end_layout
+
+\begin_layout Standard
+Alle Versuche mit dem EM8500 werden mit dem Evaluation Board EMEVB8500 gemacht.
+ Dies ist das einsteigerboard, auf dem bereits ein STS von 100 μF und ein
+ LTS von 0.1 F vorhanden sind.
+ Das Board ist über einen mitgelieferten Programmer vom Computer programmierbar.
+ Wahlweise kann das Board über die Konsole programmiert werden, wobei die
+ Register alle von Hand eingestellt und programmiert werden müssen.
+ Auf der Homepage von EM Microelectronic kann aber auch eine Excel-VBA Datei
+ heruntergeladen werden
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+http://www.emmicroelectronic.com/products/power-management/pmu-dc-energy-harvestin
+g-controller/em8500
+\end_layout
+
+\end_inset
+
+, indem alle Einstellungen gemacht und diese auf das Board programmiert
+ werden können.
+ Diese Methode wird auch gewählt, wobei die VBA Datei noch einige Fehler
+ hat.
+ Wichtig ist, dass der Programmer nicht mit dem Board verbunden ist, wenn
+ es getestet wird.
+\begin_inset Newline newline
+\end_inset
+
+Die geerntete Energie vom Magnet und der Spule wird direkt am Board angeschlosse
+n.
+ Als Last an VSUP wird während der Entwicklungsphase ein 10 kOhm Potentiometer
+ mit einem Schalter angeschlossen.
+ Mit dem Oszilloskop werden während dem Betrieb die Spannungen der Harvesting
+ Quelle (V_HRV), am STS (V_STS) und LTS (V_LTS) und an VSUP gemessen.
+\end_layout
+
+\begin_layout Subsection
+Einstellungen
+\end_layout
+
+\begin_layout Standard
+Da die Software für den Microcontroller auf dem TI SensorTag parallel zum
+ Power Management entwickelt wird, kann nicht von Anfang an berechnet werden,
+ wie viel Energie für die Applikation überhaupt notwendig ist.
+ Deshalb können die Werte für STS, LTS und Spannungslevels auch nicht von
+ Anfang an bestimmt werden.
+ Der TI SensorTag kann mit 1.8 V bis 3.8 V gespeist werden.
+ Daraus folgt, dass der ULP LDO für VSUP gebraucht wird, damit ein konstanter
+ Spannungspegel erwartet werden kann.
+ Als Ausgangsspannung wird 2 V gewählt, weil - gemäss Datenblatt - kann
+ dieser Wert um ± 10% schwanken.
+ Mit der Last von 10 kOhm sind das also 200 uA, die an VSUP gezogen werden
+ können.
+\end_layout
+
+\begin_layout Subsubsection
+
+\series bold
+Harvesting Power Überwachung
+\end_layout
+
+\begin_layout Standard
+Da der Chip für Solarzellen oder Thermoelektrische Generatoren (TEG) optimiert
+ ist, stellt sich als erstes die Frage, als was die Spule mit dem Magnet
+ gilt.
+ Der Chip kann am Harvesting Eingang die Spannung oder den Strom detektieren,
+ um interne Vorgänge zu schalten.
+ Für Solarzellen wird der Strom detektiert und für Thermoelektrische Generatoren
+ die Spannung.
+ Nach der Spule und dem Gleichrichter wird die Spannung in einen Kondensator
+ geladen und somit wird hierfür die Spannung detektiert.
+ Ein zweiter Ansatz wäre eine Konstantstromquelle über einen J-FET zu realisiere
+n, die über einen grossen Bereich ausgelegt ist.
+ Aus zeitlichen Gründen wird in dieser Arbeit nur der erste Ansatz verfolgt.
+ Die Detektion ist notwendig, um zu entscheiden, wann keine Energie mehr
+ geerntet werden kann.
+ Dafür wird eine Spannungsuntergrenze gesetzt.
+ Allgemein können alle Spannungen in der Auflösung von 73 mV eingestellt
+ werden, was dem LSB in den einstellbaren Voltage Registern entspricht.
+ Die Untergrenze wird auf 
+\begin_inset Formula $3*73mV=219mV$
+\end_inset
+
+ gesetzt.
+ Unter diesem Wert soll VSUP abgeschaltet werden, da das Fahrrad sich dann
+ nicht mehr bewegt und somit keine Geschwindigkeit gemessen werden muss.
+\begin_inset Newline newline
+\end_inset
+
+Der Chip muss also die Harvesting Spannung messen.
+ Dies geschieht periodisch und ist im Bereich von 256 ms bis 32 s einstellbar.
+ Dabei wird jeweils die Open Voltage von der Harvesting Quelle gemessen.
+ Wie lange die Open Voltage gemessen wird, ist im Bereich von 16 ms bis
+ 2 s einstellbar, damit die Harvesting Quelle in dieser Zeit nicht belastet
+ wird.
+ Da sich ein Kondensator nach dem Gleichrichter befindet, muss dieser über
+ den Magneten und die Spule aufgeladen werden.
+ Wie schnell dieser aufgeladen ist, hängt von der Geschwindigkeit des Rades
+ ab.
+ Um den Chip auch bei Geschwindigkeiten um ca.
+ 10 km/h optimal auszunutzen, wird die Open Voltage Zeit 
+\emph on
+t_hrv_meas
+\emph default
+ auf 1 s - 2 s und die Periode 
+\emph on
+t_hrv_period
+\emph default
+ auf 8 s eingestellt.
+\begin_inset Newline newline
+\end_inset
+
+Über den MPPT kann das Verhältnis in %, bei welcher Spannung oder welchem
+ Strom die maximale Leistung der Harvesting Quelle zu erwarten ist, eingestellt
+ werden.
+ Für Solarzellen wird der Wert von 80%, bei einem TEG der Wert von 50% vorgeschl
+agen.
+ Für die verwendete Anwendung wird der maximale Wert von 88% eingestellt.
+ Am DCDC Converter Eingang wird also 88% der Kondensatorspannung vom Energy
+ Harvester zur Verfügung gestellt, da die maximale Energie bei der maximalen
+ Spannung im Kondensator zu erwarten ist.
+ In 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Harvesting Power Überwachung"
+
+\end_inset
+
+ ist der interne Messvorgang vom EM8500 zu sehen.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../picture/EM8500_HRV_Period.PNG
+	lyxscale 50
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Harvesting Power Überwachung 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "EM8500DCDCRegulationTimings"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Harvesting Power Überwachung"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Als erstes wird eine Messung gemacht, um das Verhalten des MPPT und der
+ internen Messvorgänge im Chip auszutesten.
+ In 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:EM8500 Messung an V_HRV"
+
+\end_inset
+
+ ist die Spannung an V_HRV bei verschiedenen Geschwindigkeiten zu sehen.
+ Es ist gut zu erkennen, dass alle 8 s die Open Voltage im Chip für 1 s
+ gemessen wird, in der sich der Kondensator nach dem Gleichrichter aufladen
+ kann.
+ Der MPPT wird hierfür auf 88 % gesetzt.
+ Die Einstellungen sind in Tabelle 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:EM8500 Harvesting Parameter"
+
+\end_inset
+
+ zu sehen.
+ Die Geschwindigkeit wurde konstant von Hand erhöht bis zu einem Maximum
+ und danach wurde das Rad auslaufen gelassen.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="6" columns="2">
+<features rotate="0" tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Harvesting Parameter Einstellungen
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+t_hrv_period
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+8 s
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+t_hrv_meas
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1 s
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+t_sts_period
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+8 ms
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+t_lts_period
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1 s
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+MPPT ratio
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+88 %
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Einstellungen EM8500 für die Harvesting Parameter
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:EM8500 Harvesting Parameter"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../picture/EM8500_V_HRV_messung.png
+	lyxscale 50
+	width 100text%
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Messung an V_HRV bei verschiedenen Geschwindigkeiten
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:EM8500 Messung an V_HRV"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+
+\series bold
+Spannungslevels
+\end_layout
+
+\begin_layout Standard
+Die Spannungslevels, wie sie in 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Funktionsweise EM8500"
+
+\end_inset
+
+ zu sehen sind, bestimmen die Hauptfunktionsweise des EM8500.
+ Verschiedene Konfigurationen werden im Verlauf des Projektes ausprobiert,
+ da sich die Werte für den STS verändern und die richtigen Einstellungen
+ nicht ganz einfach zu finden sind.
+
+\series bold
+ 
+\series default
+Die ersten Versuche werden mit dem auf dem Board integriereten STS von 100
+ uF und dem LTS, welcher ein 100 mF grosser Super Cap ist, gemacht.
+ Da die geernetet Energie relativ gering ist, wird dieser LTS jedoch sehr
+ langsam geladen, wodurch der Ladevorgang mit dem Oszilloskop nur über sehr
+ lange Messzeiten zu sehen ist.
+ Deshalb wird ein externer Kondensator als LTS von 3300 uF angeschlossen.
+\begin_inset Newline newline
+\end_inset
+
+Als erstes werden die Register reg_v_bat_max_hi und reg_v_bat_max_lo eingestellt.
+ Für einen LiPo Akku würde v_bat_max_hi auf 4.2 Volt eingestellt werden,
+ da dies die maximale Spannung an einem LiPo ist.
+ Für den verwendeten LTS kann dieser Wert auch höher gesetzt werden.
+ Der Wert wird im ersten Versuch auf 5.5 V eingestellt, v_bat_max_lo auf
+ 5.4 V.
+ Die ersten Messungen ergeben jedoch, dass der EM Chip mit dieser Konfiguration
+ nicht mehr richtig funktioniert.
+ VSUP wird unterhalb vom Pegel vom STS abgeschaltet.
+ Aus diesem Grund werden die Werte -hi auf 4.2 V und -lo auf 4.1 V konfiguriert.
+\begin_inset Newline newline
+\end_inset
+
+Die nächsten Register sind reg_v_apl_max_hi und reg_v_apl_max_lo.
+ Diese werden auf die Werte 3.5 V und 3.4 V eingestellt.
+ Erreicht der STS den Pegel von 3.5 V, wird die überschüssige Energie in
+ den LTS transferiert.
+ Die Register v_bat_min_lo, v_bat_min_hi_con und v_bat_min_hi_dis werden
+ auf die Werte 1.8 V, 1.9 V und 2.9 V eingestellt.
+ In der Messung 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:EM8500 Messung Versuch 1"
+
+\end_inset
+
+ ist ersichtlich, das VSUP eingeschaltet wird, sobald der STS den Pegel
+ von v_bat_min_hi_dis, also 2.9 V, erreicht.
+ Die Energie wird dann vollständig vom STS an VSUP zur Verfügung gestellt
+ und ist solange verfügbar, bis sich der STS auf den Pegel von v_bat_min_lo
+ entladen hat.
+ VSUP wird dann abgeschaltet und der STS wird wieder geladen.
+ Da an VSUP ein 10 kOhm Wiederstand angeschlossen ist, wird die Energie
+ auch gebraucht.
+ In der Messung ist der ULP LDO ausgeschaltet, damit das Verhalten an VSUP
+ gesehen wird.
+ Es ist ersichtlich, dass VSUP eingeschaltet wird, wenn der STS den Pegel
+ von 2.9 V erreicht und ausgeschaltet wird VSUP, wenn der STS auf den Pegel
+ von 1.8 V gefallen ist.
+ Der LTS kann nicht geladen werden, da sich der STS gleich entlädt beim
+ einschalten von VSUP.
+ Der STS müsste sich weiter auf v_apl_max_lo aufladen können, damit danach
+ die überschüssige Energie in den LTS transferiert werden kann.
+ Es kann also über die Zeit, in der VSUP eingeschaltet ist (436 ms) 200
+ uA gezogen werden.
+ Die eingestellten Spannungslevels sind in Tabelle 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:EM8500 Einstellungen Messung 1"
+
+\end_inset
+
+ nochmals zusammengefasst.
+ Für die folgenden Messungen werden die Harvesting Parameter gemäss Tabelle
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:EM8500 Harvesting Parameter"
+
+\end_inset
+
+ eingestellt.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="8" columns="2">
+<features rotate="0" tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Spannungslevels Register Einstellungen
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+v_bat_max_hi
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+4.2 V
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+v_bat_max_lo
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+4.1 V
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+v_bat_min_hi_dis
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2.9 V
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+v_bat_min_hi_con
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.9 V
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+v_bat_min_lo
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.8 V
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+v_apl_max_hi
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3.5 V
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+v_apl_max_lo
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3.4 V
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Einstellungen EM8500 für die Spannungslevels von Messung 1
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:EM8500 Einstellungen Messung 1"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../picture/EM8500_Messung_Versuch1.PNG
+	lyxscale 50
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+EM8500 Messung Versuch 1.
+ Gelb = V_HRV, Grün = V_STS, Blau = V_LTS, Rot = VSUP
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:EM8500 Messung Versuch 1"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In der nächsten Messung wird v_bat_min_hi_dis auf 3.3 V gestellt.
+ Somit muss sich der STS auf diesen Pegel laden, damit VSUP eingeschaltet
+ werden kann.
+ Das heisst, es steht mehr Energie für VSUP zur verfügung.
+ In 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:EM8500 Messung Versuch 2"
+
+\end_inset
+
+ ist wiederum das Ergebnis der Messung zu sehen.
+ Es wurde in etwa die gleiche Geschwindigkeit, wie bei der vorherigen Messung
+ gewählt.
+ VSUP ist jetzt für 619 ms verfügbar.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../picture/EM8500_Messung_Versuch2.PNG
+	lyxscale 50
+	width 100text%
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+EM8500 Messung Versuch 2.
+
+\series bold
+ 
+\series default
+Gelb = V_HRV, Grün = V_STS, Blau = V_LTS, Rot = VSUP
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:EM8500 Messung Versuch 2"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Bis anhin wird der LTS nie geladen, da sich der STS beim Einschalten von
+ VSUP gleich wieder entlädt.
+ Während der Entwicklung der Software für den TI-SensorTag werden Probleme
+ mit dem Energieverbrauch festgestellt (Kapitel 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Ti SensorTag"
+
+\end_inset
+
+), wodurch viel Energie benötigt wird.
+ Aus diesem Grund wird die Hauptfunktionsweise des EM Chips die oben beschrieben
+e sein, wobei die Energie immer nur aus dem STS genommen werden kann, da
+ sich der STS nicht weiter aufladen kann.
+ Mit hohen Geschwindigkeiten wird mehr Energie erzeugt und der STS kann
+ sich weiter aufladen, womit überschüssige Energie in den LTS transferiert
+ werden kann.
+ In 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:EM8500 Ladevorgang LTS"
+
+\end_inset
+
+ ist der Ladevorgang vom LTS ersichtlich.
+ Dabei ist an VSUP kein Verbraucher angeschlossen, damit der Effekt besser
+ sichtbar wird.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../picture/EM8500_langzeitmessung.png
+	lyxscale 50
+	width 100text%
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+EM8500 Ladevorgang LTS.
+ Gelb = V_HRV, Blau = V_STS, Rot = V_LTS, Grün = VSUP
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:EM8500 Ladevorgang LTS"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Energiemessung an V_HRV
+\end_layout
+
+\begin_layout Standard
+Um die geerntete Energie, welche im Power Management Chip verwendet wird
+ zu messen, werden wieder Enegiemessungen gemacht.
+ Diese sind bei verscheidenen Geschwindigkeiten in folgender 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Energiemessung an V_HRV"
+
+\end_inset
+
+ von langsamer (oben links) bis schnelle Geschwindigkeit (unten rechts)
+ abgebildet.
+ Die geerntete Energie ist dabei zwischen zwei Magnetdurchläufen gemessen,
+ woraus auch die Geschwindigkeit mit der Zeitangabe zwischen den Markern
+ berechnet werden kann.
+ Die Spannung ist dabei der obere Verlauf mit den Peaks vom Magnetdurchlauf.
+ Die gelbe Linie ist der gemessene Strom, welcher in V_HRV hinein fliesst.
+ Wie man an den Energiewerten sieht, ist bei langsamen Geschwindigkeiten
+ nicht viel Energie zu ernten, wohingegen bei hohen Geschwindigkeiten viel
+ Energie geerntet werden kann.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename ../picture/Energy_Harvesting_1.png
+	width 45text%
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Geschw.
+ = 15 km/h, Spannung = 440 mV, Energie = 8.7 μJ
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset space \hfill{}
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename ../picture/Energy_Harvesting_2.png
+	width 45text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Geschw.
+ = 28 km/h, Spannung = 365 mV, Energie = 21.7 μJ
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename ../picture/Energy_Harvesting_3.png
+	width 45text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Geschw.
+ = 40 km/h, Spannung = 830 mV, Energie = 42 μJ
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset space \hfill{}
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename ../picture/Energy_Harvesting_4.png
+	width 45text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Geschw.
+ = 56 km/h, Spannung = 1.52 V, Energie = 67 μJ
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Energiemesung an V_HRV
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Energiemessung an V_HRV"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Weitere Einstellungen
+\end_layout
+
+\begin_layout Itemize
+Der Chip ist im secondary cell mode.
+ Das heisst der LTS wird geladen und ist keine Batterie, sondern ein wiederaufla
+dbarer Akku / Kondensator.
+\end_layout
+
+\begin_layout Itemize
+Damit der STS und LTS zuerst geladen werden können beim Aufstarten des Chips,
+ bevor VSUP eingeschaltet wird, kann ein Timer eingestellt werden.
+ Dieser wird auf 10 s eingestellt, danach wird VSUP eingeschaltet.
+ Über einen Taster auf dem Board kann der Chip auch früher über den Wake-Up
+ Pin aufgeweckt werden.
+\end_layout
+
+\begin_layout Itemize
+Beim Stillstand des Rades wird keine Energie produziert und die Geschwindigkeit
+ muss nicht mehr gemessen werden.
+ Deshalb wird VSUP abgeschaltet und erst bei Weiterfahrt wieder eingeschaltet.
+\end_layout
+
+\begin_layout Itemize
+Die Battery Protection ist eingeschaltet.
+ Damit wird der LTS nicht unter einen einstellbaren Wert entladen.
+ Der eingestellte Pegel v_bat_min_lo ist 1.8 V.
+\end_layout
+
+\begin_layout Itemize
+Alle VAUX Ausgänge sind deaktiviert, da sie nicht gebraucht werden.
+\end_layout
+
+\begin_layout Itemize
+Der ULP LDO ist immer eingeschaltet auf 2 V, damit eine konstante Ausgangsspannu
+ng an VSUP anliegt.
+\end_layout
+
+\begin_layout Subsection
+Finale Konfiguration
+\end_layout
+
+\begin_layout Standard
+Für die resultierende Konfiguration muss als erstes der Energieverbrauch
+ von der Applikation, also vom TI-SensorTag, bekannt sein.
+ Damit ein geeigneter STS gewählt werden kann, muss die verfügbare Energie
+ im Kondensator berechnet werden.
+ Diese berechnet sich an einer Gleichspannung wie folgt 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "EnergieKondensator"
+
+\end_inset
+
+:
+\begin_inset Formula 
+\begin{equation}
+W=\frac{1}{2}\cdot C\cdot U^{2}\label{eq:Energie im Kondensator}
+\end{equation}
+
+\end_inset
+
+Die verfügbare Spannung am Kondensator ist dabei v_bat_min_hi_dis und v_bat_min_
+lo.
+ Es ist also zu empfehlen, dass v_bat_min_hi_dis möglichst hoch gewählt
+ wird, damit ein kleinerer STS gewält werden kann.
+ Damit der Pegel v_bat_min_hi_dis möglichst hoch gewählt werden kann, muss
+ dafür auch v_apl_max_hi und _lo auf einen höheren Pegel gesetzt werden.
+ In nachstehender Tabelle 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:EM8500 Einstellungen final"
+
+\end_inset
+
+ sind die neuen eingestellten Pegel aufgelistet.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+placement h
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="8" columns="2">
+<features rotate="0" tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Spannungslevels Register Einstellungen
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+v_bat_max_hi
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+4.2 V
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+v_bat_max_lo
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+4.1 V
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+v_bat_min_hi_dis
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3.6 V
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+v_bat_min_hi_con
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2.1 V
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+v_bat_min_lo
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.8 V
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+v_apl_max_hi
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3.8 V
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+v_apl_max_lo
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3.7 V
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Einstellungen EM8500 für die Spannungslevels
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:EM8500 Einstellungen final"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Aus dem Kapitel 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Ti SensorTag"
+
+\end_inset
+
+ kann entnommen werden, dass die verwendete Software bei der Geschwindigkeit
+ von 20 km/h die Energie von 1300 μJ braucht.
+ Für höhere Geschwindigkeiten wird weniger Energie benötigt.
+ Aus den erwähnten Energieproblemen in Kapitel 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Ti SensorTag"
+
+\end_inset
+
+ wird VSUP nach einem Messvorgang aktiv ausgeschaltet, damit sich der STS
+ wieder aufladen kann.
+ Der TI-SensorTag wird aufgestartet, misst zwei Magnetdurchläufe, versendet
+ über BLE die gemessene Zeit und schaltet über die serielle Schnittstelle
+ VSUP am EM Chip ab.
+ Dabei wird im Register reg_pwr_mgt an der Adresse 0x19 das Bit sleep_vsup
+ gesetzt.
+ Der EM Chip schaltet VSUP aus und wartet die eingestellte Sleep Time von
+ 10 s, bis VSUP wieder eingeschaltet wird.
+ Somit kann ein geeigneter STS berechnet werden:
+\begin_inset Formula 
+\[
+C=\frac{2\cdot W}{U^{2}}=\frac{2\cdot1300\,μJ}{(3.6\,V)^{2}-(2.1\,V)^{2}}=304\,μF
+\]
+
+\end_inset
+
+Damit eine Messung auch bei langsameren Geschwindigkeiten funktioniert,
+ wird ein Kondensator von 470 μF gewählt.
+ Somit sollte es möglich sein, alle 10 s die Radumlaufzeit zu messen und
+ diese drahtlos zu versenden.
+\begin_inset Newline newline
+\end_inset
+
+Die Messung in 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:EM8500 Schlussmessung"
+
+\end_inset
+
+ zeigt nun das Verhalten vom EM Chip mit dem angeschlossenen TI-SensorTag
+ an VSUP an.
+ Für die Messung wurde der EM8500 gemäss Tabelle 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:EM8500 Harvesting Parameter"
+
+\end_inset
+
+ und 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:EM8500 Einstellungen final"
+
+\end_inset
+
+ konfiguriert.
+ Der STS ist ein 470 μF und der LTS ein 3300 μF Elektrolyt-Kondensator.
+ In Abbildung 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "subfig:Mehrere Raddurchlaufmessungen"
+
+\end_inset
+
+ ist zu sehen, dass die ersten fünf Messungen erfolgreich und die 6.
+ nicht erfolgreich beendet werden konnte, da der STS zu tief entladen wird.
+ In Abbildung 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "subfig:Zoom Ausschnitt 1"
+
+\end_inset
+
+ ist die 5.
+ erfolgreiche Messungen des Raddurchlaufes zu sehen.
+ Der STS entlädt sich in der Messzeit von ca.
+ 600 ms fast bis auf den minimalen Pegel.
+ Durch die Geschwindigkeit von ca.
+ 25 km/h kann der STS in 10 s nicht genügend aufgeladen werden für eine
+ weitere Messung.
+ Dies ist in Abbildung 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "subfig:Zoom Ausschnitt 2"
+
+\end_inset
+
+ zu sehen.
+ Der STS entlädt sich auf 1.8 V, wobei auch VSUP zusammenbricht und der TI-Sensor
+Tag nicht mehr richtig arbeiten kann.
+ Die gesamte Konfiguration des Chips ist im 
+\color black
+Anhang
+\color red
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "chap:Konfigurationen"
+
+\end_inset
+
+
+\color inherit
+ zu finden.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../picture/EM8500_Endmessung.png
+	lyxscale 20
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Mehrere Raddurchlaufmessungen
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "subfig:Mehrere Raddurchlaufmessungen"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../picture/EM8500_Endmessung_Zoom2.png
+	lyxscale 20
+	width 45text%
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Zoom Ausschnitt 1
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "subfig:Zoom Ausschnitt 1"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset space \hfill{}
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../picture/EM8500_Endmessung_Zoom3.png
+	lyxscale 20
+	width 45text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Zoom Ausschnitt 2
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "subfig:Zoom Ausschnitt 2"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+EM8500 Messungen mit angeschlossenem TI-SensorTag als Verbraucher an VSUP.
+ Gelb = V_HRV, Blau = V_STS, Rot = V_LTS, Grün = VSUP
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:EM8500 Schlussmessung"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Daten Verarbeitung - TI-SensorTag
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Ti SensorTag"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Übersicht
+\end_layout
+
+\begin_layout Standard
+Für die Datenverarbeitung und die drahtlose Kommunikation zum Smartphone
+ wird wie bereits in Kapitel 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:Microcontroller-und-Bluetooth"
+
+\end_inset
+
+ erwähnt, der TI-SensorTag von Texas Instruments verwendet.
+ Dieser hat den Microcontroller CC2650 verbaut, welcher einen Cortex-M3
+ Prozessor und für die Drahtloskommunikation einen Cortex-M0 im gleichen
+ Chip verbaut hat.
+ Der Cortex-M0 ist für das gesamte Handling von Bluetooth zuständig und
+ kann nicht vom User selbst programmiert werden.
+ Für die zu entwickelnde Software wird nur der Cortex-M3 Prozessor verwendet.
+ Die genaue Übersicht über den Chip kann aus dem Datenblatt und dem Reference
+ Manual vom CC2650 entnommen werden Anhang 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "chap:Datenblätter"
+
+\end_inset
+
+.
+ Die Software wird im Code Composer Studio von Texas Instruments entworfen.
+\begin_inset Newline newline
+\end_inset
+
+Die zu entwickelnde Software für den TI-SensorTag hat folgende Anforderungen,
+ um einen Geschwindigkeitssensor zu implementieren:
+\end_layout
+
+\begin_layout Itemize
+Aufstarten des Chips
+\end_layout
+
+\begin_layout Itemize
+Messen der Zeit zwischen zwei Magnetdurchläufen
+\end_layout
+
+\begin_layout Itemize
+Die gemessene Zeit per Bluetooth Advertising an das Smartphone senden
+\end_layout
+
+\begin_layout Itemize
+Dabei soll der Chip möglichst wenig Strom verbrauchen für die gesamte Anwendung
+\end_layout
+
+\begin_layout Subsection
+Bluetooth Low Energy
+\end_layout
+
+\begin_layout Standard
+Für die drahtlose Kommunikation zum Smartphone wird die Bluetooth Low Energy
+ (BLE) Technologie verwendet, welche in diesem Chip zur Verfügung steht.
+ Für eine aktive Verbindung zwischen dem Geschwindigkeitssensor und dem
+ Smartphone muss das Bluetooth Protokoll eingehalten werden.
+ Dabei muss eine Verbindung aufgebaut und beibehalten werden, was sich negativ
+ auf den Stromverbrauch auswirkt.
+ Hierfür müsste der Chip immer eingeschaltet sein, was bei einem Stillstand
+ mit dem Fahrrad aber nicht mehr möglich ist.
+ Deshalb wird auf eine aktive Verbindung verzichtet und es wird nur der
+ BLE Advertising-Modus verwendet.
+ Dieser wird auch für den Aufbaumodus einer aktiven Verbindung verwendet.
+ Ein Gerät muss sich zuerst über BLE Advertising den umliegenden Geräten
+ zeigen, damit man weiss, mit welchem Gerät man eine Verbindung aufbauen
+ will.
+ Das heisst, dass über ein BLE Advertising-Paket die Geräteinformationen
+ und auch schon einige Datenbytes versendet werden können.
+ Dabei wird das Advertising-Paket auf drei Kanälen gesendet 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "BLEIntroduction"
+
+\end_inset
+
+.
+ Diese Datenbytes werden in dieser Arbeit verwendet, um die gemessene Radumlaufz
+eit zu versenden.
+ Somit besteht eine einseitige BLE Kommunikation vom Geschwindigkeitssensor
+ zum Smartphone.
+ Die BLE Advertising-Pakete können von allen BLE-fähigen Geräten empfangen
+ werden.
+\end_layout
+
+\begin_layout Subsection
+Software
+\end_layout
+
+\begin_layout Standard
+Die Grundüberlegungen wie die Software die Anforderungen handhaben soll
+ sind die folgenden:
+\end_layout
+
+\begin_layout Enumerate
+Der Chip soll aufstarten, sobald VSUP vom EM8500 eingeschaltet wird
+\end_layout
+
+\begin_layout Enumerate
+Den Real Time Clock (RTC) als free running counter aktivieren, damit Zeitmessung
+en gemacht werden können
+\end_layout
+
+\begin_layout Enumerate
+Den Chip in einen tiefen Energiemodus versetzen
+\end_layout
+
+\begin_layout Enumerate
+Den Chip über den vom Magneten erzeugten Impuls aufwecken und die aktuelle
+ Zeit vom RTC abspeichern, danach wieder in den Standby Modus schalten
+\end_layout
+
+\begin_layout Enumerate
+Den Chip wieder über den Magnetimpuls aufwecken und wiederum die aktuelle
+ Zeit vom RTC abspeichern
+\end_layout
+
+\begin_layout Enumerate
+Die Differenz von den zwei Zeiten bilden und diese per Bluetooth Advertising
+ Paket versenden, danach wieder in den Standby Modus schalten
+\end_layout
+
+\begin_layout Standard
+Die Schritte 2 - 6 wiederholen sich danach kontinuierlich.
+\end_layout
+
+\begin_layout Subsubsection
+Energiemodi CC2650 und Bluetooth
+\end_layout
+
+\begin_layout Standard
+Der CC2650 hat vier verschiedene Energiemodi (diese können aus dem Reference
+ Manual auf Seite 425 im Kapitel 6.6 - Power Modes entnommen werden).
+ Im Energiemodus Idle kann der RF Core für das Bluetooth noch verwendet
+ werden, der Stromverbrauch ist softwareabhänging und im Standby verbraucht
+ der Chip noch ca.
+ 1 μA.
+ Im Standby ist der RTC noch aktiv und der Chip kann über einen Pin aufgeweckt
+ werden.
+ Damit im Standby die Registerkonfigurationen beibehalten werden, wacht
+ der Chip zyklisch auf, damit diese aktualisiert werden (Register refreshing).
+ Diese zwei Energiemodi wirken also sehr vielversprechend für die oben genannten
+ Anforderungen.
+\begin_inset Newline newline
+\end_inset
+
+Die Software für die Energiemodi und das Versenden von Bluetooth Paketen
+ wurde vom INES an der ZHAW bereits entwickelt und für diese Arbeit zur
+ Verfügung gestellt.
+ Die erhaltene Software verwendet den RTC, um zyklisch aus dem Standby Modus
+ aufzuwachen und Temperatur- und Feuchtigkeitswerte per BLE Advertising
+ zu versenden.
+ Diese wird um die oben genannten Anforderungen erweitert und angepasst.
+\begin_inset Newline newline
+\end_inset
+
+Diese Softwarevorlage wird mit dem entwickelten Power Management getestet
+ und ausgemessen.
+ Die Software funktioniert dabei wie folgt:
+\end_layout
+
+\begin_layout Enumerate
+Aufstarten des Chips, sobald VSUP vom EM8500 eingeschaltet ist
+\end_layout
+
+\begin_layout Enumerate
+Konfigurieren des RTC, damit der Chip alle 5 s aus dem Standby Modus aufwacht
+\end_layout
+
+\begin_layout Enumerate
+Senden einen BLE Advertising Paketes mit Temperatur- und Feuchtigkeitswerten
+ auf allen drei Advertising Kanälen
+\end_layout
+
+\begin_layout Enumerate
+Den Chip in den Standby Modus schalten
+\end_layout
+
+\begin_layout Enumerate
+Aufwachen vom Standby mittels RTC nach 5s
+\end_layout
+
+\begin_layout Standard
+Die Software wiederholt sich kontinuierlich in den Schritten 3-5.
+ Mit dieser Software ist es möglich alle 5 s ein BLE Advertising Paket zu
+ versenden.
+ Im Standby Modus verbraucht der Chip gemessen noch 16 μA, was aus Energiemessun
+gen herausgelesen werden kann.
+ Somit können STS und LTS geladen werden.
+ Mit der Änderung, dass der Chip über einen Pin aufwacht und das BLE Paket
+ versendet, wird der Energieverbrauch etwas höher sein, aber es sollte möglich
+ sein, einen Geschwindigkeitssensor Energieeffizient zu implementieren.
+ 
+\end_layout
+
+\begin_layout Subsubsection
+Blockdiagrammdarstellung der Software
+\end_layout
+
+\begin_layout Standard
+In 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Sequenzdiagramm Software Lösungsansatz 1"
+
+\end_inset
+
+ ist das Sequenzdiagramm über den Ablauf der Softare gemäss den bereits
+ erwähnten Schritten 1-6 ersichtlich.
+ Die meiste Zeit ist der Microcontroller im Standby Modus und braucht ca.
+ 16 μA (blauer Teil).
+ Das Senden per BLE auf allen 3 Kanälen ist in 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Energiemessung TI BLE"
+
+\end_inset
+
+ zu sehen.
+ Der Energieverbrauch liegt zwischen den Markern 1 & 2 bei 73 μJ in der
+ Zeit von 3.5 ms (violetter Teil in 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Sequenzdiagramm Software Lösungsansatz 1"
+
+\end_inset
+
+).
+ Die Software wiederholt danach den blauen und violetten Teil immer wieder.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement h
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../picture/Blockdiagramm_Software1.png
+	lyxscale 40
+	width 100text%
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Sequenzdiagramm Software Lösungsansatz 1
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Sequenzdiagramm Software Lösungsansatz 1"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement h
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../picture/Energiemessung_BLE.png
+	lyxscale 30
+	width 100text%
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Energiemessung TI-SensorTag BLE Advertising auf drei Kanälen
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Energiemessung TI BLE"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Damit der Chip über einen Pin aufgeweckt werden kann, muss dieser dafür
+ konfiguriert werden.
+ Hierbei treten jedoch Probleme auf, welche auch mit Hilfe des INES an der
+ ZHAW bis Projektabschluss nicht gelöst werden konnten.
+ Das Problem ist, dass das Aufwachen mit einem Pin Event vom Standby Modus
+ nicht funktioniert.
+ Es muss also ein zweiter Lösungsansatz entwickelt werden, welcher in 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Sequenzdiagramm Software Lösungsansatz 2"
+
+\end_inset
+
+ und in folgender Aufzählung ersichtlich ist:
+\end_layout
+
+\begin_layout Enumerate
+Aufstarten des Chips, sobald VSUP vom EM8500 eingeschaltet ist
+\end_layout
+
+\begin_layout Enumerate
+Den Chip in den Idle Modus versetzen
+\end_layout
+
+\begin_layout Enumerate
+Warten auf den 1.
+ Magnetimpuls und herauslesen der RTC Zeit
+\end_layout
+
+\begin_layout Enumerate
+Warten auf den 2.
+ Magnetimpuls und herauslesen der RTC Zeit
+\end_layout
+
+\begin_layout Enumerate
+Zeitdifferenz bilden und über BLE versenden
+\end_layout
+
+\begin_layout Enumerate
+VSUP am EM8500 per SPI ausschalten
+\end_layout
+
+\begin_layout Standard
+Diese Version der Software verbraucht jedoch sehr viel mehr Energie, da
+ der Chip immer im Idle Modus ist.
+ Im Idle Modus verbraucht der TI-SensorTag zwischen 600 μA und 1 mA.
+ Die Energiemessung in 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Energiemessung TI-SensorTag mit Lösungsansatz 2"
+
+\end_inset
+
+ wurde mit 20 km/h des Rades gemacht.
+ Die beschriebene Sequenz in 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Sequenzdiagramm Software Lösungsansatz 2"
+
+\end_inset
+
+ wird hierbei durchgelaufen und stellt VSUP am Ende ab.
+ Die erste Stromspitze ist das Aufwachen und Konfigurieren des Pin Interrupts,
+ die zweite Spitze ist der 1.
+ Magnetimpuls und die Spitze am Ende ist der 2.
+ Magnetimpuls mit anschliessendem Senden der Daten per BLE.
+ Die gesamte Energieaufnahme ist bei 1.3 mJ, was im Gegensatz zu ein paar
+ μJ im 1.
+ Lösungsansatz ein sehr grosser Unterschied ist.
+ Der Durchschnittsverbrauch liegt bei 962 μA, was dem Idle Strom entspricht.
+ Für höhere Geschwindigkeiten nimmt die verbrauchte Energie ab, da die gesamte
+ Messzeit kürzer wird.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../picture/Blockdiagramm_Software2.png
+	lyxscale 40
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Sequenzdiagramm Software Lösungsansatz 2
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Sequenzdiagramm Software Lösungsansatz 2"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../picture/Energiemessung Firmware.png
+	lyxscale 30
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Energiemessung TI-SensorTag mit Lösungsansatz 2
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Energiemessung TI-SensorTag mit Lösungsansatz 2"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Energiemessung TI-SensorTag mit Lösungsansatz und zu wenig Energie"
+
+\end_inset
+
+ ist eine Energiemessung zu sehen, in der die Energie im STS nicht ausreicht.
+ Bereits vor der 3.
+ Stromspitze bricht die Spannung VSUP zusammen, was dazu führt, dass der
+ TI-SensorTag die Daten nicht mehr über BLE versenden kann.
+ Ebenfalls funktioniert anscheinend die SPI Schnittstelle nicht mehr, da
+ VSUP nicht ausgeschaltet wird.
+ Diesen Problemfall gibt es mit der Software bei Geschwindigkeiten unter
+ 20 km/h leider oft.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement h
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../picture/SensorTag_Speed_low_abbruch.png
+	lyxscale 30
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Energiemessung TI-SensorTag mit Lösungsansatz 2 mit zu wenig Energie im
+ STS
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Energiemessung TI-SensorTag mit Lösungsansatz und zu wenig Energie"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Berechnung der Radlaufzeit
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:Berechnung-der-Radlaufzeit"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Die Radlaufzeit wird anhand von zwei Magnetimpulsen berechnet.
+ Hierfür wird der RTC verwendet, da dieser auch im Standbymodus noch verfügbar
+ ist.
+ Der RTC wird von einer Frequenz von 32.768 kHz getaktet und hat zwei Register
+ in dem die aktuelle Zeit gespeichert ist.
+ Das eine Register ist der Sekundenzähler und das zweite ein Subsekundenzähler.
+ Mit dem Einschalten des RTC, werden diese beiden 32-Bit Register kontinuierlich
+ inkrementert.
+ Bei einem Magnetimpuls wird jeweils ein Interrupt am Pin ausgelöst und
+ in diesem wird der aktuelle Wert aus dem Subsekundenregister gelesen.
+ Dadurch kann zwischen zwei Interrupts die Differnez von den beiden gelesenen
+ Werten gebildet und diese in Millisekunden umgerechnet werden.
+ Dieser Wert wird per BLE versendet und in der Smartphone-Applikation mit
+ dem Wissen des Radumfanges in die Geschwindigkeit umgerechnet.
+ Die Geschwindigkeit kann wegen dem fehlenden Wissen des Radumfanges nicht
+ direkt auf dem Microcontroller berechnet werden.
+ Ansonsten wäre die Software nur für einen Radumfang zu gebrauchen.
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Daten Ausgabe - Applikation
+\end_layout
+
+\begin_layout Standard
+Die Ausgabe der Daten soll eine Applikation übernehmen, welche auf einem
+ Andriod-System läuft.
+ Sie soll folgende Funktionen erfüllen können:
+\end_layout
+
+\begin_layout Itemize
+Empfangen der Daten über Bluetooth Low Energy
+\end_layout
+
+\begin_layout Itemize
+Verarbeitung der Daten 
+\end_layout
+
+\begin_layout Itemize
+Darstellung der Daten
+\end_layout
+
+\begin_layout Standard
+Es existiert bereits ein Programmrahmen, welcher vom InES zur Verfügung
+ gestellt wird.
+ Diese Applikation empfängt Daten per Bluetooth Low Energy und gibt diese
+ aus.
+ Die App wurde für verschiedene Devices geschrieben.
+ Somit besteht nun die Aufgabe, ein weites Device in Form eines Fahrradcomputers
+ hinzuzufügen.
+\begin_inset Newline newline
+\end_inset
+
+Wie im Unterabschnitt 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:Berechnung-der-Radlaufzeit"
+
+\end_inset
+
+ beschrieben, sind die zu empfangenen Daten als Radumlaufzeit in Millisekunden
+ zu interpretieren.
+ Nachfolgend folgt jeweils eine kurze Beschreibung, wie die Applikation
+ aufgebaut wird.
+ Das gesamte Softwareprojekt ist auf der CD zu finden und wurde mit der
+ Software 
+\begin_inset Quotes gld
+\end_inset
+
+Android Studio
+\begin_inset Quotes grd
+\end_inset
+
+ geschrieben bzw.
+ bearbeitet.
+\end_layout
+
+\begin_layout Subsubsection
+
+\series bold
+Empfangen der Daten über Bluetooth Low Energy
+\end_layout
+
+\begin_layout Standard
+Empfangen wird ein 32-Bit Wert, welcher im Advertising Paket aus vier 8-Bit
+ Werten zusammengefügt wird.
+ Diese werden zum Typ 
+\begin_inset Quotes gld
+\end_inset
+
+double
+\begin_inset Quotes grd
+\end_inset
+
+ gecastet:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Boxed
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "12cm"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+\align left
+inData = (((long)(data[12])) & 0x00ff) << 24; 
+\end_layout
+
+\begin_layout Plain Layout
+\align left
+inData = inData + (((long)(data[11])) & 0x00ff) << 16; 
+\end_layout
+
+\begin_layout Plain Layout
+\align left
+inData = inData + (((long)(data[10])) & 0x00ff) << 8; 
+\end_layout
+
+\begin_layout Plain Layout
+\align left
+inData = inData + (((long)(data[9])) & 0x00ff);
+\end_layout
+
+\begin_layout Plain Layout
+time = (double)inData;
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Verarbeitung der Daten:
+\series default
+
+\begin_inset Newline newline
+\end_inset
+
+In einem weiteren Schritt sollen nun die Daten in eine Geschwindigkeit in
+ km/h umgerechnet werden.
+ Dazu wird der Radumfang benötigt, welcher sich wie folgt berechnen lässt:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+U=d\cdot\pi\label{eq:Radumfang}
+\end{equation}
+
+\end_inset
+
+Um die Geschwindigkeit zu erhalten, muss jetzt nur noch der Umfang durch
+ die Zeit geteilt werden:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+v=\frac{U}{t}\label{eq:Berechnung der Geschwindigkeit auf dem Smarphone}
+\end{equation}
+
+\end_inset
+
+Am Ende dieses Abschnittes folgt die Umrechnung von m/s in km/h.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Boxed
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "12cm"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+circumference = (durchmesser/100) * pi; 
+\end_layout
+
+\begin_layout Plain Layout
+speed = (circumference / (time/1000)) * 3.6;
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+
+\series bold
+Darstellung der Daten
+\end_layout
+
+\begin_layout Standard
+Die Ausgabe der Geschwindigkeit erfolgt über den vorgegeben Programrahmen.
+ Da dies noch keine Endlösung ist, werden zusätzliche Informationen, wie
+ der Raddurchmesser des Fahrrades und die Umlaufzeit des Rades ausgegeben.
+ Siehe 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Ausgabe der Daten auf dem Smartphone"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../picture/Screenshot App 1.png
+	lyxscale 50
+	scale 25
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Ausgabe der Daten auf dem Smartphone
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Ausgabe der Daten auf dem Smartphone"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Bemerkung: Das Device wird nur bei der erhaltenen Vendor Nummer 9 angezeigt.
+ Diese Nummer wird im TI-SensorTag programmiert.
+ Der gesamte Quellcode befindet sich im Anhang 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "chap:Quellcode-Android-Applikation"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\end_layout
+
+\end_body
+\end_document

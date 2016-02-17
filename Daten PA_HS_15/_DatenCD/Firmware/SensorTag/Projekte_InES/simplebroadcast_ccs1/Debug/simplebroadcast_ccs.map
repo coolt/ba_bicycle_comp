@@ -1,0 +1,406 @@
+******************************************************************************
+                  TI ARM Linker PC v5.2.5                      
+******************************************************************************
+>> Linked Mon Nov 09 12:38:06 2015
+
+OUTPUT FILE NAME:   <simplebroadcast_ccs.out>
+ENTRY POINT SYMBOL: "ResetISR"  address: 00001b0b
+
+
+MEMORY CONFIGURATION
+
+         name            origin    length      used     unused   attr    fill
+----------------------  --------  ---------  --------  --------  ----  --------
+  FLASH                 00000000   00020000  00001efc  0001e104  R  X
+  GPRAM                 11000000   00002000  00000000  00002000  RW X
+  SRAM                  20000000   00005000  00000235  00004dcb  RW X
+
+
+SEGMENT ALLOCATION MAP
+
+run origin  load origin   length   init length attrs members
+----------  ----------- ---------- ----------- ----- -------
+00000000    00000000    00001dbc   00001dbc    r-x
+  00000000    00000000    000000c8   000000c8    r-- .intvecs
+  000000c8    000000c8    00001c8c   00001c8c    r-x .text
+  00001d54    00001d54    00000068   00000068    r-- .const
+00001dbc    00001dbc    00000008   00000008    rw-
+  00001dbc    00001dbc    00000008   00000008    rw- .args
+00001dc8    00001dc8    000000e0   000000e0    r--
+  00001dc8    00001dc8    000000e0   000000e0    r-- .cinit
+0001ffa8    0001ffa8    00000058   00000058    r--
+  0001ffa8    0001ffa8    00000058   00000058    r-- .ccfg
+20000000    20000000    00000139   00000000    rw-
+  20000000    20000000    00000114   00000000    rw- .data
+  20000118    20000118    00000021   00000000    rw- .bss
+20004f00    20004f00    00000100   00000000    rw-
+  20004f00    20004f00    00000100   00000000    rw- .stack
+
+
+SECTION ALLOCATION MAP
+
+ output                                  attributes/
+section   page    origin      length       input sections
+--------  ----  ----------  ----------   ----------------
+.intvecs   0    00000000    000000c8     
+                  00000000    000000c8     startup_ccs.obj (.intvecs)
+
+.text      0    000000c8    00001c8c     
+                  000000c8    000008f8     setup.obj (.text)
+                  000009c0    00000280     osc.obj (.text)
+                  00000c40    00000224     ddi.obj (.text)
+                  00000e64    00000224     radio.obj (.text)
+                  00001088    00000208     main.obj (.text)
+                  00001290    000001b6     rtsv7M3_T_le_eabi.lib : fd_add_t2.obj (.text)
+                  00001446    00000002     --HOLE-- [fill = 0]
+                  00001448    0000019c     chipinfo.obj (.text)
+                  000015e4    0000019c     system.obj (.text)
+                  00001780    00000118     rtc.obj (.text)
+                  00001898    0000009c     rtsv7M3_T_le_eabi.lib : memcpy_t2.obj (.text)
+                  00001934    00000086                           : fd_cmp_t2.obj (.text:__aeabi_cdcmple)
+                  000019ba    0000007a                           : memset_t2.obj (.text)
+                  00001a34    0000006c                           : autoinit.obj (.text)
+                  00001aa0    0000006a                           : copy_decompress_rle.obj (.text)
+                  00001b0a    00000060     startup_ccs.obj (.text)
+                  00001b6a    00000002     --HOLE-- [fill = 0]
+                  00001b6c    0000005c     aon_rtc.obj (.text)
+                  00001bc8    0000004c     rtsv7M3_T_le_eabi.lib : cpy_tbl.obj (.text)
+                  00001c14    00000044     aon_batmon.obj (.text)
+                  00001c58    00000044     rtsv7M3_T_le_eabi.lib : exit.obj (.text)
+                  00001c9c    0000003c                           : boot.obj (.text)
+                  00001cd8    0000002c     cpu.obj (.text)
+                  00001d04    00000018     rtsv7M3_T_le_eabi.lib : args_main.obj (.text)
+                  00001d1c    00000014                           : _lock.obj (.text)
+                  00001d30    0000000e                           : copy_decompress_none.obj (.text:decompress:none)
+                  00001d3e    0000000c                           : copy_zero_init.obj (.text:decompress:ZI)
+                  00001d4a    00000006                           : copy_decompress_rle.obj (.text:decompress:rle24)
+                  00001d50    00000004                           : pre_init.obj (.text)
+
+.const     0    00001d54    00000068     
+                  00001d54    00000068     radio.obj (.const:patchImage)
+
+.cinit     0    00001dc8    000000e0     
+                  00001dc8    000000ba     (.cinit..data.load) [load image, compression = rle]
+                  00001e82    00000002     --HOLE-- [fill = 0]
+                  00001e84    0000000c     (__TI_handler_table)
+                  00001e90    00000008     (.cinit..bss.load) [load image, compression = zero_init]
+                  00001e98    00000010     (__TI_cinit_table)
+
+.init_array 
+*          0    00000000    00000000     UNINITIALIZED
+
+.ccfg      0    0001ffa8    00000058     
+                  0001ffa8    00000058     ccfg.obj (.ccfg:retain)
+
+.data      0    20000000    00000114     UNINITIALIZED
+                  20000000    000000d0     radio.obj (.data)
+                  200000d0    00000030     radio.obj (.data:bleDifferentialOverrides)
+                  20000100    00000008     rtsv7M3_T_le_eabi.lib : _lock.obj (.data)
+                  20000108    00000008                           : exit.obj (.data)
+                  20000110    00000004                           : stkdepth_vars.obj (.data)
+
+.bss       0    20000118    00000021     UNINITIALIZED
+                  20000118    00000014     (.common:oscHfGlobals)
+                  2000012c    00000002     (.common:raw_hum)
+                  2000012e    00000002     (.common:raw_temp)
+                  20000130    00000008     (.common:devAddress)
+                  20000138    00000001     (.common:advLength)
+
+.stack     0    20004f00    00000100     UNINITIALIZED
+                  20004f00    00000100     --HOLE--
+
+.args      0    00001dbc    00000008     
+                  00001dbc    00000008     --HOLE-- [fill = 0]
+
+.TI.persistent 
+*          0    20000000    00000000     UNINITIALIZED
+
+.TI.noinit 
+*          0    20000118    00000000     UNINITIALIZED
+
+
+LINKER GENERATED COPY TABLES
+
+__TI_cinit_table @ 00001e98 records: 2, size/record: 8, table size: 16
+	.data: load addr=00001dc8, load size=000000ba bytes, run addr=20000000, run size=00000114 bytes, compression=rle
+	.bss: load addr=00001e90, load size=00000008 bytes, run addr=20000118, run size=00000021 bytes, compression=zero_init
+
+
+LINKER GENERATED HANDLER TABLE
+
+__TI_handler_table @ 00001e84 records: 3, size/record: 4, table size: 12
+	index: 0, handler: __TI_decompress_rle24
+	index: 1, handler: __TI_decompress_none
+	index: 2, handler: __TI_zero_init
+
+
+GLOBAL SYMBOLS: SORTED ALPHABETICALLY BY Name 
+
+address   name                                                  
+-------   ----                                                  
+00001c15  AONBatMonTemperatureGetDegC                           
+00001861  AONRTCIntHandler                                      
+00001c59  C$$EXIT                                               
+000014d9  ChipInfo_GetChipFamily                                
+0000152f  ChipInfo_GetHwRevision                                
+000014a7  ChipInfo_GetPackageType                               
+0000149d  ChipInfo_GetSupportedProtocol_BV                      
+00001b99  NOROM_AONRTCCurrent64BitValueGet                      
+00001b6d  NOROM_AONRTCCurrentCompareValueGet                    
+00001cfb  NOROM_CPUbasepriGet                                   
+00001cd9  NOROM_CPUcpsid                                        
+00001cef  NOROM_CPUcpsie                                        
+00001ce5  NOROM_CPUprimask                                      
+00000dbf  NOROM_DDI16BitRead                                    
+00000d1d  NOROM_DDI16BitWrite                                   
+00000e07  NOROM_DDI16BitfieldRead                               
+00000d6d  NOROM_DDI16BitfieldWrite                              
+00000a51  NOROM_OSCClockSourceGet                               
+00000a01  NOROM_OSCClockSourceSet                               
+00000a81  NOROM_OSCInterfaceEnable                              
+00000b85  OSCHF_AttemptToSwitchToXosc                           
+00000aaf  OSCHF_GetStartupTime                                  
+00000be5  OSCHF_SwitchToRcOscTurnOffXosc                        
+00000b71  OSCHF_TurnOnXosc                                      
+00000ffd  RFCCPE0IntHandler                                     
+00000fe7  RFCCPE1IntHandler                                     
+00001b0b  ResetISR                                              
+UNDEFED   SHT$$INIT_ARRAY$$Base                                 
+UNDEFED   SHT$$INIT_ARRAY$$Limit                                
+000015c3  ThisCodeIsBuiltForCC26xxHwRev22AndLater_HaltIfViolated
+20005000  __STACK_END                                           
+00000100  __STACK_SIZE                                          
+20005000  __STACK_TOP                                           
+00001e98  __TI_CINIT_Base                                       
+00001ea8  __TI_CINIT_Limit                                      
+00001e84  __TI_Handler_Table_Base                               
+00001e90  __TI_Handler_Table_Limit                              
+00001a35  __TI_auto_init                                        
+20000108  __TI_cleanup_ptr                                      
+00001d31  __TI_decompress_none                                  
+00001d4b  __TI_decompress_rle24                                 
+2000010c  __TI_dtors_ptr                                        
+00000000  __TI_static_base__                                    
+00001d3f  __TI_zero_init                                        
+00001935  __aeabi_cdcmpeq                                       
+00001935  __aeabi_cdcmple                                       
+0000129b  __aeabi_dadd                                          
+00001291  __aeabi_dsub                                          
+000019bb  __aeabi_memclr                                        
+000019bb  __aeabi_memclr4                                       
+000019bb  __aeabi_memclr8                                       
+00001899  __aeabi_memcpy                                        
+00001899  __aeabi_memcpy4                                       
+00001899  __aeabi_memcpy8                                       
+000019bd  __aeabi_memset                                        
+000019bd  __aeabi_memset4                                       
+000019bd  __aeabi_memset8                                       
+ffffffff  __binit__                                             
+00001dbc  __c_args__                                            
+0001ffa8  __ccfg                                                
+20004f00  __stack                                               
+00001d05  _args_main                                            
+00001c9d  _c_int00                                              
+20000100  _lock                                                 
+00001d2b  _nop                                                  
+00001d23  _register_lock                                        
+00001d1d  _register_unlock                                      
+00001d51  _system_pre_init                                      
+20000104  _unlock                                               
+00001c5d  abort                                                 
+20000001  advData                                               
+20000138  advLength                                             
+20000030  advOutput                                             
+ffffffff  binit                                                 
+200000d0  bleDifferentialOverrides                              
+20000070  cmdAdv0                                               
+20000058  cmdAdv1                                               
+20000040  cmdAdv2                                               
+20000010  cmdAdvParam                                           
+20000088  cmdSetup37                                            
+200000a0  cmdSetup38                                            
+200000b8  cmdSetup39                                            
+00001bc9  copy_in                                               
+00001c65  exit                                                  
+00000000  g_pfnVectors                                          
+000015e5  initInterrupts                                        
+0000182f  initRTC                                               
+00000ec1  initRadio                                             
+00000fcf  initRadioInts                                         
+20000000  int_boot_done                                         
+000010a1  main                                                  
+20000110  main_func_sp                                          
+00001899  memcpy                                                
+000019c3  memset                                                
+000016cf  powerConfigureRecharge                                
+00001609  powerDisableAuxForceOn                                
+0000164d  powerDisableAuxRamRet                                 
+00001675  powerDisableCPU                                       
+00001623  powerDisableCache                                     
+00001641  powerDisableCacheRetention                            
+00001685  powerDisableFlashInIdle                               
+000016b9  powerDisableMcuPdReq                                  
+0000166d  powerDisablePeriph                                    
+0000165d  powerDisableRFC                                       
+000016df  powerDisableXtal                                      
+0000169b  powerDivideInfClkDS                                   
+0000168d  powerEnableAUXPdReq                                   
+00001601  powerEnableAuxForceOn                                 
+00001611  powerEnableCache                                      
+00001635  powerEnableCacheRetention                             
+0000167d  powerEnableFlashInIdle                                
+000016c1  powerEnableGPIOClockRunMode                           
+000016b1  powerEnableMcuPdReq                                   
+00001665  powerEnablePeriph                                     
+00001655  powerEnableRFC                                        
+000016d7  powerEnableXtal                                       
+000016e7  powerEnableXtalInterface                              
+00000eed  radioCmdBusRequest                                    
+00000f0b  radioCmdStartRAT                                      
+00000ee5  radioPatch                                            
+00000f1d  radioSetupAndTransmit                                 
+00000fa7  radioUpdateAdvData                                    
+2000012c  raw_hum                                               
+2000012e  raw_temp                                              
+00000edd  runRadio                                              
+000001c5  trimDevice                                            
+00001713  waitUntilAUXReady                                     
+00001701  waitUntilPeriphReady                                  
+000016ef  waitUntilRFCReady                                     
+
+
+GLOBAL SYMBOLS: SORTED BY Symbol Address 
+
+address   name                                                  
+-------   ----                                                  
+00000000  __TI_static_base__                                    
+00000000  g_pfnVectors                                          
+00000100  __STACK_SIZE                                          
+000001c5  trimDevice                                            
+00000a01  NOROM_OSCClockSourceSet                               
+00000a51  NOROM_OSCClockSourceGet                               
+00000a81  NOROM_OSCInterfaceEnable                              
+00000aaf  OSCHF_GetStartupTime                                  
+00000b71  OSCHF_TurnOnXosc                                      
+00000b85  OSCHF_AttemptToSwitchToXosc                           
+00000be5  OSCHF_SwitchToRcOscTurnOffXosc                        
+00000d1d  NOROM_DDI16BitWrite                                   
+00000d6d  NOROM_DDI16BitfieldWrite                              
+00000dbf  NOROM_DDI16BitRead                                    
+00000e07  NOROM_DDI16BitfieldRead                               
+00000ec1  initRadio                                             
+00000edd  runRadio                                              
+00000ee5  radioPatch                                            
+00000eed  radioCmdBusRequest                                    
+00000f0b  radioCmdStartRAT                                      
+00000f1d  radioSetupAndTransmit                                 
+00000fa7  radioUpdateAdvData                                    
+00000fcf  initRadioInts                                         
+00000fe7  RFCCPE1IntHandler                                     
+00000ffd  RFCCPE0IntHandler                                     
+000010a1  main                                                  
+00001291  __aeabi_dsub                                          
+0000129b  __aeabi_dadd                                          
+0000149d  ChipInfo_GetSupportedProtocol_BV                      
+000014a7  ChipInfo_GetPackageType                               
+000014d9  ChipInfo_GetChipFamily                                
+0000152f  ChipInfo_GetHwRevision                                
+000015c3  ThisCodeIsBuiltForCC26xxHwRev22AndLater_HaltIfViolated
+000015e5  initInterrupts                                        
+00001601  powerEnableAuxForceOn                                 
+00001609  powerDisableAuxForceOn                                
+00001611  powerEnableCache                                      
+00001623  powerDisableCache                                     
+00001635  powerEnableCacheRetention                             
+00001641  powerDisableCacheRetention                            
+0000164d  powerDisableAuxRamRet                                 
+00001655  powerEnableRFC                                        
+0000165d  powerDisableRFC                                       
+00001665  powerEnablePeriph                                     
+0000166d  powerDisablePeriph                                    
+00001675  powerDisableCPU                                       
+0000167d  powerEnableFlashInIdle                                
+00001685  powerDisableFlashInIdle                               
+0000168d  powerEnableAUXPdReq                                   
+0000169b  powerDivideInfClkDS                                   
+000016b1  powerEnableMcuPdReq                                   
+000016b9  powerDisableMcuPdReq                                  
+000016c1  powerEnableGPIOClockRunMode                           
+000016cf  powerConfigureRecharge                                
+000016d7  powerEnableXtal                                       
+000016df  powerDisableXtal                                      
+000016e7  powerEnableXtalInterface                              
+000016ef  waitUntilRFCReady                                     
+00001701  waitUntilPeriphReady                                  
+00001713  waitUntilAUXReady                                     
+0000182f  initRTC                                               
+00001861  AONRTCIntHandler                                      
+00001899  __aeabi_memcpy                                        
+00001899  __aeabi_memcpy4                                       
+00001899  __aeabi_memcpy8                                       
+00001899  memcpy                                                
+00001935  __aeabi_cdcmpeq                                       
+00001935  __aeabi_cdcmple                                       
+000019bb  __aeabi_memclr                                        
+000019bb  __aeabi_memclr4                                       
+000019bb  __aeabi_memclr8                                       
+000019bd  __aeabi_memset                                        
+000019bd  __aeabi_memset4                                       
+000019bd  __aeabi_memset8                                       
+000019c3  memset                                                
+00001a35  __TI_auto_init                                        
+00001b0b  ResetISR                                              
+00001b6d  NOROM_AONRTCCurrentCompareValueGet                    
+00001b99  NOROM_AONRTCCurrent64BitValueGet                      
+00001bc9  copy_in                                               
+00001c15  AONBatMonTemperatureGetDegC                           
+00001c59  C$$EXIT                                               
+00001c5d  abort                                                 
+00001c65  exit                                                  
+00001c9d  _c_int00                                              
+00001cd9  NOROM_CPUcpsid                                        
+00001ce5  NOROM_CPUprimask                                      
+00001cef  NOROM_CPUcpsie                                        
+00001cfb  NOROM_CPUbasepriGet                                   
+00001d05  _args_main                                            
+00001d1d  _register_unlock                                      
+00001d23  _register_lock                                        
+00001d2b  _nop                                                  
+00001d31  __TI_decompress_none                                  
+00001d3f  __TI_zero_init                                        
+00001d4b  __TI_decompress_rle24                                 
+00001d51  _system_pre_init                                      
+00001dbc  __c_args__                                            
+00001e84  __TI_Handler_Table_Base                               
+00001e90  __TI_Handler_Table_Limit                              
+00001e98  __TI_CINIT_Base                                       
+00001ea8  __TI_CINIT_Limit                                      
+0001ffa8  __ccfg                                                
+20000000  int_boot_done                                         
+20000001  advData                                               
+20000010  cmdAdvParam                                           
+20000030  advOutput                                             
+20000040  cmdAdv2                                               
+20000058  cmdAdv1                                               
+20000070  cmdAdv0                                               
+20000088  cmdSetup37                                            
+200000a0  cmdSetup38                                            
+200000b8  cmdSetup39                                            
+200000d0  bleDifferentialOverrides                              
+20000100  _lock                                                 
+20000104  _unlock                                               
+20000108  __TI_cleanup_ptr                                      
+2000010c  __TI_dtors_ptr                                        
+20000110  main_func_sp                                          
+2000012c  raw_hum                                               
+2000012e  raw_temp                                              
+20000138  advLength                                             
+20004f00  __stack                                               
+20005000  __STACK_END                                           
+20005000  __STACK_TOP                                           
+ffffffff  __binit__                                             
+ffffffff  binit                                                 
+UNDEFED   SHT$$INIT_ARRAY$$Base                                 
+UNDEFED   SHT$$INIT_ARRAY$$Limit                                
+
+[129 symbols]

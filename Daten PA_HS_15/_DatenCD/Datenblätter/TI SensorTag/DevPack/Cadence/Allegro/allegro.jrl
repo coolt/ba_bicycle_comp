@@ -1,0 +1,17 @@
+\t (00:10:54) allegro 16.6 S026 (v16-6-112BY) Windows 32
+\t (00:10:54)     Journal start - Tue Jan 06 14:13:07 2015
+\t (00:10:54)         Host=LTA0132599 User=a0132599 Pid=5236 CPUs=4
+\t (00:10:54) CmdLine= C:\Cadence\SPB_16.6\tools\pcb\bin\allegro.exe
+\t (00:10:54) 
+\d (00:10:54) Design opened: C:/Users/a0132599/Documents/TI/Marketing/CC26xx SensorTag/Skin/Debug/Manufacture/Cadence/Allegro/DevPack_Debug.brd
+\i (00:10:54) etchedit 
+\i (00:10:55) zoom out 1 
+\i (00:10:55) setwindow pcb
+\i (00:10:55) zoom out 23.1560 15.4230
+\i (00:10:55) trapsize 3063
+\i (00:11:03) open 
+\i (00:11:31) fillin "C:\Users\a0132599\Documents\TI\Marketing\CC26xx SensorTag\Skin\Debug\Design\DevPack_Debug.brd"
+\i (00:11:31) cd "C:\Users\a0132599\Documents\TI\Marketing\CC26xx SensorTag\Skin\Debug\Design"
+\t (00:11:31) Opening existing design...
+\i (00:11:31) trapsize 6961
+\t (00:11:31)     Journal end - Tue Jan 06 14:13:44 2015

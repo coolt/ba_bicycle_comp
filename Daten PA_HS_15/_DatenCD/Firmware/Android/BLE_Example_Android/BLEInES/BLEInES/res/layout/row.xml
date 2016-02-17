@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:orientation="horizontal" >
+		<TextView 
+		 android:id="@+id/SensorName"   
+		 android:layout_width="fill_parent"   
+		 android:layout_height="wrap_content"  
+		 android:paddingTop="10sp"
+		 android:paddingBottom="10sp"
+		 android:gravity="left"
+		 android:textSize="20sp" 
+		 android:text="Text"
+		 android:layout_weight="1">  
+		</TextView>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:gravity="right">
+            <Chronometer
+                android:id="@+id/RowTimer"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:text="00:00" />
+
+            <TextView
+                android:id="@+id/rowTemp"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/RowTimer"
+                android:gravity="right"
+                android:text="Text"/>
+        </RelativeLayout>
+
+</LinearLayout>
