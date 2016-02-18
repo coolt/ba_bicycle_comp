@@ -1,4 +1,8 @@
-Messung 45° Winkel des Sensors --> 3D-Spule ausmessen
-SMD-Spule suchen --> mehr Wicklungen, gleiche Grösse
-Test, ob der Debugger genötigt wird
-Minimalgeschwindigkeit ermittlen
+- Messung 45° Winkel des Sensors --> 3D-Spule ausmessen
+- SMD-Spule suchen --> mehr Wicklungen, gleiche Grösse
+- Test, ob der Debugger genötigt wird
+- Minimalgeschwindigkeit ermittlen
+- Projektplan finalisieren
+- Latex-Projekt aufsetzten --> Dokumentation
+- Schema oder BOM für neue Leiterplatte erfassen
+- Thematik EM-Board einlesen
