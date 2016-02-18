@@ -1,0 +1,4 @@
+Messung 45° Winkel des Sensors --> 3D-Spule ausmessen
+SMD-Spule suchen --> mehr Wicklungen, gleiche Grösse
+Test, ob der Debugger genötigt wird
+Minimalgeschwindigkeit ermittlen
