@@ -1,0 +1,4 @@
+﻿Fragen an Gast von Microelectronic:
+- Liste mit Registerkonfigurationen ?  -> Datasheet EMDVK, S 29.
+- Einfache Tests der Konfigurationen ? (Introduction) 
+- Kommunikationspin BATL, HRVL: wann senden sie Signal?

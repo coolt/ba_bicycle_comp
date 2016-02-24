@@ -1,5 +1,21 @@
-TO DO Energy Management
+﻿TO DO Energy Management
 
-- Einarbeiten Eval-Kit
-	I2C verstehen: SCK, SDA,
+- Einarbeiten EM-Kit
+	0. Verbrauch Sensortag messen 
+	(strom/Spannung /zeit) -> ev. Hilfe
+	1. Einarbeiten Konfiguration EM8500
+	- Pfadvariable setzen
+        - Wie Konfigurationsdateien erstellen? (ohne EM8500 Development Explorer.)
+	- Befehlsliste von Help erhältlich ? 
+               
+	2. EM-Verhalten des Prototyps messen
+	   -Starten 8500: 
+	    boot sequenz: holt aktuelle energiewerte der Speicherelemente ab, 
+		Setzt auf Gerät die im Eprom gespeicherten Konfigurationswerte (8500 Datasheet, S.11)
+	   - 
+	3. Kommunikationspin BATL, HRVL: keine Signale (vgl. Datasheet 8500 S.11):
+           Sollten MCU direkte Meldung über Batteriestand geben                   
+	
+	Notiz: Im User_Guide EMDVK wird S.29 die Konfiguration (mit Explorer) beschrieben
+
 - Unterschied Eval-Board InES zu Eval-Kit EM
