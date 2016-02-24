@@ -1,0 +1,4 @@
+- Vergleich Leiterplatte InES zu EM-Evalboard
+- Liste Bestückung Prototyp bicyle computer
+- Einführung Altium von Erich
+- Lukas: Erklärung aktuller Print
