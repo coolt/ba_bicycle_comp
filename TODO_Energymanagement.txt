@@ -1,0 +1,5 @@
+TO DO Energy Management
+
+- Einarbeiten Eval-Kit
+	I2C verstehen: SCK, SDA,
+- Unterschied Eval-Board InES zu Eval-Kit EM
