@@ -1,0 +1,8 @@
+Notizen Evalboard Konfigurationen
+
+Es gibt eine Applikationsnotiz, in der die Befehle notiert sind:
+MMP = ist die höchstmögliche Leistung des Harvesters
+
+Berechnungen Energy Mangement:
+- Application Note: Configuration
+- Applicaton Note: Storage Elements
