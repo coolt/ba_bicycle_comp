@@ -1,0 +1,21 @@
+Sensortag Energieverbrauch Prototyp
+------------------------------------
+Messdatum 25.2.16
+Speisung: 			1.97 V
+Widerstände: 		1 Ohm / 1%
+Ruhestrom: 			400 mA !!!  
+Strom beim Senden: 	500 mA
+
+
+
+Kontrollmessung Energieverbrauch Sensortag unprogrammiert
+---------------------------------------------------------
+Widerstand: 		1 Ohm/1%
+Ruhestrom:			
+
+
+
+
+Sensortag Anschlüsse
+--------------------
+Read-Relais Anschluss ist auf PIn 20 mit der Bezeichnung DP0 (Schematic: J2/Pin20). Auf dem Prozessor DIO25 (Pin38).
