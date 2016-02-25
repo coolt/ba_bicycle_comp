@@ -1,0 +1,3 @@
+Command, um ein komplettes Config File zu laden, muss auf englisch sein:
+
+empb85xx -cf C:\users\daniel\documents\MyFile.cfg
