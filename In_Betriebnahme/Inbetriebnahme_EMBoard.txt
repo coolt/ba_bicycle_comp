@@ -1,0 +1,7 @@
+Inbetriebnahme EM Board
+------------------------
+
+Ausgangsleistung Messen
+------------------------
+Übernahme Messaufbau PA.
+Ergänzt mit 100 Ohm Widerstand (0.5%) für parallele Strommessung.
