@@ -1,7 +1,17 @@
-Inbetriebnahme EM Board
+﻿Inbetriebnahme EM Board
 ------------------------
 
 Ausgangsleistung Messen
 ------------------------
 Übernahme Messaufbau PA.
-Ergänzt mit 100 Ohm Widerstand (0.5%) für parallele Strommessung.
+
+Last: 			100 Ohm/ 1%		
+Spannung:		0.7 V / 2 ms   (Details siehe Bild)
+Geschwindigkeit:	Max.
+
+
+
+
+Last:			10 Ohm (Entspricht Last Sensortag)
+Spannung: 		(siehe Bild)		
+Geschwindigkeit:	Max
