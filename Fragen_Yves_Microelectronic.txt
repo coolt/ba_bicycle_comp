@@ -1,5 +1,0 @@
-﻿Fragen an Gast von Microelectronic:
-- MPPT Ratio Einstellungen: wie funktioniert das ?
-- Liste mit Registerkonfigurationen ?  -> Datasheet EMDVK, S 29.
-- Einfache Tests der Konfigurationen ? (Introduction) 
-- Kommunikationspin BATL, HRVL: wann senden sie Signal?
