@@ -1,0 +1,153 @@
+# FIXED
+
+sensors/opt-3001-sensor.obj: ../sensors/opt-3001-sensor.c
+sensors/opt-3001-sensor.obj: ../sensors/opt-3001-sensor.h
+sensors/opt-3001-sensor.obj: C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.6/include/stdint.h
+sensors/opt-3001-sensor.obj: C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.6/include/stdlib.h
+sensors/opt-3001-sensor.obj: C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.6/include/linkage.h
+sensors/opt-3001-sensor.obj: C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.6/include/stdbool.h
+sensors/opt-3001-sensor.obj: C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.6/include/yvals.h
+sensors/opt-3001-sensor.obj: C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.6/include/stdarg.h
+sensors/opt-3001-sensor.obj: C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.6/include/_lock.h
+sensors/opt-3001-sensor.obj: ../sensors/ti-lib.h
+sensors/opt-3001-sensor.obj: C:/Users/Daniel/Documents/_SVN/Projektarbeit_HS2015/Firmware/_Workspaces/CodeComposerStudio/Startup_wait_for_2_Pin_Interrupts_send_time_over_BLE_disable_VSUP_over_SPI/cc26xxware_2_21_03_15980/driverlib/aon_batmon.h
+sensors/opt-3001-sensor.obj: C:/Users/Daniel/Documents/_SVN/Projektarbeit_HS2015/Firmware/_Workspaces/CodeComposerStudio/Startup_wait_for_2_Pin_Interrupts_send_time_over_BLE_disable_VSUP_over_SPI/cc26xxware_2_21_03_15980/inc/hw_types.h
+sensors/opt-3001-sensor.obj: C:/Users/Daniel/Documents/_SVN/Projektarbeit_HS2015/Firmware/_Workspaces/CodeComposerStudio/Startup_wait_for_2_Pin_Interrupts_send_time_over_BLE_disable_VSUP_over_SPI/cc26xxware_2_21_03_15980/inc/hw_chip_def.h
+sensors/opt-3001-sensor.obj: C:/Users/Daniel/Documents/_SVN/Projektarbeit_HS2015/Firmware/_Workspaces/CodeComposerStudio/Startup_wait_for_2_Pin_Interrupts_send_time_over_BLE_disable_VSUP_over_SPI/cc26xxware_2_21_03_15980/inc/hw_memmap.h
+sensors/opt-3001-sensor.obj: C:/Users/Daniel/Documents/_SVN/Projektarbeit_HS2015/Firmware/_Workspaces/CodeComposerStudio/Startup_wait_for_2_Pin_Interrupts_send_time_over_BLE_disable_VSUP_over_SPI/cc26xxware_2_21_03_15980/inc/hw_aon_batmon.h
+sensors/opt-3001-sensor.obj: C:/Users/Daniel/Documents/_SVN/Projektarbeit_HS2015/Firmware/_Workspaces/CodeComposerStudio/Startup_wait_for_2_Pin_Interrupts_send_time_over_BLE_disable_VSUP_over_SPI/cc26xxware_2_21_03_15980/driverlib/debug.h
+sensors/opt-3001-sensor.obj: C:/Users/Daniel/Documents/_SVN/Projektarbeit_HS2015/Firmware/_Workspaces/CodeComposerStudio/Startup_wait_for_2_Pin_Interrupts_send_time_over_BLE_disable_VSUP_over_SPI/cc26xxware_2_21_03_15980/driverlib/aon_event.h
+sensors/opt-3001-sensor.obj: C:/Users/Daniel/Documents/_SVN/Projektarbeit_HS2015/Firmware/_Workspaces/CodeComposerStudio/Startup_wait_for_2_Pin_Interrupts_send_time_over_BLE_disable_VSUP_over_SPI/cc26xxware_2_21_03_15980/inc/hw_device.h
+sensors/opt-3001-sensor.obj: C:/Users/Daniel/Documents/_SVN/Projektarbeit_HS2015/Firmware/_Workspaces/CodeComposerStudio/Startup_wait_for_2_Pin_Interrupts_send_time_over_BLE_disable_VSUP_over_SPI/cc26xxware_2_21_03_15980/inc/hw_aon_event.h
+sensors/opt-3001-sensor.obj: C:/Users/Daniel/Documents/_SVN/Projektarbeit_HS2015/Firmware/_Workspaces/CodeComposerStudio/Startup_wait_for_2_Pin_Interrupts_send_time_over_BLE_disable_VSUP_over_SPI/cc26xxware_2_21_03_15980/driverlib/rom.h
+sensors/opt-3001-sensor.obj: C:/Users/Daniel/Documents/_SVN/Projektarbeit_HS2015/Firmware/_Workspaces/CodeComposerStudio/Startup_wait_for_2_Pin_Interrupts_send_time_over_BLE_disable_VSUP_over_SPI/cc26xxware_2_21_03_15980/driverlib/aon_ioc.h
+sensors/opt-3001-sensor.obj: C:/Users/Daniel/Documents/_SVN/Projektarbeit_HS2015/Firmware/_Workspaces/CodeComposerStudio/Startup_wait_for_2_Pin_Interrupts_send_time_over_BLE_disable_VSUP_over_SPI/cc26xxware_2_21_03_15980/inc/hw_aon_ioc.h
+sensors/opt-3001-sensor.obj: C:/Users/Daniel/Documents/_SVN/Projektarbeit_HS2015/Firmware/_Workspaces/CodeComposerStudio/Startup_wait_for_2_Pin_Interrupts_send_time_over_BLE_disable_VSUP_over_SPI/cc26xxware_2_21_03_15980/driverlib/aon_rtc.h
+sensors/opt-3001-sensor.obj: C:/Users/Daniel/Documents/_SVN/Projektarbeit_HS2015/Firmware/_Workspaces/CodeComposerStudio/Startup_wait_for_2_Pin_Interrupts_send_time_over_BLE_disable_VSUP_over_SPI/cc26xxware_2_21_03_15980/inc/hw_aon_rtc.h
+sensors/opt-3001-sensor.obj: C:/Users/Daniel/Documents/_SVN/Projektarbeit_HS2015/Firmware/_Workspaces/CodeComposerStudio/Startup_wait_for_2_Pin_Interrupts_send_time_over_BLE_disable_VSUP_over_SPI/cc26xxware_2_21_03_15980/driverlib/aon_wuc.h
+sensors/opt-3001-sensor.obj: C:/Users/Daniel/Documents/_SVN/Projektarbeit_HS2015/Firmware/_Workspaces/CodeComposerStudio/Startup_wait_for_2_Pin_Interrupts_send_time_over_BLE_disable_VSUP_over_SPI/cc26xxware_2_21_03_15980/inc/hw_ints.h
+sensors/opt-3001-sensor.obj: C:/Users/Daniel/Documents/_SVN/Projektarbeit_HS2015/Firmware/_Workspaces/CodeComposerStudio/Startup_wait_for_2_Pin_Interrupts_send_time_over_BLE_disable_VSUP_over_SPI/cc26xxware_2_21_03_15980/inc/hw_aon_wuc.h
+sensors/opt-3001-sensor.obj: C:/Users/Daniel/Documents/_SVN/Projektarbeit_HS2015/Firmware/_Workspaces/CodeComposerStudio/Startup_wait_for_2_Pin_Interrupts_send_time_over_BLE_disable_VSUP_over_SPI/cc26xxware_2_21_03_15980/driverlib/interrupt.h
+sensors/opt-3001-sensor.obj: C:/Users/Daniel/Documents/_SVN/Projektarbeit_HS2015/Firmware/_Workspaces/CodeComposerStudio/Startup_wait_for_2_Pin_Interrupts_send_time_over_BLE_disable_VSUP_over_SPI/cc26xxware_2_21_03_15980/inc/hw_nvic.h
+sensors/opt-3001-sensor.obj: C:/Users/Daniel/Documents/_SVN/Projektarbeit_HS2015/Firmware/_Workspaces/CodeComposerStudio/Startup_wait_for_2_Pin_Interrupts_send_time_over_BLE_disable_VSUP_over_SPI/cc26xxware_2_21_03_15980/driverlib/cpu.h
+sensors/opt-3001-sensor.obj: C:/Users/Daniel/Documents/_SVN/Projektarbeit_HS2015/Firmware/_Workspaces/CodeComposerStudio/Startup_wait_for_2_Pin_Interrupts_send_time_over_BLE_disable_VSUP_over_SPI/cc26xxware_2_21_03_15980/driverlib/aux_wuc.h
+sensors/opt-3001-sensor.obj: C:/Users/Daniel/Documents/_SVN/Projektarbeit_HS2015/Firmware/_Workspaces/CodeComposerStudio/Startup_wait_for_2_Pin_Interrupts_send_time_over_BLE_disable_VSUP_over_SPI/cc26xxware_2_21_03_15980/inc/hw_aux_wuc.h
+sensors/opt-3001-sensor.obj: C:/Users/Daniel/Documents/_SVN/Projektarbeit_HS2015/Firmware/_Workspaces/CodeComposerStudio/Startup_wait_for_2_Pin_Interrupts_send_time_over_BLE_disable_VSUP_over_SPI/cc26xxware_2_21_03_15980/driverlib/chipinfo.h
+sensors/opt-3001-sensor.obj: C:/Users/Daniel/Documents/_SVN/Projektarbeit_HS2015/Firmware/_Workspaces/CodeComposerStudio/Startup_wait_for_2_Pin_Interrupts_send_time_over_BLE_disable_VSUP_over_SPI/cc26xxware_2_21_03_15980/inc/hw_fcfg1.h
+sensors/opt-3001-sensor.obj: C:/Users/Daniel/Documents/_SVN/Projektarbeit_HS2015/Firmware/_Workspaces/CodeComposerStudio/Startup_wait_for_2_Pin_Interrupts_send_time_over_BLE_disable_VSUP_over_SPI/cc26xxware_2_21_03_15980/driverlib/ddi.h
+sensors/opt-3001-sensor.obj: C:/Users/Daniel/Documents/_SVN/Projektarbeit_HS2015/Firmware/_Workspaces/CodeComposerStudio/Startup_wait_for_2_Pin_Interrupts_send_time_over_BLE_disable_VSUP_over_SPI/cc26xxware_2_21_03_15980/inc/hw_ddi.h
+sensors/opt-3001-sensor.obj: C:/Users/Daniel/Documents/_SVN/Projektarbeit_HS2015/Firmware/_Workspaces/CodeComposerStudio/Startup_wait_for_2_Pin_Interrupts_send_time_over_BLE_disable_VSUP_over_SPI/cc26xxware_2_21_03_15980/inc/hw_aux_smph.h
+sensors/opt-3001-sensor.obj: C:/Users/Daniel/Documents/_SVN/Projektarbeit_HS2015/Firmware/_Workspaces/CodeComposerStudio/Startup_wait_for_2_Pin_Interrupts_send_time_over_BLE_disable_VSUP_over_SPI/cc26xxware_2_21_03_15980/driverlib/gpio.h
+sensors/opt-3001-sensor.obj: C:/Users/Daniel/Documents/_SVN/Projektarbeit_HS2015/Firmware/_Workspaces/CodeComposerStudio/Startup_wait_for_2_Pin_Interrupts_send_time_over_BLE_disable_VSUP_over_SPI/cc26xxware_2_21_03_15980/inc/hw_gpio.h
+sensors/opt-3001-sensor.obj: C:/Users/Daniel/Documents/_SVN/Projektarbeit_HS2015/Firmware/_Workspaces/CodeComposerStudio/Startup_wait_for_2_Pin_Interrupts_send_time_over_BLE_disable_VSUP_over_SPI/cc26xxware_2_21_03_15980/driverlib/i2c.h
+sensors/opt-3001-sensor.obj: C:/Users/Daniel/Documents/_SVN/Projektarbeit_HS2015/Firmware/_Workspaces/CodeComposerStudio/Startup_wait_for_2_Pin_Interrupts_send_time_over_BLE_disable_VSUP_over_SPI/cc26xxware_2_21_03_15980/inc/hw_i2c.h
+sensors/opt-3001-sensor.obj: C:/Users/Daniel/Documents/_SVN/Projektarbeit_HS2015/Firmware/_Workspaces/CodeComposerStudio/Startup_wait_for_2_Pin_Interrupts_send_time_over_BLE_disable_VSUP_over_SPI/cc26xxware_2_21_03_15980/inc/hw_sysctl.h
+sensors/opt-3001-sensor.obj: C:/Users/Daniel/Documents/_SVN/Projektarbeit_HS2015/Firmware/_Workspaces/CodeComposerStudio/Startup_wait_for_2_Pin_Interrupts_send_time_over_BLE_disable_VSUP_over_SPI/cc26xxware_2_21_03_15980/driverlib/ioc.h
+sensors/opt-3001-sensor.obj: C:/Users/Daniel/Documents/_SVN/Projektarbeit_HS2015/Firmware/_Workspaces/CodeComposerStudio/Startup_wait_for_2_Pin_Interrupts_send_time_over_BLE_disable_VSUP_over_SPI/cc26xxware_2_21_03_15980/inc/hw_ioc.h
+sensors/opt-3001-sensor.obj: C:/Users/Daniel/Documents/_SVN/Projektarbeit_HS2015/Firmware/_Workspaces/CodeComposerStudio/Startup_wait_for_2_Pin_Interrupts_send_time_over_BLE_disable_VSUP_over_SPI/cc26xxware_2_21_03_15980/driverlib/osc.h
+sensors/opt-3001-sensor.obj: C:/Users/Daniel/Documents/_SVN/Projektarbeit_HS2015/Firmware/_Workspaces/CodeComposerStudio/Startup_wait_for_2_Pin_Interrupts_send_time_over_BLE_disable_VSUP_over_SPI/cc26xxware_2_21_03_15980/inc/hw_ddi_0_osc.h
+sensors/opt-3001-sensor.obj: C:/Users/Daniel/Documents/_SVN/Projektarbeit_HS2015/Firmware/_Workspaces/CodeComposerStudio/Startup_wait_for_2_Pin_Interrupts_send_time_over_BLE_disable_VSUP_over_SPI/cc26xxware_2_21_03_15980/driverlib/prcm.h
+sensors/opt-3001-sensor.obj: C:/Users/Daniel/Documents/_SVN/Projektarbeit_HS2015/Firmware/_Workspaces/CodeComposerStudio/Startup_wait_for_2_Pin_Interrupts_send_time_over_BLE_disable_VSUP_over_SPI/cc26xxware_2_21_03_15980/inc/hw_prcm.h
+sensors/opt-3001-sensor.obj: C:/Users/Daniel/Documents/_SVN/Projektarbeit_HS2015/Firmware/_Workspaces/CodeComposerStudio/Startup_wait_for_2_Pin_Interrupts_send_time_over_BLE_disable_VSUP_over_SPI/cc26xxware_2_21_03_15980/driverlib/pwr_ctrl.h
+sensors/opt-3001-sensor.obj: C:/Users/Daniel/Documents/_SVN/Projektarbeit_HS2015/Firmware/_Workspaces/CodeComposerStudio/Startup_wait_for_2_Pin_Interrupts_send_time_over_BLE_disable_VSUP_over_SPI/cc26xxware_2_21_03_15980/inc/hw_aon_sysctl.h
+sensors/opt-3001-sensor.obj: C:/Users/Daniel/Documents/_SVN/Projektarbeit_HS2015/Firmware/_Workspaces/CodeComposerStudio/Startup_wait_for_2_Pin_Interrupts_send_time_over_BLE_disable_VSUP_over_SPI/cc26xxware_2_21_03_15980/inc/hw_adi_2_refsys.h
+sensors/opt-3001-sensor.obj: C:/Users/Daniel/Documents/_SVN/Projektarbeit_HS2015/Firmware/_Workspaces/CodeComposerStudio/Startup_wait_for_2_Pin_Interrupts_send_time_over_BLE_disable_VSUP_over_SPI/cc26xxware_2_21_03_15980/driverlib/adi.h
+sensors/opt-3001-sensor.obj: C:/Users/Daniel/Documents/_SVN/Projektarbeit_HS2015/Firmware/_Workspaces/CodeComposerStudio/Startup_wait_for_2_Pin_Interrupts_send_time_over_BLE_disable_VSUP_over_SPI/cc26xxware_2_21_03_15980/inc/hw_uart.h
+sensors/opt-3001-sensor.obj: C:/Users/Daniel/Documents/_SVN/Projektarbeit_HS2015/Firmware/_Workspaces/CodeComposerStudio/Startup_wait_for_2_Pin_Interrupts_send_time_over_BLE_disable_VSUP_over_SPI/cc26xxware_2_21_03_15980/inc/hw_adi.h
+sensors/opt-3001-sensor.obj: C:/Users/Daniel/Documents/_SVN/Projektarbeit_HS2015/Firmware/_Workspaces/CodeComposerStudio/Startup_wait_for_2_Pin_Interrupts_send_time_over_BLE_disable_VSUP_over_SPI/cc26xxware_2_21_03_15980/driverlib/sys_ctrl.h
+sensors/opt-3001-sensor.obj: C:/Users/Daniel/Documents/_SVN/Projektarbeit_HS2015/Firmware/_Workspaces/CodeComposerStudio/Startup_wait_for_2_Pin_Interrupts_send_time_over_BLE_disable_VSUP_over_SPI/cc26xxware_2_21_03_15980/inc/hw_rfc_pwr.h
+sensors/opt-3001-sensor.obj: C:/Users/Daniel/Documents/_SVN/Projektarbeit_HS2015/Firmware/_Workspaces/CodeComposerStudio/Startup_wait_for_2_Pin_Interrupts_send_time_over_BLE_disable_VSUP_over_SPI/cc26xxware_2_21_03_15980/inc/hw_adi_3_refsys.h
+sensors/opt-3001-sensor.obj: C:/Users/Daniel/Documents/_SVN/Projektarbeit_HS2015/Firmware/_Workspaces/CodeComposerStudio/Startup_wait_for_2_Pin_Interrupts_send_time_over_BLE_disable_VSUP_over_SPI/cc26xxware_2_21_03_15980/driverlib/vims.h
+sensors/opt-3001-sensor.obj: C:/Users/Daniel/Documents/_SVN/Projektarbeit_HS2015/Firmware/_Workspaces/CodeComposerStudio/Startup_wait_for_2_Pin_Interrupts_send_time_over_BLE_disable_VSUP_over_SPI/cc26xxware_2_21_03_15980/inc/hw_vims.h
+sensors/opt-3001-sensor.obj: C:/Users/Daniel/Documents/_SVN/Projektarbeit_HS2015/Firmware/_Workspaces/CodeComposerStudio/Startup_wait_for_2_Pin_Interrupts_send_time_over_BLE_disable_VSUP_over_SPI/cc26xxware_2_21_03_15980/driverlib/ssi.h
+sensors/opt-3001-sensor.obj: C:/Users/Daniel/Documents/_SVN/Projektarbeit_HS2015/Firmware/_Workspaces/CodeComposerStudio/Startup_wait_for_2_Pin_Interrupts_send_time_over_BLE_disable_VSUP_over_SPI/cc26xxware_2_21_03_15980/inc/hw_ssi.h
+sensors/opt-3001-sensor.obj: C:/Users/Daniel/Documents/_SVN/Projektarbeit_HS2015/Firmware/_Workspaces/CodeComposerStudio/Startup_wait_for_2_Pin_Interrupts_send_time_over_BLE_disable_VSUP_over_SPI/cc26xxware_2_21_03_15980/driverlib/systick.h
+sensors/opt-3001-sensor.obj: C:/Users/Daniel/Documents/_SVN/Projektarbeit_HS2015/Firmware/_Workspaces/CodeComposerStudio/Startup_wait_for_2_Pin_Interrupts_send_time_over_BLE_disable_VSUP_over_SPI/cc26xxware_2_21_03_15980/driverlib/timer.h
+sensors/opt-3001-sensor.obj: C:/Users/Daniel/Documents/_SVN/Projektarbeit_HS2015/Firmware/_Workspaces/CodeComposerStudio/Startup_wait_for_2_Pin_Interrupts_send_time_over_BLE_disable_VSUP_over_SPI/cc26xxware_2_21_03_15980/inc/hw_gpt.h
+sensors/opt-3001-sensor.obj: C:/Users/Daniel/Documents/_SVN/Projektarbeit_HS2015/Firmware/_Workspaces/CodeComposerStudio/Startup_wait_for_2_Pin_Interrupts_send_time_over_BLE_disable_VSUP_over_SPI/cc26xxware_2_21_03_15980/driverlib/uart.h
+sensors/opt-3001-sensor.obj: C:/Users/Daniel/Documents/_SVN/Projektarbeit_HS2015/Firmware/_Workspaces/CodeComposerStudio/Startup_wait_for_2_Pin_Interrupts_send_time_over_BLE_disable_VSUP_over_SPI/cc26xxware_2_21_03_15980/driverlib/watchdog.h
+sensors/opt-3001-sensor.obj: C:/Users/Daniel/Documents/_SVN/Projektarbeit_HS2015/Firmware/_Workspaces/CodeComposerStudio/Startup_wait_for_2_Pin_Interrupts_send_time_over_BLE_disable_VSUP_over_SPI/cc26xxware_2_21_03_15980/inc/hw_wdt.h
+sensors/opt-3001-sensor.obj: C:/Users/Daniel/Documents/_SVN/Projektarbeit_HS2015/Firmware/_Workspaces/CodeComposerStudio/Startup_wait_for_2_Pin_Interrupts_send_time_over_BLE_disable_VSUP_over_SPI/interfaces/board-i2c.h
+sensors/opt-3001-sensor.obj: ../sensors/sensor-common.h
+sensors/opt-3001-sensor.obj: C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.6/include/string.h
+sensors/opt-3001-sensor.obj: C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.6/include/stdio.h
+sensors/opt-3001-sensor.obj: C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.6/include/stdarg.h
+sensors/opt-3001-sensor.obj: C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.6/include/math.h
+sensors/opt-3001-sensor.obj: C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.6/include/ymath.h
+sensors/opt-3001-sensor.obj: C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.6/include/float.h
+
+../sensors/opt-3001-sensor.c: 
+../sensors/opt-3001-sensor.h: 
+C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.6/include/stdint.h: 
+C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.6/include/stdlib.h: 
+C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.6/include/linkage.h: 
+C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.6/include/stdbool.h: 
+C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.6/include/yvals.h: 
+C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.6/include/stdarg.h: 
+C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.6/include/_lock.h: 
+../sensors/ti-lib.h: 
+C:/Users/Daniel/Documents/_SVN/Projektarbeit_HS2015/Firmware/_Workspaces/CodeComposerStudio/Startup_wait_for_2_Pin_Interrupts_send_time_over_BLE_disable_VSUP_over_SPI/cc26xxware_2_21_03_15980/driverlib/aon_batmon.h: 
+C:/Users/Daniel/Documents/_SVN/Projektarbeit_HS2015/Firmware/_Workspaces/CodeComposerStudio/Startup_wait_for_2_Pin_Interrupts_send_time_over_BLE_disable_VSUP_over_SPI/cc26xxware_2_21_03_15980/inc/hw_types.h: 
+C:/Users/Daniel/Documents/_SVN/Projektarbeit_HS2015/Firmware/_Workspaces/CodeComposerStudio/Startup_wait_for_2_Pin_Interrupts_send_time_over_BLE_disable_VSUP_over_SPI/cc26xxware_2_21_03_15980/inc/hw_chip_def.h: 
+C:/Users/Daniel/Documents/_SVN/Projektarbeit_HS2015/Firmware/_Workspaces/CodeComposerStudio/Startup_wait_for_2_Pin_Interrupts_send_time_over_BLE_disable_VSUP_over_SPI/cc26xxware_2_21_03_15980/inc/hw_memmap.h: 
+C:/Users/Daniel/Documents/_SVN/Projektarbeit_HS2015/Firmware/_Workspaces/CodeComposerStudio/Startup_wait_for_2_Pin_Interrupts_send_time_over_BLE_disable_VSUP_over_SPI/cc26xxware_2_21_03_15980/inc/hw_aon_batmon.h: 
+C:/Users/Daniel/Documents/_SVN/Projektarbeit_HS2015/Firmware/_Workspaces/CodeComposerStudio/Startup_wait_for_2_Pin_Interrupts_send_time_over_BLE_disable_VSUP_over_SPI/cc26xxware_2_21_03_15980/driverlib/debug.h: 
+C:/Users/Daniel/Documents/_SVN/Projektarbeit_HS2015/Firmware/_Workspaces/CodeComposerStudio/Startup_wait_for_2_Pin_Interrupts_send_time_over_BLE_disable_VSUP_over_SPI/cc26xxware_2_21_03_15980/driverlib/aon_event.h: 
+C:/Users/Daniel/Documents/_SVN/Projektarbeit_HS2015/Firmware/_Workspaces/CodeComposerStudio/Startup_wait_for_2_Pin_Interrupts_send_time_over_BLE_disable_VSUP_over_SPI/cc26xxware_2_21_03_15980/inc/hw_device.h: 
+C:/Users/Daniel/Documents/_SVN/Projektarbeit_HS2015/Firmware/_Workspaces/CodeComposerStudio/Startup_wait_for_2_Pin_Interrupts_send_time_over_BLE_disable_VSUP_over_SPI/cc26xxware_2_21_03_15980/inc/hw_aon_event.h: 
+C:/Users/Daniel/Documents/_SVN/Projektarbeit_HS2015/Firmware/_Workspaces/CodeComposerStudio/Startup_wait_for_2_Pin_Interrupts_send_time_over_BLE_disable_VSUP_over_SPI/cc26xxware_2_21_03_15980/driverlib/rom.h: 
+C:/Users/Daniel/Documents/_SVN/Projektarbeit_HS2015/Firmware/_Workspaces/CodeComposerStudio/Startup_wait_for_2_Pin_Interrupts_send_time_over_BLE_disable_VSUP_over_SPI/cc26xxware_2_21_03_15980/driverlib/aon_ioc.h: 
+C:/Users/Daniel/Documents/_SVN/Projektarbeit_HS2015/Firmware/_Workspaces/CodeComposerStudio/Startup_wait_for_2_Pin_Interrupts_send_time_over_BLE_disable_VSUP_over_SPI/cc26xxware_2_21_03_15980/inc/hw_aon_ioc.h: 
+C:/Users/Daniel/Documents/_SVN/Projektarbeit_HS2015/Firmware/_Workspaces/CodeComposerStudio/Startup_wait_for_2_Pin_Interrupts_send_time_over_BLE_disable_VSUP_over_SPI/cc26xxware_2_21_03_15980/driverlib/aon_rtc.h: 
+C:/Users/Daniel/Documents/_SVN/Projektarbeit_HS2015/Firmware/_Workspaces/CodeComposerStudio/Startup_wait_for_2_Pin_Interrupts_send_time_over_BLE_disable_VSUP_over_SPI/cc26xxware_2_21_03_15980/inc/hw_aon_rtc.h: 
+C:/Users/Daniel/Documents/_SVN/Projektarbeit_HS2015/Firmware/_Workspaces/CodeComposerStudio/Startup_wait_for_2_Pin_Interrupts_send_time_over_BLE_disable_VSUP_over_SPI/cc26xxware_2_21_03_15980/driverlib/aon_wuc.h: 
+C:/Users/Daniel/Documents/_SVN/Projektarbeit_HS2015/Firmware/_Workspaces/CodeComposerStudio/Startup_wait_for_2_Pin_Interrupts_send_time_over_BLE_disable_VSUP_over_SPI/cc26xxware_2_21_03_15980/inc/hw_ints.h: 
+C:/Users/Daniel/Documents/_SVN/Projektarbeit_HS2015/Firmware/_Workspaces/CodeComposerStudio/Startup_wait_for_2_Pin_Interrupts_send_time_over_BLE_disable_VSUP_over_SPI/cc26xxware_2_21_03_15980/inc/hw_aon_wuc.h: 
+C:/Users/Daniel/Documents/_SVN/Projektarbeit_HS2015/Firmware/_Workspaces/CodeComposerStudio/Startup_wait_for_2_Pin_Interrupts_send_time_over_BLE_disable_VSUP_over_SPI/cc26xxware_2_21_03_15980/driverlib/interrupt.h: 
+C:/Users/Daniel/Documents/_SVN/Projektarbeit_HS2015/Firmware/_Workspaces/CodeComposerStudio/Startup_wait_for_2_Pin_Interrupts_send_time_over_BLE_disable_VSUP_over_SPI/cc26xxware_2_21_03_15980/inc/hw_nvic.h: 
+C:/Users/Daniel/Documents/_SVN/Projektarbeit_HS2015/Firmware/_Workspaces/CodeComposerStudio/Startup_wait_for_2_Pin_Interrupts_send_time_over_BLE_disable_VSUP_over_SPI/cc26xxware_2_21_03_15980/driverlib/cpu.h: 
+C:/Users/Daniel/Documents/_SVN/Projektarbeit_HS2015/Firmware/_Workspaces/CodeComposerStudio/Startup_wait_for_2_Pin_Interrupts_send_time_over_BLE_disable_VSUP_over_SPI/cc26xxware_2_21_03_15980/driverlib/aux_wuc.h: 
+C:/Users/Daniel/Documents/_SVN/Projektarbeit_HS2015/Firmware/_Workspaces/CodeComposerStudio/Startup_wait_for_2_Pin_Interrupts_send_time_over_BLE_disable_VSUP_over_SPI/cc26xxware_2_21_03_15980/inc/hw_aux_wuc.h: 
+C:/Users/Daniel/Documents/_SVN/Projektarbeit_HS2015/Firmware/_Workspaces/CodeComposerStudio/Startup_wait_for_2_Pin_Interrupts_send_time_over_BLE_disable_VSUP_over_SPI/cc26xxware_2_21_03_15980/driverlib/chipinfo.h: 
+C:/Users/Daniel/Documents/_SVN/Projektarbeit_HS2015/Firmware/_Workspaces/CodeComposerStudio/Startup_wait_for_2_Pin_Interrupts_send_time_over_BLE_disable_VSUP_over_SPI/cc26xxware_2_21_03_15980/inc/hw_fcfg1.h: 
+C:/Users/Daniel/Documents/_SVN/Projektarbeit_HS2015/Firmware/_Workspaces/CodeComposerStudio/Startup_wait_for_2_Pin_Interrupts_send_time_over_BLE_disable_VSUP_over_SPI/cc26xxware_2_21_03_15980/driverlib/ddi.h: 
+C:/Users/Daniel/Documents/_SVN/Projektarbeit_HS2015/Firmware/_Workspaces/CodeComposerStudio/Startup_wait_for_2_Pin_Interrupts_send_time_over_BLE_disable_VSUP_over_SPI/cc26xxware_2_21_03_15980/inc/hw_ddi.h: 
+C:/Users/Daniel/Documents/_SVN/Projektarbeit_HS2015/Firmware/_Workspaces/CodeComposerStudio/Startup_wait_for_2_Pin_Interrupts_send_time_over_BLE_disable_VSUP_over_SPI/cc26xxware_2_21_03_15980/inc/hw_aux_smph.h: 
+C:/Users/Daniel/Documents/_SVN/Projektarbeit_HS2015/Firmware/_Workspaces/CodeComposerStudio/Startup_wait_for_2_Pin_Interrupts_send_time_over_BLE_disable_VSUP_over_SPI/cc26xxware_2_21_03_15980/driverlib/gpio.h: 
+C:/Users/Daniel/Documents/_SVN/Projektarbeit_HS2015/Firmware/_Workspaces/CodeComposerStudio/Startup_wait_for_2_Pin_Interrupts_send_time_over_BLE_disable_VSUP_over_SPI/cc26xxware_2_21_03_15980/inc/hw_gpio.h: 
+C:/Users/Daniel/Documents/_SVN/Projektarbeit_HS2015/Firmware/_Workspaces/CodeComposerStudio/Startup_wait_for_2_Pin_Interrupts_send_time_over_BLE_disable_VSUP_over_SPI/cc26xxware_2_21_03_15980/driverlib/i2c.h: 
+C:/Users/Daniel/Documents/_SVN/Projektarbeit_HS2015/Firmware/_Workspaces/CodeComposerStudio/Startup_wait_for_2_Pin_Interrupts_send_time_over_BLE_disable_VSUP_over_SPI/cc26xxware_2_21_03_15980/inc/hw_i2c.h: 
+C:/Users/Daniel/Documents/_SVN/Projektarbeit_HS2015/Firmware/_Workspaces/CodeComposerStudio/Startup_wait_for_2_Pin_Interrupts_send_time_over_BLE_disable_VSUP_over_SPI/cc26xxware_2_21_03_15980/inc/hw_sysctl.h: 
+C:/Users/Daniel/Documents/_SVN/Projektarbeit_HS2015/Firmware/_Workspaces/CodeComposerStudio/Startup_wait_for_2_Pin_Interrupts_send_time_over_BLE_disable_VSUP_over_SPI/cc26xxware_2_21_03_15980/driverlib/ioc.h: 
+C:/Users/Daniel/Documents/_SVN/Projektarbeit_HS2015/Firmware/_Workspaces/CodeComposerStudio/Startup_wait_for_2_Pin_Interrupts_send_time_over_BLE_disable_VSUP_over_SPI/cc26xxware_2_21_03_15980/inc/hw_ioc.h: 
+C:/Users/Daniel/Documents/_SVN/Projektarbeit_HS2015/Firmware/_Workspaces/CodeComposerStudio/Startup_wait_for_2_Pin_Interrupts_send_time_over_BLE_disable_VSUP_over_SPI/cc26xxware_2_21_03_15980/driverlib/osc.h: 
+C:/Users/Daniel/Documents/_SVN/Projektarbeit_HS2015/Firmware/_Workspaces/CodeComposerStudio/Startup_wait_for_2_Pin_Interrupts_send_time_over_BLE_disable_VSUP_over_SPI/cc26xxware_2_21_03_15980/inc/hw_ddi_0_osc.h: 
+C:/Users/Daniel/Documents/_SVN/Projektarbeit_HS2015/Firmware/_Workspaces/CodeComposerStudio/Startup_wait_for_2_Pin_Interrupts_send_time_over_BLE_disable_VSUP_over_SPI/cc26xxware_2_21_03_15980/driverlib/prcm.h: 
+C:/Users/Daniel/Documents/_SVN/Projektarbeit_HS2015/Firmware/_Workspaces/CodeComposerStudio/Startup_wait_for_2_Pin_Interrupts_send_time_over_BLE_disable_VSUP_over_SPI/cc26xxware_2_21_03_15980/inc/hw_prcm.h: 
+C:/Users/Daniel/Documents/_SVN/Projektarbeit_HS2015/Firmware/_Workspaces/CodeComposerStudio/Startup_wait_for_2_Pin_Interrupts_send_time_over_BLE_disable_VSUP_over_SPI/cc26xxware_2_21_03_15980/driverlib/pwr_ctrl.h: 
+C:/Users/Daniel/Documents/_SVN/Projektarbeit_HS2015/Firmware/_Workspaces/CodeComposerStudio/Startup_wait_for_2_Pin_Interrupts_send_time_over_BLE_disable_VSUP_over_SPI/cc26xxware_2_21_03_15980/inc/hw_aon_sysctl.h: 
+C:/Users/Daniel/Documents/_SVN/Projektarbeit_HS2015/Firmware/_Workspaces/CodeComposerStudio/Startup_wait_for_2_Pin_Interrupts_send_time_over_BLE_disable_VSUP_over_SPI/cc26xxware_2_21_03_15980/inc/hw_adi_2_refsys.h: 
+C:/Users/Daniel/Documents/_SVN/Projektarbeit_HS2015/Firmware/_Workspaces/CodeComposerStudio/Startup_wait_for_2_Pin_Interrupts_send_time_over_BLE_disable_VSUP_over_SPI/cc26xxware_2_21_03_15980/driverlib/adi.h: 
+C:/Users/Daniel/Documents/_SVN/Projektarbeit_HS2015/Firmware/_Workspaces/CodeComposerStudio/Startup_wait_for_2_Pin_Interrupts_send_time_over_BLE_disable_VSUP_over_SPI/cc26xxware_2_21_03_15980/inc/hw_uart.h: 
+C:/Users/Daniel/Documents/_SVN/Projektarbeit_HS2015/Firmware/_Workspaces/CodeComposerStudio/Startup_wait_for_2_Pin_Interrupts_send_time_over_BLE_disable_VSUP_over_SPI/cc26xxware_2_21_03_15980/inc/hw_adi.h: 
+C:/Users/Daniel/Documents/_SVN/Projektarbeit_HS2015/Firmware/_Workspaces/CodeComposerStudio/Startup_wait_for_2_Pin_Interrupts_send_time_over_BLE_disable_VSUP_over_SPI/cc26xxware_2_21_03_15980/driverlib/sys_ctrl.h: 
+C:/Users/Daniel/Documents/_SVN/Projektarbeit_HS2015/Firmware/_Workspaces/CodeComposerStudio/Startup_wait_for_2_Pin_Interrupts_send_time_over_BLE_disable_VSUP_over_SPI/cc26xxware_2_21_03_15980/inc/hw_rfc_pwr.h: 
+C:/Users/Daniel/Documents/_SVN/Projektarbeit_HS2015/Firmware/_Workspaces/CodeComposerStudio/Startup_wait_for_2_Pin_Interrupts_send_time_over_BLE_disable_VSUP_over_SPI/cc26xxware_2_21_03_15980/inc/hw_adi_3_refsys.h: 
+C:/Users/Daniel/Documents/_SVN/Projektarbeit_HS2015/Firmware/_Workspaces/CodeComposerStudio/Startup_wait_for_2_Pin_Interrupts_send_time_over_BLE_disable_VSUP_over_SPI/cc26xxware_2_21_03_15980/driverlib/vims.h: 
+C:/Users/Daniel/Documents/_SVN/Projektarbeit_HS2015/Firmware/_Workspaces/CodeComposerStudio/Startup_wait_for_2_Pin_Interrupts_send_time_over_BLE_disable_VSUP_over_SPI/cc26xxware_2_21_03_15980/inc/hw_vims.h: 
+C:/Users/Daniel/Documents/_SVN/Projektarbeit_HS2015/Firmware/_Workspaces/CodeComposerStudio/Startup_wait_for_2_Pin_Interrupts_send_time_over_BLE_disable_VSUP_over_SPI/cc26xxware_2_21_03_15980/driverlib/ssi.h: 
+C:/Users/Daniel/Documents/_SVN/Projektarbeit_HS2015/Firmware/_Workspaces/CodeComposerStudio/Startup_wait_for_2_Pin_Interrupts_send_time_over_BLE_disable_VSUP_over_SPI/cc26xxware_2_21_03_15980/inc/hw_ssi.h: 
+C:/Users/Daniel/Documents/_SVN/Projektarbeit_HS2015/Firmware/_Workspaces/CodeComposerStudio/Startup_wait_for_2_Pin_Interrupts_send_time_over_BLE_disable_VSUP_over_SPI/cc26xxware_2_21_03_15980/driverlib/systick.h: 
+C:/Users/Daniel/Documents/_SVN/Projektarbeit_HS2015/Firmware/_Workspaces/CodeComposerStudio/Startup_wait_for_2_Pin_Interrupts_send_time_over_BLE_disable_VSUP_over_SPI/cc26xxware_2_21_03_15980/driverlib/timer.h: 
+C:/Users/Daniel/Documents/_SVN/Projektarbeit_HS2015/Firmware/_Workspaces/CodeComposerStudio/Startup_wait_for_2_Pin_Interrupts_send_time_over_BLE_disable_VSUP_over_SPI/cc26xxware_2_21_03_15980/inc/hw_gpt.h: 
+C:/Users/Daniel/Documents/_SVN/Projektarbeit_HS2015/Firmware/_Workspaces/CodeComposerStudio/Startup_wait_for_2_Pin_Interrupts_send_time_over_BLE_disable_VSUP_over_SPI/cc26xxware_2_21_03_15980/driverlib/uart.h: 
+C:/Users/Daniel/Documents/_SVN/Projektarbeit_HS2015/Firmware/_Workspaces/CodeComposerStudio/Startup_wait_for_2_Pin_Interrupts_send_time_over_BLE_disable_VSUP_over_SPI/cc26xxware_2_21_03_15980/driverlib/watchdog.h: 
+C:/Users/Daniel/Documents/_SVN/Projektarbeit_HS2015/Firmware/_Workspaces/CodeComposerStudio/Startup_wait_for_2_Pin_Interrupts_send_time_over_BLE_disable_VSUP_over_SPI/cc26xxware_2_21_03_15980/inc/hw_wdt.h: 
+C:/Users/Daniel/Documents/_SVN/Projektarbeit_HS2015/Firmware/_Workspaces/CodeComposerStudio/Startup_wait_for_2_Pin_Interrupts_send_time_over_BLE_disable_VSUP_over_SPI/interfaces/board-i2c.h: 
+../sensors/sensor-common.h: 
+C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.6/include/string.h: 
+C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.6/include/stdio.h: 
+C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.6/include/stdarg.h: 
+C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.6/include/math.h: 
+C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.6/include/ymath.h: 
+C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.6/include/float.h: 

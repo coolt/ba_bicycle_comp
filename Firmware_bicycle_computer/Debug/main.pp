@@ -1,14 +1,15 @@
 # FIXED
 
 main.obj: ../main.c
-main.obj: ../board.h
-main.obj: ../cc26xxware_2_22_00_16101/driverLib/ioc.h
+main.obj: ../em8500-pwr-mgnt.h
+main.obj: C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.7/include/stdint.h
+main.obj: C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.7/include/stdlib.h
+main.obj: C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.7/include/linkage.h
 main.obj: C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.7/include/stdbool.h
 main.obj: C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.7/include/yvals.h
 main.obj: C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.7/include/stdarg.h
-main.obj: C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.7/include/linkage.h
 main.obj: C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.7/include/_lock.h
-main.obj: C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.7/include/stdint.h
+main.obj: ../cc26xxware_2_22_00_16101/driverLib/ioc.h
 main.obj: C:/Users/katrin/Documents/Dokumente/ZHAW/5Jahr/ba_bicycle_comp/Firmware_bicycle_computer/cc26xxware_2_22_00_16101/startup_files/../inc/hw_types.h
 main.obj: C:/Users/katrin/Documents/Dokumente/ZHAW/5Jahr/ba_bicycle_comp/Firmware_bicycle_computer/cc26xxware_2_22_00_16101/startup_files/../inc/hw_chip_def.h
 main.obj: C:/Users/katrin/Documents/Dokumente/ZHAW/5Jahr/ba_bicycle_comp/Firmware_bicycle_computer/cc26xxware_2_22_00_16101/startup_files/../inc/hw_memmap.h
@@ -21,6 +22,7 @@ main.obj: ../cc26xxware_2_22_00_16101/driverLib/cpu.h
 main.obj: ../cc26xxware_2_22_00_16101/driverLib/../driverLib/rom.h
 main.obj: ../cc26xxware_2_22_00_16101/driverLib/gpio.h
 main.obj: C:/Users/katrin/Documents/Dokumente/ZHAW/5Jahr/ba_bicycle_comp/Firmware_bicycle_computer/cc26xxware_2_22_00_16101/startup_files/../inc/hw_gpio.h
+main.obj: ../board.h
 main.obj: ../radio.h
 main.obj: ../config.h
 main.obj: ../system.h
@@ -52,6 +54,7 @@ main.obj: C:/Users/katrin/Documents/Dokumente/ZHAW/5Jahr/ba_bicycle_comp/Firmwar
 main.obj: C:/Users/katrin/Documents/Dokumente/ZHAW/5Jahr/ba_bicycle_comp/Firmware_bicycle_computer/cc26xxware_2_22_00_16101/startup_files/../inc/hw_adi.h
 main.obj: ../cc26xxware_2_22_00_16101/driverLib/vims.h
 main.obj: C:/Users/katrin/Documents/Dokumente/ZHAW/5Jahr/ba_bicycle_comp/Firmware_bicycle_computer/cc26xxware_2_22_00_16101/startup_files/../inc/hw_vims.h
+main.obj: ../cc26xxware_2_22_00_16101/driverLib/aon_rtc.h
 main.obj: ../cc26xxware_2_22_00_16101/inc/hw_aon_event.h
 main.obj: ../interfaces/board-i2c.h
 main.obj: ../sensors/sensor-common.h
@@ -67,14 +70,15 @@ main.obj: ../sensors/ext-flash.h
 main.obj: C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.7/include/stdlib.h
 
 ../main.c: 
-../board.h: 
-../cc26xxware_2_22_00_16101/driverLib/ioc.h: 
+../em8500-pwr-mgnt.h: 
+C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.7/include/stdint.h: 
+C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.7/include/stdlib.h: 
+C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.7/include/linkage.h: 
 C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.7/include/stdbool.h: 
 C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.7/include/yvals.h: 
 C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.7/include/stdarg.h: 
-C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.7/include/linkage.h: 
 C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.7/include/_lock.h: 
-C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.7/include/stdint.h: 
+../cc26xxware_2_22_00_16101/driverLib/ioc.h: 
 C:/Users/katrin/Documents/Dokumente/ZHAW/5Jahr/ba_bicycle_comp/Firmware_bicycle_computer/cc26xxware_2_22_00_16101/startup_files/../inc/hw_types.h: 
 C:/Users/katrin/Documents/Dokumente/ZHAW/5Jahr/ba_bicycle_comp/Firmware_bicycle_computer/cc26xxware_2_22_00_16101/startup_files/../inc/hw_chip_def.h: 
 C:/Users/katrin/Documents/Dokumente/ZHAW/5Jahr/ba_bicycle_comp/Firmware_bicycle_computer/cc26xxware_2_22_00_16101/startup_files/../inc/hw_memmap.h: 
@@ -87,6 +91,7 @@ C:/Users/katrin/Documents/Dokumente/ZHAW/5Jahr/ba_bicycle_comp/Firmware_bicycle_
 ../cc26xxware_2_22_00_16101/driverLib/../driverLib/rom.h: 
 ../cc26xxware_2_22_00_16101/driverLib/gpio.h: 
 C:/Users/katrin/Documents/Dokumente/ZHAW/5Jahr/ba_bicycle_comp/Firmware_bicycle_computer/cc26xxware_2_22_00_16101/startup_files/../inc/hw_gpio.h: 
+../board.h: 
 ../radio.h: 
 ../config.h: 
 ../system.h: 
@@ -118,6 +123,7 @@ C:/Users/katrin/Documents/Dokumente/ZHAW/5Jahr/ba_bicycle_comp/Firmware_bicycle_
 C:/Users/katrin/Documents/Dokumente/ZHAW/5Jahr/ba_bicycle_comp/Firmware_bicycle_computer/cc26xxware_2_22_00_16101/startup_files/../inc/hw_adi.h: 
 ../cc26xxware_2_22_00_16101/driverLib/vims.h: 
 C:/Users/katrin/Documents/Dokumente/ZHAW/5Jahr/ba_bicycle_comp/Firmware_bicycle_computer/cc26xxware_2_22_00_16101/startup_files/../inc/hw_vims.h: 
+../cc26xxware_2_22_00_16101/driverLib/aon_rtc.h: 
 ../cc26xxware_2_22_00_16101/inc/hw_aon_event.h: 
 ../interfaces/board-i2c.h: 
 ../sensors/sensor-common.h: 
