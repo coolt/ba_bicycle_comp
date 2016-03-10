@@ -54,6 +54,49 @@ bool meas_done, first, int_enable;
 uint32_t test;
 
 
+// Start: Function in PA ----------------------------------------------
+// impuls goes from BOARD_IOID_DP0 on pin 25
+ void extPinEnable(uint8_t enable){  // Todo: check type: not boolean ?
+	// Power on IOC domain
+	powerEnablePeriph();
+	powerEnableGPIOClockRunMode();
+
+	// Wait for domains to power on
+	while((PRCMPowerDomainStatus(PRCM_DOMAIN_PERIPH)
+			!= PRCM_DOMAIN_POWER_ON));
+
+	if(enable){
+		// Enable PIN25 for Interrupts
+		IOCPortConfigureSet(BOARD_IOID_DP0, IOC_PORT_GPIO, IOC_IOMODE_NORMAL | IOC_RISING_EDGE | IOC_INT_ENABLE | IOC_IOPULL_DOWN  | IOC_INPUT_ENABLE | IOC_WAKE_ON_HIGH);
+		//Set device to wake MCU from standby on PIN 25
+		HWREG(AON_EVENT_BASE + AON_EVENT_O_MCUWUSEL) = AON_EVENT_MCUWUSEL_WU1_EV_PAD25;
+		// Enable and clear the Interrupt
+		IOCIntClear(IOID_25);
+		IntPendClear(INT_EDGE_DETECT);
+		IntEnable(INT_EDGE_DETECT);
+	}
+	else{
+		// Disable PIN25 for Interrupts
+		IOCPortConfigureSet(BOARD_IOID_DP0, IOC_PORT_GPIO, IOC_IOMODE_NORMAL | IOC_RISING_EDGE | IOC_INT_DISABLE | IOC_IOPULL_DOWN  | IOC_INPUT_ENABLE | IOC_WAKE_ON_HIGH);
+		//Set device to wake MCU from standby on PIN 25
+		HWREG(AON_EVENT_BASE + AON_EVENT_O_MCUWUSEL) = AON_EVENT_MCUWUSEL_WU1_EV_NONE;
+		// disable Interrupt
+		IntDisable(INT_EDGE_DETECT);
+	}
+
+	// Power off IOC domain
+	powerDisablePeriph();
+	// Disable clock for GPIO in CPU run mode
+	HWREGBITW(PRCM_BASE + PRCM_O_GPIOCLKGR, PRCM_GPIOCLKGR_CLK_EN_BITN) = 0;
+	// Load clock settings
+	HWREGBITW(PRCM_BASE + PRCM_O_CLKLOADCTL, PRCM_CLKLOADCTL_LOAD_BITN) = 1;
+}
+// ----------------------------------------------------End Function only in PA
+
+
+
+
+
 // interrupts -----------------------------------------------------------
 void GPIOIntHandler(void){
 
@@ -82,6 +125,7 @@ void GPIOIntHandler(void){
 		CPUdelay(10000);
 
 		// Interrupt of PAD25 - clear it
+		// baek: Pin 25 erhält die Relais-Impulse per Interrupt
 		if(IOCIntStatus(IOID_25)){
 			IOCIntClear(IOID_25);
 
@@ -156,8 +200,6 @@ void testLED(void){
 
 void sensorsInit(void)
 	{
-		uint16_t success = 0;
-	    uint16_t val;
 
 		//Turn off TMP007
 	    configure_tmp_007(0);
@@ -213,45 +255,6 @@ void ledInit(void)
 			GPIOPinWrite(LED_GREEN, 0);
 		End Code PA */
 	}
-
-
-// Start: Function in PA ----------------------------------------------
- void extPinEnable(uint8_t enable){
-	// Power on IOC domain
-	powerEnablePeriph();
-	powerEnableGPIOClockRunMode();
-
-	// Wait for domains to power on
-	while((PRCMPowerDomainStatus(PRCM_DOMAIN_PERIPH)
-			!= PRCM_DOMAIN_POWER_ON));
-
-	if(enable){
-		// Enable PIN25 for Interrupts
-		IOCPortConfigureSet(BOARD_IOID_DP0, IOC_PORT_GPIO, IOC_IOMODE_NORMAL | IOC_RISING_EDGE | IOC_INT_ENABLE | IOC_IOPULL_DOWN  | IOC_INPUT_ENABLE | IOC_WAKE_ON_HIGH);
-		//Set device to wake MCU from standby on PIN 25
-		HWREG(AON_EVENT_BASE + AON_EVENT_O_MCUWUSEL) = AON_EVENT_MCUWUSEL_WU1_EV_PAD25;
-		// Enable and clear the Interrupt
-		IOCIntClear(IOID_25);
-		IntPendClear(INT_EDGE_DETECT);
-		IntEnable(INT_EDGE_DETECT);
-	}
-	else{
-		// Disable PIN25 for Interrupts
-		IOCPortConfigureSet(BOARD_IOID_DP0, IOC_PORT_GPIO, IOC_IOMODE_NORMAL | IOC_RISING_EDGE | IOC_INT_DISABLE | IOC_IOPULL_DOWN  | IOC_INPUT_ENABLE | IOC_WAKE_ON_HIGH);
-		//Set device to wake MCU from standby on PIN 25
-		HWREG(AON_EVENT_BASE + AON_EVENT_O_MCUWUSEL) = AON_EVENT_MCUWUSEL_WU1_EV_NONE;
-		// disable Interrupt
-		IntDisable(INT_EDGE_DETECT);
-	}
-
-	// Power off IOC domain
-	powerDisablePeriph();
-	// Disable clock for GPIO in CPU run mode
-	HWREGBITW(PRCM_BASE + PRCM_O_GPIOCLKGR, PRCM_GPIOCLKGR_CLK_EN_BITN) = 0;
-	// Load clock settings
-	HWREGBITW(PRCM_BASE + PRCM_O_CLKLOADCTL, PRCM_CLKLOADCTL_LOAD_BITN) = 1;
-}
-// ----------------------------------------------------End Function only in PA
 
 
 
@@ -375,7 +378,7 @@ int main(void) {
 	    // Code only Dario --------------------------------------------------end
 
 	    // Code from PA (idle mode) -------------------------------------------start
-	    // enable and configure PIN Interrupt on PIN25
+	    // enable and configure PIN Interrupt on PIN25 for bicycle reed relais impuls
 		extPinEnable(true);
 
 		// IDLE procedure
