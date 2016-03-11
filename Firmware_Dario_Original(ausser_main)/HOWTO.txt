@@ -1,2 +1,0 @@
-Switchhing between XTAL and RC Oscilator:
-	ccfg.c:113/114
