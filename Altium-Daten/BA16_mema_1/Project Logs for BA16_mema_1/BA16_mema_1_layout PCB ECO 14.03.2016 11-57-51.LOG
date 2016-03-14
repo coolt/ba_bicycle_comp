@@ -1,0 +1,199 @@
+Added Component: Designator=C1(CHIP 1206)
+Added Component: Designator=C2(ELKO SMD-C 6.3x6.3)
+Added Component: Designator=C3(CHIP 0603)
+Added Component: Designator=C4(CHIP 0603)
+Added Component: Designator=C5(CHIP 1206)
+Added Component: Designator=C6(CHIP 0603)
+Added Component: Designator=C7(CHIP 0603)
+Added Component: Designator=C8(CHIP 0603)
+Added Component: Designator=C9(CHIP 0603)
+Added Component: Designator=C10(C_RAD_flex)
+Added Component: Designator=C11(C_RAD_flex)
+Added Component: Designator=D1(SOT-143)
+Added Component: Designator=D2(SOT-23)
+Added Component: Designator=L1(WE_74458308)
+Added Component: Designator=L2(CHIP 0805)
+Added Component: Designator=R1(CHIP 0603)
+Added Component: Designator=R2(CHIP 0603)
+Added Component: Designator=R3(CHIP 0603)
+Added Component: Designator=S1(MK16-C-2)
+Added Component: Designator=T1(SOT-223)
+Added Component: Designator=TP1(TP SMD)
+Added Component: Designator=TP2(TP SMD)
+Added Component: Designator=TP3(TP SMD)
+Added Component: Designator=TP4(TP SMD)
+Added Component: Designator=TP5(TP SMD)
+Added Component: Designator=TP6(TP SMD)
+Added Component: Designator=TP7(TP SMD)
+Added Component: Designator=TP8(TP SMD)
+Added Component: Designator=TP9(TP SMD)
+Added Component: Designator=TP10(TP SMD)
+Added Component: Designator=TP11(TP SMD)
+Added Component: Designator=TP12(TP SMD)
+Added Component: Designator=TP13(TP SMD)
+Added Component: Designator=TP14(TP SMD)
+Added Component: Designator=TP15(TP SMD)
+Added Component: Designator=TP16(TP SMD)
+Added Component: Designator=TP17(TP SMD)
+Added Component: Designator=TP18(TP SMD)
+Added Component: Designator=TP19(TP SMD)
+Added Component: Designator=TP20(TP SMD)
+Added Component: Designator=TP21(TP SMD)
+Added Component: Designator=TP22(TP SMD)
+Added Component: Designator=U1(QFN-24)
+Added Component: Designator=X1(HEADER SMD 2x10 0.635mm)
+Added Pin To Net: NetName=VCC Pin=C1-1
+Added Pin To Net: NetName=GND Pin=C1-2
+Added Pin To Net: NetName=VCC Pin=C2-1
+Added Pin To Net: NetName=GND Pin=C2-2
+Added Pin To Net: NetName=GND Pin=C3-1
+Added Pin To Net: NetName=NetC3_2 Pin=C3-2
+Added Pin To Net: NetName=VREG Pin=C4-1
+Added Pin To Net: NetName=GND Pin=C4-2
+Added Pin To Net: NetName=VCC_LTS Pin=C5-1
+Added Pin To Net: NetName=GND Pin=C5-2
+Added Pin To Net: NetName=VSUP Pin=C6-1
+Added Pin To Net: NetName=GND Pin=C6-2
+Added Pin To Net: NetName=VAUX_VCC2 Pin=C7-1
+Added Pin To Net: NetName=GND Pin=C7-2
+Added Pin To Net: NetName=VAUX_VCC1 Pin=C8-1
+Added Pin To Net: NetName=GND Pin=C8-2
+Added Pin To Net: NetName=VAUX_VCC0 Pin=C9-1
+Added Pin To Net: NetName=GND Pin=C9-2
+Added Pin To Net: NetName=VCC_LTS Pin=C10-1
+Added Pin To Net: NetName=VCC_LTS Pin=C10-1
+Added Pin To Net: NetName=VCC_LTS Pin=C10-1
+Added Pin To Net: NetName=VCC_LTS Pin=C10-1
+Added Pin To Net: NetName=GND Pin=C10-2
+Added Pin To Net: NetName=GND Pin=C10-2
+Added Pin To Net: NetName=GND Pin=C10-2
+Added Pin To Net: NetName=GND Pin=C10-2
+Added Pin To Net: NetName=VCC_STS Pin=C11-1
+Added Pin To Net: NetName=VCC_STS Pin=C11-1
+Added Pin To Net: NetName=VCC_STS Pin=C11-1
+Added Pin To Net: NetName=VCC_STS Pin=C11-1
+Added Pin To Net: NetName=GND Pin=C11-2
+Added Pin To Net: NetName=GND Pin=C11-2
+Added Pin To Net: NetName=GND Pin=C11-2
+Added Pin To Net: NetName=GND Pin=C11-2
+Added Pin To Net: NetName=GND Pin=D1-1
+Added Pin To Net: NetName=NetD1_2 Pin=D1-2
+Added Pin To Net: NetName=NetC3_2 Pin=D2-1
+Added Pin To Net: NetName=GND Pin=D2-2
+Added Pin To Net: NetName=NetD1_2 Pin=L1-2
+Added Pin To Net: NetName=NetL2_1 Pin=L2-1
+Added Pin To Net: NetName=VCC Pin=L2-2
+Added Pin To Net: NetName=NetC3_2 Pin=R1-1
+Added Pin To Net: NetName=WAKE_UP Pin=R2-1
+Added Pin To Net: NetName=GND Pin=R2-2
+Added Pin To Net: NetName=REED_SWITCH Pin=R3-1
+Added Pin To Net: NetName=NetR3_2 Pin=R3-2
+Added Pin To Net: NetName=NetR3_2 Pin=S1-1
+Added Pin To Net: NetName=VSUP Pin=S1-2
+Added Pin To Net: NetName=NetC3_2 Pin=T1-1
+Added Pin To Net: NetName=VCC Pin=T1-2
+Added Pin To Net: NetName=NetD1_2 Pin=TP1-1
+Added Pin To Net: NetName=NetC3_2 Pin=TP3-1
+Added Pin To Net: NetName=VCC Pin=TP4-1
+Added Pin To Net: NetName=NetL2_1 Pin=TP5-1
+Added Pin To Net: NetName=GND Pin=TP7-1
+Added Pin To Net: NetName=VSUP Pin=TP8-1
+Added Pin To Net: NetName=EM_CS Pin=TP9-1
+Added Pin To Net: NetName=WAKE_UP Pin=TP10-1
+Added Pin To Net: NetName=HRV_LOW Pin=TP11-1
+Added Pin To Net: NetName=MCU_MOSI Pin=TP12-1
+Added Pin To Net: NetName=BAT_LOW Pin=TP13-1
+Added Pin To Net: NetName=MCU_MISO Pin=TP14-1
+Added Pin To Net: NetName=VREG Pin=TP15-1
+Added Pin To Net: NetName=MCU_SCLK Pin=TP16-1
+Added Pin To Net: NetName=VCC_STS Pin=TP17-1
+Added Pin To Net: NetName=VCC_LTS Pin=TP18-1
+Added Pin To Net: NetName=VAUX_VCC2 Pin=TP19-1
+Added Pin To Net: NetName=REED_SWITCH Pin=TP20-1
+Added Pin To Net: NetName=VAUX_VCC1 Pin=TP21-1
+Added Pin To Net: NetName=VAUX_VCC0 Pin=TP22-1
+Added Pin To Net: NetName=VCC_STS Pin=U1-1
+Added Pin To Net: NetName=WAKE_UP Pin=U1-2
+Added Pin To Net: NetName=MCU_MOSI Pin=U1-4
+Added Pin To Net: NetName=MCU_MISO Pin=U1-5
+Added Pin To Net: NetName=MCU_SCLK Pin=U1-6
+Added Pin To Net: NetName=EM_CS Pin=U1-7
+Added Pin To Net: NetName=VAUX_VCC0 Pin=U1-12
+Added Pin To Net: NetName=VAUX_VCC1 Pin=U1-13
+Added Pin To Net: NetName=VAUX_VCC2 Pin=U1-14
+Added Pin To Net: NetName=VSUP Pin=U1-16
+Added Pin To Net: NetName=HRV_LOW Pin=U1-17
+Added Pin To Net: NetName=BAT_LOW Pin=U1-18
+Added Pin To Net: NetName=VREG Pin=U1-19
+Added Pin To Net: NetName=GND Pin=U1-20
+Added Pin To Net: NetName=GND Pin=U1-21
+Added Pin To Net: NetName=NetL2_1 Pin=U1-22
+Added Pin To Net: NetName=VCC Pin=U1-23
+Added Pin To Net: NetName=VCC_LTS Pin=U1-24
+Added Pin To Net: NetName=VSUP Pin=X1-1
+Added Pin To Net: NetName=GND Pin=X1-2
+Added Pin To Net: NetName=EM_CS Pin=X1-7
+Added Pin To Net: NetName=WAKE_UP Pin=X1-8
+Added Pin To Net: NetName=HRV_LOW Pin=X1-10
+Added Pin To Net: NetName=MCU_MOSI Pin=X1-11
+Added Pin To Net: NetName=BAT_LOW Pin=X1-12
+Added Pin To Net: NetName=MCU_MISO Pin=X1-13
+Added Pin To Net: NetName=VREG Pin=X1-14
+Added Pin To Net: NetName=MCU_SCLK Pin=X1-15
+Added Pin To Net: NetName=VCC_STS Pin=X1-16
+Added Pin To Net: NetName=VCC_LTS Pin=X1-18
+Added Pin To Net: NetName=REED_SWITCH Pin=X1-20
+Added Pin To Net: NetName=NetD1_3 Pin=D1-3
+Added Pin To Net: NetName=NetD1_3 Pin=D1-4
+Added Pin To Net: NetName=NetD1_3 Pin=R1-2
+Added Pin To Net: NetName=NetD1_3 Pin=T1-3
+Added Pin To Net: NetName=NetD1_3 Pin=TP2-1
+Added Net: Name=NetD1_3
+Added Pin To Net: NetName=NetD1_5 Pin=L1-1
+Added Pin To Net: NetName=NetD1_5 Pin=TP6-1
+Added Net: Name=NetD1_5
+Added Member To Class: ClassName=Harvester Member=Component C1 Cap
+Added Member To Class: ClassName=Harvester Member=Component C2 47uF 25V
+Added Member To Class: ClassName=Harvester Member=Component C3 1nF
+Added Member To Class: ClassName=Harvester Member=Component C4 Cap
+Added Member To Class: ClassName=Harvester Member=Component C5 Cap
+Added Member To Class: ClassName=Harvester Member=Component C6 Cap
+Added Member To Class: ClassName=Harvester Member=Component C7 Cap
+Added Member To Class: ClassName=Harvester Member=Component C8 Cap
+Added Member To Class: ClassName=Harvester Member=Component C9 Cap
+Added Member To Class: ClassName=Harvester Member=Component C10 3300uF 25V
+Added Member To Class: ClassName=Harvester Member=Component C11 470uF 25V
+Added Member To Class: ClassName=Harvester Member=Component D1 HSMS-286P
+Added Member To Class: ClassName=Harvester Member=Component D2 BAS16
+Added Member To Class: ClassName=Harvester Member=Component L1 8mH
+Added Member To Class: ClassName=Harvester Member=Component L2 L
+Added Member To Class: ClassName=Harvester Member=Component R1 1M
+Added Member To Class: ClassName=Harvester Member=Component R2 R
+Added Member To Class: ClassName=Harvester Member=Component R3 10k 0603
+Added Member To Class: ClassName=Harvester Member=Component S1 Reed Switch
+Added Member To Class: ClassName=Harvester Member=Component T1 BSP149
+Added Member To Class: ClassName=Harvester Member=Component TP1 TP_SMD
+Added Member To Class: ClassName=Harvester Member=Component TP2 TP_SMD
+Added Member To Class: ClassName=Harvester Member=Component TP3 TP_SMD
+Added Member To Class: ClassName=Harvester Member=Component TP4 TP_SMD
+Added Member To Class: ClassName=Harvester Member=Component TP5 TP_SMD
+Added Member To Class: ClassName=Harvester Member=Component TP6 TP_SMD
+Added Member To Class: ClassName=Harvester Member=Component TP7 TP_SMD
+Added Member To Class: ClassName=Harvester Member=Component TP8 TP_SMD
+Added Member To Class: ClassName=Harvester Member=Component TP9 TP_SMD
+Added Member To Class: ClassName=Harvester Member=Component TP10 TP_SMD
+Added Member To Class: ClassName=Harvester Member=Component TP11 TP_SMD
+Added Member To Class: ClassName=Harvester Member=Component TP12 TP_SMD
+Added Member To Class: ClassName=Harvester Member=Component TP13 TP_SMD
+Added Member To Class: ClassName=Harvester Member=Component TP14 TP_SMD
+Added Member To Class: ClassName=Harvester Member=Component TP15 TP_SMD
+Added Member To Class: ClassName=Harvester Member=Component TP16 TP_SMD
+Added Member To Class: ClassName=Harvester Member=Component TP17 TP_SMD
+Added Member To Class: ClassName=Harvester Member=Component TP18 TP_SMD
+Added Member To Class: ClassName=Harvester Member=Component TP19 TP_SMD
+Added Member To Class: ClassName=Harvester Member=Component TP20 TP_SMD
+Added Member To Class: ClassName=Harvester Member=Component TP21 TP_SMD
+Added Member To Class: ClassName=Harvester Member=Component TP22 TP_SMD
+Added Member To Class: ClassName=Harvester Member=Component U1 em8500
+Added Member To Class: ClassName=Harvester Member=Component X1 LSS-110-01-F-DV-A-TR
+Added Room: Name=Harvester
