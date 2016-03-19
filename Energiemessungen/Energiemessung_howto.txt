@@ -1,5 +1,0 @@
-Energiemessungen
-
-Zwei Arten: siehe Meli, IOT"-Vorleseung, Skript week1_sliedes.pdf, S.19
-- billig : Strom über Shung messen und Spannung an KO ausgeben
-- teuerer: Poweranalyser 
