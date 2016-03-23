@@ -2,7 +2,7 @@
 
 sensors/sensor-common.obj: ../sensors/sensor-common.c
 sensors/sensor-common.obj: ../sensors/sensor-common.h
-sensors/sensor-common.obj: C:/Users/katrin/workspace_ba/bicycle_computer/interfaces/board-i2c.h
+sensors/sensor-common.obj: C:/Users/katrin/Documents/Dokumente/ZHAW/5Jahr/ba_bicycle_comp/bicycle_computer_v0/interfaces/board-i2c.h
 sensors/sensor-common.obj: C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.7/include/stdint.h
 sensors/sensor-common.obj: C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.7/include/stdbool.h
 sensors/sensor-common.obj: C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.7/include/yvals.h
@@ -12,7 +12,7 @@ sensors/sensor-common.obj: C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.7/include/_
 
 ../sensors/sensor-common.c: 
 ../sensors/sensor-common.h: 
-C:/Users/katrin/workspace_ba/bicycle_computer/interfaces/board-i2c.h: 
+C:/Users/katrin/Documents/Dokumente/ZHAW/5Jahr/ba_bicycle_comp/bicycle_computer_v0/interfaces/board-i2c.h: 
 C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.7/include/stdint.h: 
 C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.7/include/stdbool.h: 
 C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.7/include/yvals.h: 
