@@ -1,0 +1,5 @@
+Added Component: Designator=T1(SOT-223)
+Added Pin To Net: NetName=NetC3_2 Pin=T1-1
+Added Pin To Net: NetName=VCC Pin=T1-2
+Added Pin To Net: NetName=NetD1_2 Pin=T1-3
+Added Member To Class: ClassName=Harvester Member=Component T1 BSP149

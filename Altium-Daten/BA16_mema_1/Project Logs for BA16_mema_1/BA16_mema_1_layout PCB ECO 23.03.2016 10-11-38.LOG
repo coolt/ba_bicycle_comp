@@ -1,0 +1,80 @@
+Change Component Footprint: Designator=TP1 Old Footprint=TP SMD New Footprint=TP
+Change Component Footprint: Designator=TP2 Old Footprint=TP SMD New Footprint=TP
+Change Component Footprint: Designator=TP3 Old Footprint=TP SMD New Footprint=TP
+Change Component Footprint: Designator=TP4 Old Footprint=TP SMD New Footprint=TP
+Change Component Footprint: Designator=TP5 Old Footprint=TP SMD New Footprint=TP
+Change Component Footprint: Designator=TP6 Old Footprint=TP SMD New Footprint=TP
+Change Component Footprint: Designator=TP7 Old Footprint=TP SMD New Footprint=TP
+Change Component Footprint: Designator=TP8 Old Footprint=TP SMD New Footprint=TP
+Change Component Footprint: Designator=TP9 Old Footprint=TP SMD New Footprint=TP
+Change Component Footprint: Designator=TP10 Old Footprint=TP SMD New Footprint=TP
+Change Component Footprint: Designator=TP11 Old Footprint=TP SMD New Footprint=TP
+Change Component Footprint: Designator=TP12 Old Footprint=TP SMD New Footprint=TP
+Change Component Footprint: Designator=TP13 Old Footprint=TP SMD New Footprint=TP
+Change Component Footprint: Designator=TP14 Old Footprint=TP SMD New Footprint=TP
+Change Component Footprint: Designator=TP15 Old Footprint=TP SMD New Footprint=TP
+Change Component Footprint: Designator=TP16 Old Footprint=TP SMD New Footprint=TP
+Change Component Footprint: Designator=TP17 Old Footprint=TP SMD New Footprint=TP
+Change Component Footprint: Designator=TP18 Old Footprint=TP SMD New Footprint=TP
+Change Component Footprint: Designator=TP19 Old Footprint=TP SMD New Footprint=TP
+Change Component Footprint: Designator=TP20 Old Footprint=TP SMD New Footprint=TP
+Change Component Footprint: Designator=TP21 Old Footprint=TP SMD New Footprint=TP
+Change Component Footprint: Designator=TP22 Old Footprint=TP SMD New Footprint=TP
+Change Component Comment : Designator=TP1 Old Comment=TP_SMD New Comment=TP
+Change Component Comment : Designator=TP2 Old Comment=TP_SMD New Comment=TP
+Change Component Comment : Designator=TP3 Old Comment=TP_SMD New Comment=TP
+Change Component Comment : Designator=TP4 Old Comment=TP_SMD New Comment=TP
+Change Component Comment : Designator=TP5 Old Comment=TP_SMD New Comment=TP
+Change Component Comment : Designator=TP6 Old Comment=TP_SMD New Comment=TP
+Change Component Comment : Designator=TP7 Old Comment=TP_SMD New Comment=TP
+Change Component Comment : Designator=TP8 Old Comment=TP_SMD New Comment=TP
+Change Component Comment : Designator=TP9 Old Comment=TP_SMD New Comment=TP
+Change Component Comment : Designator=TP10 Old Comment=TP_SMD New Comment=TP
+Change Component Comment : Designator=TP11 Old Comment=TP_SMD New Comment=TP
+Change Component Comment : Designator=TP12 Old Comment=TP_SMD New Comment=TP
+Change Component Comment : Designator=TP13 Old Comment=TP_SMD New Comment=TP
+Change Component Comment : Designator=TP14 Old Comment=TP_SMD New Comment=TP
+Change Component Comment : Designator=TP15 Old Comment=TP_SMD New Comment=TP
+Change Component Comment : Designator=TP16 Old Comment=TP_SMD New Comment=TP
+Change Component Comment : Designator=TP17 Old Comment=TP_SMD New Comment=TP
+Change Component Comment : Designator=TP18 Old Comment=TP_SMD New Comment=TP
+Change Component Comment : Designator=TP19 Old Comment=TP_SMD New Comment=TP
+Change Component Comment : Designator=TP20 Old Comment=TP_SMD New Comment=TP
+Change Component Comment : Designator=TP21 Old Comment=TP_SMD New Comment=TP
+Change Component Comment : Designator=TP22 Old Comment=TP_SMD New Comment=TP
+Added Component: Designator=TP23(TP)
+Added Component: Designator=TP24(TP)
+Added Component: Designator=TP25(TP)
+Added Component: Designator=TP26(TP)
+Added Component: Designator=TP27(TP)
+Added Component: Designator=TP28(TP)
+Added Component: Designator=TP29(TP)
+Added Pin To Net: NetName=NetTP23_1 Pin=TP23-1
+Added Pin To Net: NetName=NetTP23_1 Pin=X1-4
+Added Net: Name=NetTP23_1
+Added Pin To Net: NetName=NetTP24_1 Pin=TP24-1
+Added Pin To Net: NetName=NetTP24_1 Pin=X1-3
+Added Net: Name=NetTP24_1
+Added Pin To Net: NetName=NetTP25_1 Pin=TP25-1
+Added Pin To Net: NetName=NetTP25_1 Pin=X1-6
+Added Net: Name=NetTP25_1
+Added Pin To Net: NetName=NetTP26_1 Pin=TP26-1
+Added Pin To Net: NetName=NetTP26_1 Pin=X1-5
+Added Net: Name=NetTP26_1
+Added Pin To Net: NetName=NetTP27_1 Pin=TP27-1
+Added Pin To Net: NetName=NetTP27_1 Pin=X1-10
+Added Net: Name=NetTP27_1
+Added Pin To Net: NetName=NetTP28_1 Pin=TP28-1
+Added Pin To Net: NetName=NetTP28_1 Pin=X1-18
+Added Net: Name=NetTP28_1
+Added Pin To Net: NetName=NetTP29_1 Pin=TP29-1
+Added Pin To Net: NetName=NetTP29_1 Pin=X1-20
+Added Net: Name=NetTP29_1
+Added Member To Class: ClassName=Harvester Member=Component TP23 TP
+Added Member To Class: ClassName=Harvester Member=Component TP24 TP
+Added Member To Class: ClassName=Harvester Member=Component TP25 TP
+Added Member To Class: ClassName=Harvester Member=Component TP26 TP
+Added Member To Class: ClassName=Harvester Member=Component TP27 TP
+Added Member To Class: ClassName=Harvester Member=Component TP28 TP
+Added Member To Class: ClassName=Harvester Member=Component TP29 TP
+Added Room: Name=Harvester

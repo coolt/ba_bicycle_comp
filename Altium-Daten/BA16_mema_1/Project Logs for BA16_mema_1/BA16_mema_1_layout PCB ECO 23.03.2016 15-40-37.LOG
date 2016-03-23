@@ -1,0 +1,30 @@
+Removed Pin From Net: NetName=GND Pin=D1-1
+Removed Pin From Net: NetName=NetD1_3 Pin=D1-3
+Removed Pin From Net: NetName=NetD1_3 Pin=D1-4
+Removed Pin From Net: NetName=GND Pin=D1-6
+Change Component DesignItemId : Designator=D1 Old DesignItemId=HSMS-286P New DesignItemId=D
+Change Component Footprint: Designator=C2 Old Footprint=ELKO SMD-C 6.3x6.3 New Footprint=TANT D
+Change Component Footprint: Designator=D1 Old Footprint=SOT-363 (SC-70) New Footprint=SOD-123
+Change Component Comment : Designator=D1 Old Comment=HSMS-286P New Comment=1N5819
+Added Component: Designator=D3(SOD-123)
+Added Component: Designator=D4(SOD-123)
+Added Component: Designator=D5(SOD-123)
+Added Pin To Net: NetName=NetD1_3 Pin=D1-2
+Added Pin To Net: NetName=GND Pin=D3-1
+Added Pin To Net: NetName=NetD1_3 Pin=D4-2
+Added Pin To Net: NetName=GND Pin=D5-1
+Change Net Name : Old Net Name=NetD1_3 New Net Name=NetD1_2
+Added Pin To Net: NetName=NetD1_1 Pin=D1-1
+Added Pin To Net: NetName=NetD1_1 Pin=D3-2
+Added Pin To Net: NetName=NetD1_1 Pin=L1-8
+Added Pin To Net: NetName=NetD1_1 Pin=TP1-1
+Added Net: Name=NetD1_1
+Added Pin To Net: NetName=NetD4_1 Pin=D4-1
+Added Pin To Net: NetName=NetD4_1 Pin=D5-2
+Added Pin To Net: NetName=NetD4_1 Pin=L1-4
+Added Pin To Net: NetName=NetD4_1 Pin=TP6-1
+Added Net: Name=NetD4_1
+Added Member To Class: ClassName=Harvester Member=Component D3 1N5819
+Added Member To Class: ClassName=Harvester Member=Component D4 1N5819
+Added Member To Class: ClassName=Harvester Member=Component D5 1N5819
+Added Room: Name=Harvester
