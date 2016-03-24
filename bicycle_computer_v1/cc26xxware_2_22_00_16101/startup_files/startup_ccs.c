@@ -280,7 +280,35 @@ static void SVCallIntHandler( void ){ while(1) {}}
 static void DebugMonIntHandler( void ){ while(1) {}}
 static void PendSVIntHandler( void ){ while(1) {}}
 static void SysTickIntHandler( void ){ while(1) {}}
-//static void GPIOIntHandler( void ){ while(1) {}}
+static void GPIOIntHandler(void){
+	uint32_t pin_mask;
+
+	powerEnablePeriph();
+	powerEnableGPIOClockRunMode();
+
+	/* Wait for domains to power on */
+	while((PRCMPowerDomainStatus(PRCM_DOMAIN_PERIPH) != PRCM_DOMAIN_POWER_ON));
+
+	/* Read interrupt flags */
+	pin_mask = (HWREG(GPIO_BASE + GPIO_O_EVFLAGS31_0) & GPIO_PIN_MASK);
+
+	/* Clear the interrupt flags */
+	HWREG(GPIO_BASE + GPIO_O_EVFLAGS31_0) = pin_mask;
+
+	powerDisablePeriph();
+	// Disable clock for GPIO in CPU run mode
+	HWREGBITW(PRCM_BASE + PRCM_O_GPIOCLKGR, PRCM_GPIOCLKGR_CLK_EN_BITN) = 0;
+	// Load clock settings
+	HWREGBITW(PRCM_BASE + PRCM_O_CLKLOADCTL, PRCM_CLKLOADCTL_LOAD_BITN) = 1;
+
+	//To avoid second interupt with register = 0 (its not fast enough!!)
+	__asm(" nop");
+	__asm(" nop");
+	__asm(" nop");
+	__asm(" nop");
+	__asm(" nop");
+	__asm(" nop");
+}
 static void I2CIntHandler( void ){ while(1) {}}
 static void AONIntHandler( void ){ while(1) {}}
 

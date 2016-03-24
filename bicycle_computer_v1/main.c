@@ -12,45 +12,14 @@
         - Configure IO's and set up advertisment payload
         - Configure output power to desired value in CMD_RADIO_SETUP (see pa_table_cc26xx.c)
 
-  <!--
-  Copyright 2015 Texas Instruments Incorporated. All rights reserved.
-
-  IMPORTANT: Your use of this Software is limited to those specific rights
-  granted under the terms of a software license agreement between the user
-  who downloaded the software, his/her employer (which must be your employer)
-  and Texas Instruments Incorporated (the "License").  You may not use this
-  Software unless you agree to abide by the terms of the License. The License
-  limits your use, and you acknowledge, that the Software may not be modified,
-  copied or distributed unless embedded on a Texas Instruments microcontroller
-  or used solely and exclusively in conjunction with a Texas Instruments radio
-  frequency transceiver, which is integrated into your product.  Other than for
-  the foregoing purpose, you may not use, reproduce, copy, prepare derivative
-  works of, modify, distribute, perform, display or sell this Software and/or
-  its documentation for any purpose.
-
-  YOU FURTHER ACKNOWLEDGE AND AGREE THAT THE SOFTWARE AND DOCUMENTATION ARE
-  PROVIDED ``AS IS" WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESS OR IMPLIED,
-  INCLUDING WITHOUT LIMITATION, ANY WARRANTY OF MERCHANTABILITY, TITLE,
-  NON-INFRINGEMENT AND FITNESS FOR A PARTICULAR PURPOSE. IN NO EVENT SHALL
-  TEXAS INSTRUMENTS OR ITS LICENSORS BE LIABLE OR OBLIGATED UNDER CONTRACT,
-  NEGLIGENCE, STRICT LIABILITY, CONTRIBUTION, BREACH OF WARRANTY, OR OTHER
-  LEGAL EQUITABLE THEORY ANY DIRECT OR INDIRECT DAMAGES OR EXPENSES
-  INCLUDING BUT NOT LIMITED TO ANY INCIDENTAL, SPECIAL, INDIRECT, PUNITIVE
-  OR CONSEQUENTIAL DAMAGES, LOST PROFITS OR LOST DATA, COST OF PROCUREMENT
-  OF SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
-  (INCLUDING BUT NOT LIMITED TO ANY DEFENSE THEREOF), OR OTHER SIMILAR COSTS.
-
-  Should you have any questions regarding your right to use this Software,
-  contact Texas Instruments Incorporated at www.TI.com.
-*/
 
 /*
- * Improved simple broadcast sample (from Ti) edited and optimized.
- * Sensors off --> 3uA sleep current with balanced recharges every ~600ms and peaks arround 10mA
- * (12.01.2016, brts)
+ * V1
+ * - GPIO-Hanlder in startup_ccs.s
+ * - Add Wakeup
  */
 
-// Test
+
 #include "cc26xxware_2_22_00_16101/driverLib/ioc.h"
 #include "cc26xxware_2_22_00_16101/driverLib/sys_ctrl.h"
 
@@ -77,42 +46,11 @@ extern volatile bool rfBootDone;
 extern volatile bool rfSetupDone;
 extern volatile bool rfAdvertisingDone;
 
-// interrupts -----------------------------------------------------------
-void GPIOIntHandler(void){
-	uint32_t pin_mask;
 
-	powerEnablePeriph();
-	powerEnableGPIOClockRunMode();
 
-	/* Wait for domains to power on */
-	while((PRCMPowerDomainStatus(PRCM_DOMAIN_PERIPH) != PRCM_DOMAIN_POWER_ON));
-
-	/* Read interrupt flags */
-	pin_mask = (HWREG(GPIO_BASE + GPIO_O_EVFLAGS31_0) & GPIO_PIN_MASK);
-
-	/* Clear the interrupt flags */
-	HWREG(GPIO_BASE + GPIO_O_EVFLAGS31_0) = pin_mask;
-
-	powerDisablePeriph();
-	// Disable clock for GPIO in CPU run mode
-	HWREGBITW(PRCM_BASE + PRCM_O_GPIOCLKGR, PRCM_GPIOCLKGR_CLK_EN_BITN) = 0;
-	// Load clock settings
-	HWREGBITW(PRCM_BASE + PRCM_O_CLKLOADCTL, PRCM_CLKLOADCTL_LOAD_BITN) = 1;
-
-	//To avoid second interupt with register = 0 (its not fast enough!!)
-	__asm(" nop");
-	__asm(" nop");
-	__asm(" nop");
-	__asm(" nop");
-	__asm(" nop");
-	__asm(" nop");
-}
 
 void sensorsInit(void)
 {
-	uint16_t success = 0;
-    uint16_t val;
-
 	//Turn off TMP007
     configure_tmp_007(0);
 
@@ -167,7 +105,7 @@ int main(void) {
   // Divide INF clk to save Idle mode power (increases interrupt latency)
   powerDivideInfClkDS(PRCM_INFRCLKDIVDS_RATIO_DIV32);
 
-  //initRTC();
+  initRTC();
 
   powerEnablePeriph();
   powerEnableGPIOClockRunMode();
@@ -176,7 +114,7 @@ int main(void) {
   while((PRCMPowerDomainStatus(PRCM_DOMAIN_PERIPH) != PRCM_DOMAIN_POWER_ON));
 
   sensorsInit();
-  ledInit();
+  // ledInit();
 
   //Config IOID4 for external interrupt on rising edge and wake up
   IOCPortConfigureSet(BOARD_IOID_KEY_RIGHT, IOC_PORT_GPIO, IOC_IOMODE_NORMAL | IOC_FALLING_EDGE | IOC_INT_ENABLE | IOC_IOPULL_UP | IOC_INPUT_ENABLE | IOC_WAKE_ON_LOW);
