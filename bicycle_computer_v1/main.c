@@ -14,14 +14,14 @@
 
 
 /*
- * V1
+ *   V1
  * - GPIO-Hanlder in startup_ccs.s
- * - Add Wakeup
+ * - Applikationskonstanten in config.h
  */
 
 
-#include "cc26xxware_2_22_00_16101/driverLib/ioc.h"
-#include "cc26xxware_2_22_00_16101/driverLib/sys_ctrl.h"
+#include "cc26xxware_2_22_00_16101/driverLib/ioc.h"  // Alle Grundeinstellungen (was wie aktiv ist)
+#include "cc26xxware_2_22_00_16101/driverLib/sys_ctrl.h"  // Bus, CPU, Refresh
 
 #include "sensors/sensor-common.h"
 #include "sensors/ext-flash.h"
@@ -30,11 +30,11 @@
 #include "sensors/hdc-1000-sensor.h"
 #include "sensors/opt-3001-sensor.h"
 
-#include "board.h"
+#include "board.h" // Konstanten IO
 #include "radio.h"
 
-#include "config.h"
-#include "cc26xxware_2_22_00_16101/driverLib/gpio.h"
+#include "config.h" // Konstanten V1
+#include "cc26xxware_2_22_00_16101/driverLib/gpio.h" // Konstanten GPIO Pins
 #include "interfaces/board-i2c.h"
 #include "rtc.h"
 #include "radio.h"

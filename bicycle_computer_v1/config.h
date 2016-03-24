@@ -1,6 +1,4 @@
-
-
-//Configuration for simpleBroadcaster
+//Configuration for V1
 
 #include "cc26xxware_2_22_00_16101/inc/hw_types.h"
 

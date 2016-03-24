@@ -1,5 +1,8 @@
 /******************************************************************************
 *  Filename:       startup_ccs.c
+*
+*  Konstanten für die Applikation liegen in config.h
+*
 ******************************************************************************/
 
 
@@ -11,6 +14,11 @@
 #if !(defined(__TI_COMPILER_VERSION__))
 #error "startup_ccs.c: Unsupported compiler!"
 #endif
+
+// *********************************************
+// Includes for Hanlder
+//
+// ********************************
 
 #include <../inc/hw_types.h>
 #include "../inc/hw_memmap.h"
@@ -256,24 +264,24 @@ static void SVCallIntHandler( void ){ while(1) {}}
 static void DebugMonIntHandler( void ){ while(1) {}}
 static void PendSVIntHandler( void ){ while(1) {}}
 static void SysTickIntHandler( void ){ while(1) {}}
+
 static void GPIOIntHandler(void){
+
 	uint32_t pin_mask;
 
+	// power on GPIO
 	powerEnablePeriph();
 	powerEnableGPIOClockRunMode();
+	while((PRCMPowerDomainStatus(PRCM_DOMAIN_PERIPH) != PRCM_DOMAIN_POWER_ON)); /* Wait for domains to power on */
 
-	/* Wait for domains to power on */
-	while((PRCMPowerDomainStatus(PRCM_DOMAIN_PERIPH) != PRCM_DOMAIN_POWER_ON));
-
-	/* Read interrupt flags */
+	// GPIO_EVFLAG31-0 = alle GPIO
 	pin_mask = (HWREG(GPIO_BASE + GPIO_O_EVFLAGS31_0) & GPIO_PIN_MASK);
-
 	/* Clear the interrupt flags */
 	HWREG(GPIO_BASE + GPIO_O_EVFLAGS31_0) = pin_mask;
 
+	// Power off
 	powerDisablePeriph();
-	// Disable clock for GPIO in CPU run mode
-	HWREGBITW(PRCM_BASE + PRCM_O_GPIOCLKGR, PRCM_GPIOCLKGR_CLK_EN_BITN) = 0;
+	HWREGBITW(PRCM_BASE + PRCM_O_GPIOCLKGR, PRCM_GPIOCLKGR_CLK_EN_BITN) = 0; // Disable clock for GPIO in CPU run mode
 	// Load clock settings
 	HWREGBITW(PRCM_BASE + PRCM_O_CLKLOADCTL, PRCM_CLKLOADCTL_LOAD_BITN) = 1;
 
