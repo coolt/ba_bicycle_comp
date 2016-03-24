@@ -13,10 +13,14 @@
         - Configure output power to desired value in CMD_RADIO_SETUP (see pa_table_cc26xx.c)
 
 
-/*
+
  *   V1
+ *   ----------------------------------
  * - GPIO-Hanlder in startup_ccs.s
  * - Applikationskonstanten in config.h
+ * - IOKonstanten in board.h, gpio.h
+ * - Power- und Init-Funktionen in system.h
+ *
  */
 
 
@@ -46,46 +50,6 @@ extern volatile bool rfBootDone;
 extern volatile bool rfSetupDone;
 extern volatile bool rfAdvertisingDone;
 
-
-
-
-void sensorsInit(void)
-{
-	//Turn off TMP007
-    configure_tmp_007(0);
-
-	//Power down Gyro
-	IOCPinTypeGpioOutput(BOARD_IOID_MPU_POWER);
-	GPIOPinClear(BOARD_MPU_POWER);
-
-	//Power down Mic
-	IOCPinTypeGpioOutput(BOARD_IOID_MIC_POWER);
-	GPIOPinClear(1 << BOARD_IOID_MIC_POWER);
-
-	//Turn off external flash
-	ext_flash_init(); //includes power down instruction
-
-	//Turn off OPT3001
-	configure_opt_3001(0);
-
-	configure_bmp_280(0);
-
-	//Power off Serial domain (Powered on in sensor configurations!)
-	PRCMPowerDomainOff(PRCM_DOMAIN_SERIAL);
-	while((PRCMPowerDomainStatus(PRCM_DOMAIN_SERIAL) != PRCM_DOMAIN_POWER_OFF));
-
-	//Shut down I2C
-	board_i2c_shutdown();
-}
-
-void ledInit(void)
-{
-	IOCPinTypeGpioOutput(BOARD_IOID_LED_1); //LED1
-	IOCPinTypeGpioOutput(BOARD_IOID_LED_2); //LED2
-
-	GPIOPinClear(BOARD_LED_1);
-	GPIOPinClear(BOARD_LED_2);
-}
 
 
 int main(void) {

@@ -1,5 +1,6 @@
 #include "cc26xxware_2_22_00_16101/driverLib/aux_wuc.h"
 #include "cc26xxware_2_22_00_16101/driverLib/cpu.h"
+#include "cc26xxware_2_22_00_16101/driverLib/prcm.h"
 #include "cc26xxware_2_22_00_16101/inc/hw_aon_wuc.h"
 #include "cc26xxware_2_22_00_16101/inc/hw_ints.h"
 #include "cc26xxware_2_22_00_16101/inc/hw_memmap.h"
@@ -8,6 +9,46 @@
 #include "cc26xxware_2_22_00_16101/inc/hw_types.h"
 #include "cc26xxware_2_22_00_16101/driverLib/osc.h"
 #include "cc26xxware_2_22_00_16101/driverLib/vims.h"
+#include "board.h"
+
+void ledInit(void)
+{
+	IOCPinTypeGpioOutput(BOARD_IOID_LED_1); //LED1
+	IOCPinTypeGpioOutput(BOARD_IOID_LED_2); //LED2
+
+	GPIOPinClear(BOARD_LED_1);
+	GPIOPinClear(BOARD_LED_2);
+}
+
+void sensorsInit(void)
+{
+	//Turn off TMP007
+    configure_tmp_007(0);
+
+	//Power down Gyro
+	IOCPinTypeGpioOutput(BOARD_IOID_MPU_POWER);
+	GPIOPinClear(BOARD_MPU_POWER);
+
+	//Power down Mic
+	IOCPinTypeGpioOutput(BOARD_IOID_MIC_POWER);
+	GPIOPinClear(1 << BOARD_IOID_MIC_POWER);
+
+	//Turn off external flash
+	ext_flash_init(); //includes power down instruction
+
+	//Turn off OPT3001
+	configure_opt_3001(0);
+
+	configure_bmp_280(0);
+
+	//Power off Serial domain (Powered on in sensor configurations!)
+	PRCMPowerDomainOff(PRCM_DOMAIN_SERIAL);
+	while((PRCMPowerDomainStatus(PRCM_DOMAIN_SERIAL) != PRCM_DOMAIN_POWER_OFF));
+
+	//Shut down I2C
+	board_i2c_shutdown();
+}
+
 
 // Enable interrupt on CPU
 void initInterrupts(void) {
