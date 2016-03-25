@@ -54,11 +54,11 @@ extern void SVCallIntHandler( void );
 extern void DebugMonIntHandler( void );
 extern void PendSVIntHandler( void );
 extern void SysTickIntHandler( void );
-extern void GPIOIntHandler( void );
+extern void GPIOIntHandler( void );  // used
 extern void I2CIntHandler( void );
 extern void RFCCPE1IntHandler( void );
 extern void AONIntHandler( void );
-extern void AONRTCIntHandler( void );
+extern void AONRTCIntHandler( void ); // used
 extern void UART0IntHandler( void );
 extern void AUXSWEvent0IntHandler( void );
 extern void SSI0IntHandler( void );
@@ -265,6 +265,7 @@ static void DebugMonIntHandler( void ){ while(1) {}}
 static void PendSVIntHandler( void ){ while(1) {}}
 static void SysTickIntHandler( void ){ while(1) {}}
 
+// ***************************************************************************************333
 static void GPIOIntHandler(void){
 
 	uint32_t pin_mask;
@@ -276,14 +277,12 @@ static void GPIOIntHandler(void){
 
 	// GPIO_EVFLAG31-0 = alle GPIO
 	pin_mask = (HWREG(GPIO_BASE + GPIO_O_EVFLAGS31_0) & GPIO_PIN_MASK);
-	/* Clear the interrupt flags */
-	HWREG(GPIO_BASE + GPIO_O_EVFLAGS31_0) = pin_mask;
+	HWREG(GPIO_BASE + GPIO_O_EVFLAGS31_0) = pin_mask;  /* Clear the interrupt flags */
 
 	// Power off
 	powerDisablePeriph();
 	HWREGBITW(PRCM_BASE + PRCM_O_GPIOCLKGR, PRCM_GPIOCLKGR_CLK_EN_BITN) = 0; // Disable clock for GPIO in CPU run mode
-	// Load clock settings
-	HWREGBITW(PRCM_BASE + PRCM_O_CLKLOADCTL, PRCM_CLKLOADCTL_LOAD_BITN) = 1;
+	HWREGBITW(PRCM_BASE + PRCM_O_CLKLOADCTL, PRCM_CLKLOADCTL_LOAD_BITN) = 1; // Load clock settings
 
 	//To avoid second interupt with register = 0 (its not fast enough!!)
 	__asm(" nop");
@@ -293,6 +292,8 @@ static void GPIOIntHandler(void){
 	__asm(" nop");
 	__asm(" nop");
 }
+
+// **************************************************************************************************************************33
 static void I2CIntHandler( void ){ while(1) {}}
 static void AONIntHandler( void ){ while(1) {}}
 static void UART0IntHandler( void ){ while(1) {}}

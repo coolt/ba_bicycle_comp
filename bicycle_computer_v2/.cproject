@@ -81,7 +81,7 @@
 						</toolChain>
 					</folderInfo>
 					<sourceEntries>
-						<entry excluding="main_combined.c|cc26xxware_2_22_00_16101/startup_files/ccfg.c|cc26xxware_2_22_00_16101/doc|cc26xxware_2_22_00_16101/linker_files|radio_files/pa_table/pa_table_cc26xx.c|cc26xxware_2_22_00_16101/utils" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
+						<entry excluding="measuremen.c|main_combined.c|cc26xxware_2_22_00_16101/startup_files/ccfg.c|cc26xxware_2_22_00_16101/doc|cc26xxware_2_22_00_16101/linker_files|radio_files/pa_table/pa_table_cc26xx.c|cc26xxware_2_22_00_16101/utils" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
 					</sourceEntries>
 				</configuration>
 			</storageModule>
@@ -157,6 +157,9 @@
 							</tool>
 						</toolChain>
 					</folderInfo>
+					<sourceEntries>
+						<entry excluding="measuremen.c" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
+					</sourceEntries>
 				</configuration>
 			</storageModule>
 			<storageModule moduleId="org.eclipse.cdt.core.externalSettings"/>

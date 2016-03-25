@@ -24,6 +24,8 @@ volatile bool rfBootDone          = 0;
 volatile bool rfSetupDone         = 0;
 volatile bool rfAdvertisingDone   = 0;
 
+
+// actives GPIO Pin
 void extPinEnable(bool enable){
 
 	// Power on IOC domain
@@ -33,10 +35,13 @@ void extPinEnable(bool enable){
 			!= PRCM_DOMAIN_POWER_ON));
 
 	if(enable){
-		// Enable PIN25 Reed Switch for Interrupts
+		// !! fast identischer Code in main. unter interrupt set !!!!!!!!!!!!!!!!!!!
+
+
+		// Enable PIN25 (Reed Switch) for Interrupts
 		IOCPortConfigureSet(BOARD_IOID_DP0, IOC_PORT_GPIO, IOC_IOMODE_NORMAL | IOC_RISING_EDGE | IOC_INT_ENABLE | IOC_IOPULL_DOWN  | IOC_INPUT_ENABLE | IOC_WAKE_ON_HIGH);
 		//Set device to wake MCU from standby on PIN 25
-		HWREG(AON_EVENT_BASE + AON_EVENT_O_MCUWUSEL) = AON_EVENT_MCUWUSEL_WU1_EV_PAD25;
+		HWREG(AON_EVENT_BASE + AON_EVENT_O_MCUWUSEL) = AON_EVENT_MCUWUSEL_WU1_EV_PAD25; // see in main
 		// Enable and clear the Interrupt
 		IOCIntClear(IOID_25);
 		IntPendClear(INT_EDGE_DETECT);
@@ -203,6 +208,9 @@ void radioCmdStartRAT(void) {
 void radioSetupAndTransmit() {
   radioSendCommand( (uint32_t)&cmdSetup);
 }
+
+
+
 
 //Update advertising byte based on IO inputs
 void radioUpdateAdvData(int size, char* data) {
