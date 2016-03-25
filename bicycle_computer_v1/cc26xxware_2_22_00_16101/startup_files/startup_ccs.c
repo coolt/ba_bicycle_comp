@@ -295,7 +295,6 @@ static void GPIOIntHandler(void){
 }
 static void I2CIntHandler( void ){ while(1) {}}
 static void AONIntHandler( void ){ while(1) {}}
-
 static void UART0IntHandler( void ){ while(1) {}}
 static void AUXSWEvent0IntHandler( void ){ while(1) {}}
 static void SSI0IntHandler( void ){ while(1) {}}
