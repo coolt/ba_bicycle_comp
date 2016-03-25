@@ -12,12 +12,14 @@
         - Configure IO's and set up advertisment payload
         - Configure output power to desired value in CMD_RADIO_SETUP (see pa_table_cc26xx.c)
 
-
+ *   V0:
+ *   Fixes Aufwachen nach 10 s (Wakeup intervall) in RTC-init-Funktion,
+ *   Danach Zeit berechnen
 
  *   V1
  *   ----------------------------------
  * - GPIO-Hanlder in startup_ccs.s
- * - Applikationskonstanten in config.h
+ * - Applikationskonstanten in config.h -> Interrupt defines
  * - IOKonstanten in board.h, gpio.h
  * - Power- und Init-Funktionen in system.h
  *
@@ -67,7 +69,8 @@ int main(void) {
 	// reduce clk
 	powerDivideInfClkDS(PRCM_INFRCLKDIVDS_RATIO_DIV32); // Divide INF clk to save Idle mode power (increases interrupt latency)
 
-	initRTC(); // for time-calculation
+	// Change
+	initRTC(); // for time-calculation,  !! PA Code: automtisches Aufwachen nach 10 s, dann berechnen
 
 	// power on
 	powerEnablePeriph();

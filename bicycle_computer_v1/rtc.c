@@ -1,4 +1,4 @@
-
+// Code from PA
 #include "config.h"
 
 #include "cc26xxware_2_22_00_16101/inc/hw_aon_event.h"
@@ -25,7 +25,6 @@ void initRTC(void) {
 
   //Enable RTC
   AONRTCEnable();
-
 }
 
 /**  // new function from PA

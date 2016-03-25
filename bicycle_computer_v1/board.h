@@ -1,20 +1,16 @@
 /*
- *
- * \note   Do not include this file directly. It gets included by contiki-conf
- *         after all relevant directives have been set.
+ * Definition for the bicycle computer in the end of file
+ * The names are based on the netnames of the pcb
  */
-/*---------------------------------------------------------------------------*/
+
+
 #ifndef BOARD_H_
 #define BOARD_H_
-/*---------------------------------------------------------------------------*/
+
 #include "cc26xxware_2_22_00_16101/driverLib/ioc.h"
-/*---------------------------------------------------------------------------*/
-/**
- * \name LED configurations
- *
- * Those values are not meant to be modified by the user
- * @{
- */
+
+
+// LED
 /* Some files include leds.h before us, so we need to get rid of defaults in
  * leds.h before we provide correct definitions */
 #undef LEDS_GREEN
@@ -28,30 +24,16 @@
 #define LEDS_ORANGE    LEDS_RED
 
 #define LEDS_CONF_ALL  3
-
-/* Notify various examples that we have LEDs */
 #define PLATFORM_HAS_LEDS        1
-/** @} */
-/*---------------------------------------------------------------------------*/
-/**
- * \name LED IOID mappings
- *
- * Those values are not meant to be modified by the user
- * @{
- */
+
 #define BOARD_IOID_LED_1          IOID_10
 #define BOARD_IOID_LED_2          IOID_15
 #define BOARD_LED_1               (1 << BOARD_IOID_LED_1)
 #define BOARD_LED_2               (1 << BOARD_IOID_LED_2)
 #define BOARD_LED_ALL             (BOARD_LED_1 | BOARD_LED_2)
-/** @} */
-/*---------------------------------------------------------------------------*/
-/**
- * \name UART IOID mapping
- *
- * Those values are not meant to be modified by the user
- * @{
- */
+
+
+// UART
 #define BOARD_IOID_DP4_UARTRX     IOID_28
 #define BOARD_IOID_DP5_UARTTX     IOID_29
 
@@ -69,87 +51,41 @@
 #define BOARD_UART_TX             (1 << BOARD_IOID_UART_TX)
 #define BOARD_UART_CTS            (1 << BOARD_IOID_UART_CTS)
 #define BOARD_UART_RTS            (1 << BOARD_IOID_UART_RTS)
-/** @} */
-/*---------------------------------------------------------------------------*/
-/**
- * \name Button IOID mapping
- *
- * Those values are not meant to be modified by the user
- * @{
- */
+
+// Button
 #define BOARD_IOID_KEY_LEFT       IOID_0
 #define BOARD_IOID_KEY_RIGHT      IOID_4
 #define BOARD_KEY_LEFT            (1 << BOARD_IOID_KEY_LEFT)
 #define BOARD_KEY_RIGHT           (1 << BOARD_IOID_KEY_RIGHT)
-/** @} */
-/*---------------------------------------------------------------------------*/
-/**
- * \brief SPI IOID mappings
- *
- * Those values are not meant to be modified by the user
- * @{
- */
+
+// SPI
 #define BOARD_IOID_SPI_MOSI       IOID_19
 #define BOARD_IOID_SPI_MISO       IOID_18
-/** @} */
-/*---------------------------------------------------------------------------*/
-/**
- * \name Buzzer configuration
- * @{
- */
+
+// Buzzer
 #define BOARD_IOID_BUZZER         IOID_21 /**< Buzzer Pin */
-/** @} */
-/*---------------------------------------------------------------------------*/
-/**
- * \name Reed Relay IOID mapping
- *
- * Those values are not meant to be modified by the user
- * @{
- */
+
+// Reed Relay
 #define BOARD_IOID_REED_RELAY     IOID_3
-/** @} */
-/*---------------------------------------------------------------------------*/
-/**
- * \name External flash IOID mapping
- *
- * Those values are not meant to be modified by the user
- * @{
- */
+
+// Flash
 #define BOARD_IOID_FLASH_CS       IOID_14
 #define BOARD_FLASH_CS            (1 << BOARD_IOID_FLASH_CS)
 #define BOARD_IOID_SPI_CLK_FLASH  IOID_17
-/** @} */
-/*---------------------------------------------------------------------------*/
-/**
- * \brief I2C IOID mappings
- *
- * Those values are not meant to be modified by the user
- * @{
- */
+
+// I2C
 #define BOARD_IOID_SDA            IOID_5 /**< Interface 0 SDA: All sensors bar MPU */
 #define BOARD_IOID_SCL            IOID_6 /**< Interface 0 SCL: All sensors bar MPU */
 #define BOARD_IOID_SDA_HP         IOID_8 /**< Interface 1 SDA: MPU */
 #define BOARD_IOID_SCL_HP         IOID_9 /**< Interface 1 SCL: MPU */
-/** @} */
-/*---------------------------------------------------------------------------*/
-/**
- * \brief MPU IOID mappings
- *
- * Those values are not meant to be modified by the user
- * @{
- */
+
+// MPU
 #define BOARD_IOID_MPU_INT        IOID_7
 #define BOARD_IOID_MPU_POWER      IOID_12
 #define BOARD_MPU_INT             (1 << BOARD_IOID_MPU_INT)
 #define BOARD_MPU_POWER           (1 << BOARD_IOID_MPU_POWER)
-/** @} */
-/*---------------------------------------------------------------------------*/
-/**
- * \brief Board devpack IOID mappings (LCD etc.)
- *
- * Those values are not meant to be modified by the user
- * @{
- */
+
+// Dev Pack (as LCD, ..)
 #define BOARD_IOID_AUDIOFS_TDO        IOID_16
 #define BOARD_IOID_DEVPACK_CS         IOID_20
 #define BOARD_IOID_DEVPK_LCD_EXTCOMIN IOID_22
@@ -160,39 +96,31 @@
 #define BOARD_IOID_DP3                IOID_27
 #define BOARD_IOID_DEVPK_ID           IOID_30
 #define BOARD_DEVPACK_CS              (1 << BOARD_IOID_DEVPACK_CS)
-/** @} */
-/*---------------------------------------------------------------------------*/
-/**
- * \brief TMP Sensor
- *
- * Those values are not meant to be modified by the user
- * @{
- */
+
+// tmp Sensor
 #define BOARD_IOID_TMP_RDY          IOID_1
-/** @} */
-/*---------------------------------------------------------------------------*/
-/**
- * \brief Digital Microphone
- *
- * Those values are not meant to be modified by the user
- * @{
- */
+
+// digital Mic
 #define BOARD_IOID_MIC_POWER        IOID_13
 #define BOARD_IOID_AUDIO_DI         IOID_2
 #define BOARD_IOID_AUDIO_CLK        IOID_11
-/** @} */
-/*---------------------------------------------------------------------------*/
-/**
- * \name Device string used on startup
- * @{
- */
+
+// bicycle computer
+
+#define REED_SWITCH					BOARD_IOID_DP0   // IOID_25
+#define VCC_LTS						BOARD_IOID_DP1   // IOID_24 (analog)
+#define VCC_STS						BOARD_IOID_DP2   // IOID_23
+#define VREG						BOARD_IOID_DP3   // IOID_27
+#define BAT_LOW						BOARD_IOID_DP4_UARTRX // IOID_28
+#define HRV_LOW						BOARD_IOID_DP5_UARTTX // IOID_29
+#define WAKE_UP						BOARD_IOID_AUDIODO    // IOID_22 (from sensortag to em-board)
+#define EM_CS						BOARD_IOID_DEVPACK_CS // IOID_20
+#define MCU_MOSI					BOARD_IOID_SPI_MOSI   // IOID_19
+#define MCU_MISO					BOARD_IOID_SPI_MISO   // IOID_18
+#define MCU_SCLK					BOARD_IOID_SPI_CLK_FLASH // IOID_17
+
+// device string
 #define BOARD_STRING "TI CC2650 SensorTag"
 
-/** @} */
-/*---------------------------------------------------------------------------*/
 #endif /* BOARD_H_ */
-/*---------------------------------------------------------------------------*/
-/**
- * @}
- * @}
- */
+
