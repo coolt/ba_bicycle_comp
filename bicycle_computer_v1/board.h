@@ -106,7 +106,6 @@
 #define BOARD_IOID_AUDIO_CLK        IOID_11
 
 // bicycle computer
-
 #define REED_SWITCH					BOARD_IOID_DP0   // IOID_25
 #define VCC_LTS						BOARD_IOID_DP1   // IOID_24 (analog)
 #define VCC_STS						BOARD_IOID_DP2   // IOID_23
