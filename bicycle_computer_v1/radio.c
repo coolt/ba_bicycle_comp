@@ -146,6 +146,7 @@ void radioPatch(void) {
   applyPatch();
 }
 
+//Request radio to keep on system bus
 void radioCmdBusRequest(bool enabled) {
   // Send bus request command as direct command
   uint32_t cmd = CMDR_DIR_CMD_1BYTE(CMD_BUS_REQUEST, enabled);
@@ -153,7 +154,7 @@ void radioCmdBusRequest(bool enabled) {
   radioWaitCommandOk();
 }
 
-
+//Start radio timer
 void radioCmdStartRAT(void) {
   uint32_t cmd = CMDR_DIR_CMD(CMD_START_RAT);
   radioSendCommand(cmd);
@@ -167,12 +168,11 @@ void radioSetupAndTransmit() {
 
 //Update advertising byte based on IO inputs
 void radioUpdateAdvData(int size, char* data) {
-
-  int i;
-  for(i = 0; i < size; i++)
-  {
+	int i;
+	for(i = 0; i < size; i++)
+	{
 	  advData[i] = data[i];
-  }
+	}
 }
 
 

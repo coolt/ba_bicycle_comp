@@ -109,8 +109,8 @@ int main(void) {
 	HWREGBITW(PRCM_BASE + PRCM_O_GPIOCLKGR, PRCM_GPIOCLKGR_CLK_EN_BITN) = 0;
 	HWREGBITW(PRCM_BASE + PRCM_O_CLKLOADCTL, PRCM_CLKLOADCTL_LOAD_BITN) = 1; // Load clock settings
 
-	initInterrupts();
-	initRadio();
+	initInterrupts(); // enable generaly
+	initRadio();  // set BLE, 3 Adv. channels
 
 	// power off and set Refresh on
 	powerDisableFlashInIdle();  // Turn off FLASH in idle mode == stand by mode
@@ -137,7 +137,7 @@ int main(void) {
 
 
 	//Start radio setup and linked advertisment
-	radioUpdateAdvData(10, payload);
+	radioUpdateAdvData(10, payload); //Update advertising byte based on IO inputs
 	while(1) {  // endlose loop: system is in standby mode, waiting for interrupt on GPIO
 
 		rfBootDone  = 0;
@@ -149,14 +149,14 @@ int main(void) {
 		// Prepation to send data
 		// -----------------------------------------------------
 		waitUntilRFCReady();
-		initRadioInts();
+		initRadioInts();  // define which interrupts are detected (int vector table)
 		runRadio();
 
 		waitUntilAUXReady(); //Wait until AUX is ready before configuring oscillators
 		OSCHF_TurnOnXosc();  //Enable 24MHz XTAL (higher clk for sending)
 		while( ! rfBootDone) { //IDLE until BOOT_DONE interrupt from RFCore is triggered
 			powerDisableCPU();
-			PRCMDeepSleep();
+			//Request radio to keep on system busPRCMDeepSleep();
 		} //This code runs after BOOT_DONE interrupt has woken up the CPU again
 
 		radioCmdBusRequest(true); //Request radio to keep on system bus
