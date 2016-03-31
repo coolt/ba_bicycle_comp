@@ -125,10 +125,10 @@ int main(void) {
 	//Fill payload buffer with adv parameter data
 	uint8_t p;
 	p = 0;
-	payload[p++] = 0x02;          /* 2 bytes */
+	payload[p++] = 0x01;          /* 2 bytes */
 	payload[p++] = 0x01;
-	payload[p++] = 0x05;          /* LE Limited Discoverable Mode" & "BR/EDR Not Supported */
-	payload[p++] = 0x09; //1 + strlen(beacond_config.adv_name);
+	payload[p++] = 0x03;          /* LE Limited Discoverable Mode" & "BR/EDR Not Supported */
+	payload[p++] = 0x04; //1 + strlen(beacond_config.adv_name);
 	payload[p++] = 0x03;//BLE_ADV_TYPE_NAME;
 	payload[p++] = 0x00;//BLE_ADV_TYPE_NAME;
 	payload[p++] = 0xDE;//BLE_ADV_TYPE_NAME;
