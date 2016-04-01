@@ -8,7 +8,7 @@ ccfg.obj: C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.7/include/yvals.h
 ccfg.obj: C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.7/include/stdarg.h
 ccfg.obj: C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.7/include/linkage.h
 ccfg.obj: C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.7/include/_lock.h
-ccfg.obj: C:/Users/katrin/Documents/Dokumente/ZHAW/5Jahr/ba_bicycle_comp/bicycle_computer_v2_03_25/cc26xxware_2_22_00_16101/startup_files/../inc/hw_chip_def.h
+ccfg.obj: C:/Users/katrin/Documents/Dokumente/ZHAW/5Jahr/ba_bicycle_comp/bicycle_computer_v2/cc26xxware_2_22_00_16101/startup_files/../inc/hw_chip_def.h
 ccfg.obj: ../cc26xxware_2_22_00_16101/inc/hw_ccfg.h
 ccfg.obj: ../cc26xxware_2_22_00_16101/inc/hw_ccfg_simple_struct.h
 
@@ -20,6 +20,6 @@ C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.7/include/yvals.h:
 C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.7/include/stdarg.h: 
 C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.7/include/linkage.h: 
 C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.7/include/_lock.h: 
-C:/Users/katrin/Documents/Dokumente/ZHAW/5Jahr/ba_bicycle_comp/bicycle_computer_v2_03_25/cc26xxware_2_22_00_16101/startup_files/../inc/hw_chip_def.h: 
+C:/Users/katrin/Documents/Dokumente/ZHAW/5Jahr/ba_bicycle_comp/bicycle_computer_v2/cc26xxware_2_22_00_16101/startup_files/../inc/hw_chip_def.h: 
 ../cc26xxware_2_22_00_16101/inc/hw_ccfg.h: 
 ../cc26xxware_2_22_00_16101/inc/hw_ccfg_simple_struct.h: 
