@@ -1,7 +1,7 @@
 ******************************************************************************
                   TI ARM Linker PC v5.2.7                      
 ******************************************************************************
->> Linked Fri Apr 01 13:53:58 2016
+>> Linked Fri Apr 01 15:09:59 2016
 
 OUTPUT FILE NAME:   <bicycle_computer.out>
 ENTRY POINT SYMBOL: "ResetISR"  address: 00004031

@@ -4169,3 +4169,46 @@ java.nio.channels.ClosedByInterruptException
 	at org.eclipse.cdt.internal.ui.text.c.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:144)
 	at org.eclipse.cdt.internal.ui.text.c.hover.CEditorTextHoverProxy.getHoverInfo2(CEditorTextHoverProxy.java:84)
 	at org.eclipse.jface.text.TextViewerHoverManager$4.run(TextViewerHoverManager.java:166)
+!SESSION 2016-04-01 15:06:29.729 -----------------------------------------------
+eclipse.buildId=4.4.1.M20140925-0400
+java.version=1.7.0_60
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=de_CH
+Framework arguments:  -product com.ti.ccstudio.branding.product -product com.ti.ccstudio.branding.product -product com.ti.ccstudio.branding.product -product com.ti.ccstudio.branding.product -product com.ti.ccstudio.branding.product -product com.ti.ccstudio.branding.product
+Command-line arguments:  -os win32 -ws win32 -arch x86 -product com.ti.ccstudio.branding.product -product com.ti.ccstudio.branding.product -product com.ti.ccstudio.branding.product -product com.ti.ccstudio.branding.product -product com.ti.ccstudio.branding.product -data C:\Users\katrin\Documents\Dokumente\ZHAW\5Jahr\ba_bicycle_comp\V2_03_30 -product com.ti.ccstudio.branding.product -clean
+
+!ENTRY org.eclipse.core.resources 2 10035 2016-04-01 15:07:07.227
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY com.ti.common.core 4 0 2016-04-01 15:07:07.292
+!MESSAGE path=ccs_base/DebugServer
+
+!ENTRY com.ti.common.core 4 0 2016-04-01 15:07:07.297
+!MESSAGE debugServerDir=C:/ti/ccsv6/ccs_base/DebugServer
+
+!ENTRY org.eclipse.core.net 4 0 2016-04-01 15:07:15.396
+!MESSAGE WinHttp.DetectAutoProxyConfigUrl for wpad failed with error 'Die Proxy-Autokonfigurations-URL wurde nicht gefunden.
+' #12180.
+
+!ENTRY org.eclipse.core.net 4 0 2016-04-01 15:07:15.544
+!MESSAGE WinHttp.DetectAutoProxyConfigUrl for wpad failed with error 'Die Proxy-Autokonfigurations-URL wurde nicht gefunden.
+' #12180.
+
+!ENTRY org.eclipse.cdt.core 1 0 2016-04-01 15:10:04.784
+!MESSAGE Indexed 'bicycle_computer' (58 sources, 158 headers) in 3.87 sec: 8'344 declarations; 19'006 references; 0 unresolved inclusions; 0 syntax errors; 1 unresolved names (0.0037 %)
+
+!ENTRY com.ti.ccstudio.debug 1 0 2016-04-01 15:12:04.047
+!MESSAGE DS_ERROR: CS_DAP_0: Error: (Error -261 @ 0x0) Invalid response was received from the XDS110. (Emulation package 6.0.83.1) 
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2016-04-01 15:12:04.864
+!MESSAGE DS_ERROR: CS_DAP_0: Unable to determine target status after 20 attempts
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2016-04-01 15:12:05.055
+!MESSAGE DS_ERROR: CS_DAP_0: Failed to remove the debug state from the target before disconnecting.  There may still be breakpoint op-codes embedded in program memory.  It is recommended that you reset the emulator before you connect and reload your program before you continue debugging
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2016-04-01 15:12:05.238
+!MESSAGE DS_ERROR: Cortex_M3_0: JTAG Communication Error: (Error -261 @ 0x0) Invalid response was received from the XDS110. (Emulation package 6.0.83.1) 
+
