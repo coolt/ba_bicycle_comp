@@ -1,0 +1,136 @@
+/** V2-0331
+  V2-0401: TESTING INTERRUPT
+ */
+
+#include "cc26xxware_2_22_00_16101/driverLib/ioc.h"
+#include "cc26xxware_2_22_00_16101/driverLib/sys_ctrl.h"
+
+#include "sensors/sensor-common.h"
+#include "sensors/ext-flash.h"
+#include "sensors/bmp-280-sensor.h"
+#include "sensors/tmp-007-sensor.h"
+#include "sensors/hdc-1000-sensor.h"
+#include "sensors/opt-3001-sensor.h"
+
+#include "board.h"
+#include "radio.h"
+
+#include "config.h"
+#include "cc26xxware_2_22_00_16101/driverLib/gpio.h"
+#include "interfaces/board-i2c.h"
+#include "rtc.h"
+#include "radio.h"
+#include "system.h"
+#include "cc26xxware_2_22_00_16101/inc/hw_aon_event.h"
+
+
+extern volatile bool rfBootDone;
+extern volatile bool rfSetupDone;
+extern volatile bool rfAdvertisingDone;
+
+
+int main(void) {
+
+
+  //Force AUX on
+  powerEnableAuxForceOn();
+
+
+  //initRTC();
+
+  powerEnablePeriph(); // enable periphieri for gpio
+  powerEnableGPIOClockRunMode();
+
+  /* Wait for domains to power on */
+  while((PRCMPowerDomainStatus(PRCM_DOMAIN_PERIPH) != PRCM_DOMAIN_POWER_ON));
+
+  sensorsInit();
+  ledInit();
+  initInterrupts(); // Enable Int on CPU //  HWREG(NVIC_EN0) = 1 << (INT_RF_CPE1 - 16);
+
+
+
+  //powerDisablePeriph();
+  //Disable clock for GPIO in CPU run mode
+  //HWREGBITW(PRCM_BASE + PRCM_O_GPIOCLKGR, PRCM_GPIOCLKGR_CLK_EN_BITN) = 0;
+  // Load clock settings
+  //HWREGBITW(PRCM_BASE + PRCM_O_CLKLOADCTL, PRCM_CLKLOADCTL_LOAD_BITN) = 1;
+
+
+
+  //Clear payload buffer
+//    memset(payload, 0, BLE_ADV_PAYLOAD_BUF_LEN);
+
+/*    //Fill payload buffer with adv parameter data
+    uint8_t p;
+    p = 0;
+    payload[p++] = 0x03;          // 2 bytes
+    payload[p++] = 0x03;
+    payload[p++] = 0x3;        // LE Limited Discoverable Mode" & "BR/EDR Not Supported
+    payload[p++] = 0x03;//BLE_ADV_TYPE_NAME;
+    payload[p++] = 0x03;//BLE_ADV_TYPE_NAME;
+    payload[p++] = 0x3;//BLE_ADV_TYPE_NAME;
+    payload[p++] = 0x03;//BLE_ADV_TYPE_NAME;
+    payload[p++] = 0x3;//BLE_ADV_TYPE_NAME;   */
+
+
+
+  while(1) {
+
+
+
+    //
+    // Standby procedure
+ /*
+
+    powerDisableXtal();
+
+    // Turn off radio
+    powerDisableRFC();
+
+    // Switch to RCOSC_HF
+    OSCHfSourceSwitch();
+
+    // Allow AUX to turn off again. No longer need oscillator interface
+    powerDisableAuxForceOn();
+
+    // Goto Standby. MCU will now request to be powered down on DeepSleep
+    powerEnableMcuPdReq();
+
+    // Disable cache and retention
+    powerDisableCache();
+    powerDisableCacheRetention();
+
+    //Calculate next recharge
+    SysCtrlSetRechargeBeforePowerDown(XOSC_IN_HIGH_POWER_MODE);
+
+    // Synchronize transactions to AON domain to ensure AUX has turned off
+    SysCtrlAonSync();
+
+    //
+    // Enter Standby
+    //
+
+    powerDisableCPU();
+    PRCMDeepSleep();
+*/
+    SysCtrlAonUpdate();
+    SysCtrlAdjustRechargeAfterPowerDown();
+    SysCtrlAonSync();
+
+    //
+	// Wakeup from RTC every 100ms, code starts execution from here
+	//
+
+/*    powerEnableRFC();
+    powerEnableAuxForceOn();
+
+    //Re-enable cache and retention
+    powerEnableCache();
+    powerEnableCacheRetention();
+
+    //MCU will not request to be powered down on DeepSleep -> System goes only to IDLE
+    powerDisableMcuPdReq();
+    */
+  }
+}

@@ -7,6 +7,7 @@
 #include "cc26xxware_2_22_00_16101/inc/hw_nvic.h"
 #include "cc26xxware_2_22_00_16101/inc/hw_prcm.h"
 #include "cc26xxware_2_22_00_16101/inc/hw_types.h"
+#include "cc26xxware_2_22_00_16101/inc/hw_aon_event.h"
 #include "cc26xxware_2_22_00_16101/driverLib/osc.h"
 #include "cc26xxware_2_22_00_16101/driverLib/vims.h"
 #include "board.h"
@@ -50,18 +51,37 @@ void sensorsInit(void)
 }
 
 
-// Enable interrupt on CPU
+
 void initInterrupts(void) {
 
-  // CPE1 - Int channels 31:16: Boot done is bit 30
-  HWREG(NVIC_EN0) = 1 << (INT_RF_CPE1 - 16);
-  // CPE0 - Int channels  15:0: CMD_DONE is bit 1, LAST_CMD_DONE is bit 0
-  HWREG(NVIC_EN0) = 1 << (INT_RF_CPE0 - 16);
-  // RTC combined event output
-  HWREG(NVIC_EN0) = 1 << (INT_AON_RTC - 16);
+	// Enable GPIO for interrupts
+	// ---------------------------
+	// Port Configuration: GPIO Pin 4 is Input, idle = 1, interrupt = 0
+	IOCPortConfigureSet(BOARD_IOID_KEY_RIGHT, IOC_PORT_GPIO, IOC_IOMODE_NORMAL | IOC_FALLING_EDGE | IOC_INT_ENABLE | IOC_IOPULL_UP | IOC_INPUT_ENABLE | IOC_WAKE_ON_LOW);
+				//Set device to wake MCU from standby on PIN4 (BUTTON1)
+				//HWREG(AON_EVENT_BASE + AON_EVENT_O_MCUWUSEL) = AON_EVENT_MCUWUSEL_WU0_EV_PAD;  //Does not work with AON_EVENT_MCUWUSEL_WU0_EV_PAD4 --> WHY??
+	//Config IOID25 for external interrupt on rising edge and wake up
+	IOCPortConfigureSet(REED_SWITCH, IOC_PORT_GPIO, IOC_IOMODE_NORMAL | IOC_FALLING_EDGE | IOC_INT_ENABLE | IOC_IOPULL_UP | IOC_INPUT_ENABLE | IOC_WAKE_ON_LOW);
 
-  // Global interrupt enable
-  CPUcpsie();
+	// Set Interrupt on WUC Event
+	// ---------------------------
+	HWREG(AON_EVENT_BASE + AON_EVENT_O_EVTOMCUSEL ) = AON_EVENT_MCUWUSEL_WU0_EV_PAD;
+
+	// set Interrupt in NVIC
+	// --------------------------
+	IntEnable(INT_EDGE_DETECT); // Typ = AON
+	IntEnable(INT_RF_CPE1); // Boot done is bit 30
+	IntEnable(INT_RF_CPE0);
+	IntEnable(INT_AON_RTC); // RTC combined event output
+	/* missing:
+	#define INT_SW0                 43          // Software Event 0
+	#define INT_AUX_COMBO           44          // AUX combined event, directly to MCU domain
+	#define INT_AON_PRG0            45          // AON programmable 0
+	#define INT_PROG                46          // Dynamic Programmable interrupt
+	 */
+
+	// Global interrupt enable
+	CPUcpsie();
 }
 
 void powerEnableAuxForceOn(void) {

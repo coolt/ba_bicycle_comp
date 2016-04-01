@@ -249,9 +249,7 @@ FaultISR(void)
 static void
 IntDefaultHandler(void)
 {
-    //
-    // Go into an infinite loop.
-    //
+    // For every unexpected interrupt
     while(1)
     {
     }
@@ -268,16 +266,18 @@ static void SysTickIntHandler( void ){ while(1) {}}
 // ***************************************************************************************333
 static void GPIOIntHandler(void){
 
-	uint32_t pin_mask;
+
+	uint32_t interrupt_pin_mask;
 
 	// power on GPIO
 	powerEnablePeriph();
 	powerEnableGPIOClockRunMode();
 	while((PRCMPowerDomainStatus(PRCM_DOMAIN_PERIPH) != PRCM_DOMAIN_POWER_ON)); /* Wait for domains to power on */
 
-	// GPIO_EVFLAG31-0 = alle GPIO
-	pin_mask = (HWREG(GPIO_BASE + GPIO_O_EVFLAGS31_0) & GPIO_PIN_MASK);
-	HWREG(GPIO_BASE + GPIO_O_EVFLAGS31_0) = pin_mask;  /* Clear the interrupt flags */
+	// detect which interrupt pin is set to 1
+	interrupt_pin_mask = (HWREG(GPIO_BASE + GPIO_O_EVFLAGS31_0) ); // delete in code: & GPIO PIN MASK 0xFFFFFFF
+	HWREG(GPIO_BASE + GPIO_O_EVFLAGS31_0) = interrupt_pin_mask;  /* Clear the interrupt flags. */  // Here: often twice the same interrupt detected, even when not true
+	// HWREG(GPIO_BASE + GPIO_O_EVFLAGS31_0) = 0; // Set all pins to 0 would not works, second interrupt often follows
 
 	// Power off
 	powerDisablePeriph();

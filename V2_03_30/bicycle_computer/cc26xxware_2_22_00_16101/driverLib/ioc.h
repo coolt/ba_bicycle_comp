@@ -169,6 +169,10 @@ extern "C"
 #define IOC_PORT_RFC_GPI0         0x00000033  // RC Core Data In Pin 0
 #define IOC_PORT_RFC_GPI1         0x00000034  // RC Core Data In Pin 1
 
+/////////////////////////////////////////////////////////////////////////////
+// defines for DIO-Register.
+// Each DIO has his Register with 32 bits.
+
 //*****************************************************************************
 //
 // Defines for enabling/disabling an IO
