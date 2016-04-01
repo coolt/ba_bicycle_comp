@@ -22,7 +22,6 @@ system.obj: C:/Users/katrin/Documents/Dokumente/ZHAW/5Jahr/ba_bicycle_comp/V2_03
 system.obj: C:/Users/katrin/Documents/Dokumente/ZHAW/5Jahr/ba_bicycle_comp/V2_03_30/bicycle_computer/cc26xxware_2_22_00_16101/startup_files/../inc/hw_aon_rtc.h
 system.obj: ../cc26xxware_2_22_00_16101/driverLib/interrupt.h
 system.obj: ../cc26xxware_2_22_00_16101/inc/hw_aon_wuc.h
-system.obj: ../cc26xxware_2_22_00_16101/inc/hw_aon_event.h
 system.obj: ../cc26xxware_2_22_00_16101/driverLib/osc.h
 system.obj: C:/Users/katrin/Documents/Dokumente/ZHAW/5Jahr/ba_bicycle_comp/V2_03_30/bicycle_computer/cc26xxware_2_22_00_16101/startup_files/../inc/hw_ddi.h
 system.obj: C:/Users/katrin/Documents/Dokumente/ZHAW/5Jahr/ba_bicycle_comp/V2_03_30/bicycle_computer/cc26xxware_2_22_00_16101/startup_files/../inc/hw_ddi_0_osc.h
@@ -59,7 +58,6 @@ C:/Users/katrin/Documents/Dokumente/ZHAW/5Jahr/ba_bicycle_comp/V2_03_30/bicycle_
 C:/Users/katrin/Documents/Dokumente/ZHAW/5Jahr/ba_bicycle_comp/V2_03_30/bicycle_computer/cc26xxware_2_22_00_16101/startup_files/../inc/hw_aon_rtc.h: 
 ../cc26xxware_2_22_00_16101/driverLib/interrupt.h: 
 ../cc26xxware_2_22_00_16101/inc/hw_aon_wuc.h: 
-../cc26xxware_2_22_00_16101/inc/hw_aon_event.h: 
 ../cc26xxware_2_22_00_16101/driverLib/osc.h: 
 C:/Users/katrin/Documents/Dokumente/ZHAW/5Jahr/ba_bicycle_comp/V2_03_30/bicycle_computer/cc26xxware_2_22_00_16101/startup_files/../inc/hw_ddi.h: 
 C:/Users/katrin/Documents/Dokumente/ZHAW/5Jahr/ba_bicycle_comp/V2_03_30/bicycle_computer/cc26xxware_2_22_00_16101/startup_files/../inc/hw_ddi_0_osc.h: 
